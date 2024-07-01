@@ -20,6 +20,7 @@
                 <nav class="navigation nav-img">
                     <a href="#about-me" class="tab__element">Обо мне</a>
                     <a href="#services" class="tab__element">Услуги</a>
+                    <a href="#programs" class="tab__element">Программы</a>
                     <a href="#reviews" class="tab__element">Отзывы</a>
                     <a href="#education" class="tab__element">Образование</a>
                     <a class="tab__element">EN</a>
@@ -40,24 +41,26 @@
             </a>
         </div>
     </section>
-    <section class="wrapper" id="services">
+    <section class="wrapper services-modifier" id="services">
         <div class="services-tab">
-            <div class="services-list">
-                <p>Консультация 30$/50 минут</p>
-                <ul class="services-list-wrapper">
-                    <li class="services-list-item">Зависимое и созависимое поведение</li>
-                    <li class="services-list-item">Взаимоотношения в паре</li>
-                    <li class="services-list-item">Детско-родительские отношения</li>
-                    <li class="services-list-item">Улучшение качества жизни</li>
-                    <li class="services-list-item">Саморазвитие и личностный рост</li>
-                    <li class="services-list-item">Самооценка, личные границы и поиск собсвтенных смыслов</li>
-                    <li class="services-list-item">Помощь при расставании/разводе/утрате/проживании потери</li>
-                </ul>
+            <div class="services-info">
+                <h2 class="services-header">Консультация 30$/50 минут</h2>
+                <div class="services-list">
+                    <ul class="services-list-wrapper">
+                        <li class="services-list-item">Зависимое и созависимое поведение</li>
+                        <li class="services-list-item">Взаимоотношения в паре</li>
+                        <li class="services-list-item">Детско-родительские отношения</li>
+                        <li class="services-list-item">Улучшение качества жизни</li>
+                        <li class="services-list-item">Саморазвитие и личностный рост</li>
+                        <li class="services-list-item">Самооценка, личные границы и поиск собственных смыслов</li>
+                        <li class="services-list-item">Помощь при расставании/разводе/утрате/проживании потери</li>
+                    </ul>
+                </div>
             </div>
             <div class="services-video">
                 <video
-                        width="400"
-                        height="300"
+                        width="800"
+                        height="600"
                         controls
                 >
                     <source src="video/soz_youtube2.mp4" type="video/mp4">
@@ -71,16 +74,29 @@
 <!--                        allowfullscreen-->
 <!--                ></iframe>-->
             </div>
-            <div class="services-apply">
+        </div>
+        <div class="services-apply">
                 <span>Работаю со взрослыми и подростками 18+</span>
                 <span>LGBT friendly</span>
-                <a href="https://t.me/talisman05">Записаться на консультацию</a>
+                <a href="https://t.me/talisman05" class="services-btn">Записаться на консультацию</a>
             </div>
+    </section>
+    <section class="wrapper programs-modifier" id="programs">
+        <div class="programs-tab">
+            <h2 class="services-header">ПРОГРАММЫ</h2>
         </div>
     </section>
     <section class="wrapper" id="reviews"></section>
     <section class="wrapper" id="education"></section>
     <footer class="wrapper"></footer>
+
+    <div class="services-modal" id="servicesModal" style="display: none;">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <span class="modal-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto corporis deserunt dolor illum magnam molestiae nobis odit quod similique sit?</span>
+            <a href="https://t.me/talisman05" class="modal-btn">Записаться</a>
+    </div>
+</div>
 
     <script src="js/servicesSection.js"></script>
     <script src="js/slider.js"></script>
