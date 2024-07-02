@@ -44,8 +44,6 @@ document.addEventListener('DOMContentLoaded', function () {
         },
     });
 
-    let currentSlideIndex = 0;
-
     document.querySelectorAll('.fancybox-item').forEach(item => {
         item.addEventListener('click', () => {
             currentSlideIndex = swiper.realIndex;
@@ -54,11 +52,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
     Fancybox.bind('[data-fancybox="gallery"]', {
         Thumbs: {
-            autoStart: false, // Disable thumbnails
+            autoStart: false
         },
         on: {
             close: () => {
-                swiper.slideToLoop(currentSlideIndex, 0, false);
                 document.activeElement.blur(); // Remove focus from the currently focused element
             }
         }
