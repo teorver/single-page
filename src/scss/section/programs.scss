@@ -1,12 +1,19 @@
 .programs-modifier{
   max-width: 100%;
-  background-color:#f8f5f7;
-  padding: 40px 115px;
+  background-color: #f8f5f7;
+  padding: 70px 115px;
 }
 
 .programs-tab{
   display: flex;
   flex-direction: column;
+  gap: 45px;
+}
+
+.programs-options{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .programs-header{
@@ -14,4 +21,40 @@
   font-size: 64px;
   color: #5F698A;
   text-align: left;
+}
+
+.program-item{
+  width: calc((100% - 300px) / 3);
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  border: 1px solid #5F698A;
+  padding: 26px 10px;
+  justify-content: space-between;
+}
+
+.program-item__header{
+  font-size: 22px;
+  font-weight: 500;
+  color: #5F698A;
+  height: 10%;
+}
+
+.program__list{}
+
+.program__list-item{
+  color: #5F698A;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.product-btn{
+  background-color: #df968c;
+  padding: 20px;
+  color: white;
+  width: 50%;
+  display: flex;
+  margin: 0 auto;
+  font-size: 25px;
+  justify-content: center;
 }
