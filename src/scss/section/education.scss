@@ -1,10 +1,11 @@
 .swiper {
-  width: 80%;
+  width: 100%;
   height: auto;
   display: flex;
   flex-direction: column;
   margin: 0 auto; /* Center align */
-  padding: 40px 10px;
+  padding: 40px 87px;
+  background: #f8f5f7;
 }
 
 .swiper-wrapper {
@@ -16,7 +17,7 @@
 .swiper-slide {
   display: flex;
   justify-content: center; /* Center images within the slides */
-  margin: 0 80px;
+  //margin: 0 80px;
 }
 
 .swiper-slide-modifier{
@@ -79,8 +80,8 @@
 }
 
 .img__modifier {
-  width: 60%;
-  height: auto;
+  width: 100%;
+  height: 300px;
 
   @media (max-width: 590px) {
     width: 100%;
