@@ -28,6 +28,7 @@
 .swiper-slide {
   display: flex;
   justify-content: center;
+  flex: 0 0 auto;
 }
 
 .swiper-slide-modifier{
@@ -138,4 +139,13 @@
   text-align: left;
   padding: 40px 120px;
   background-color: #f8f5f7;
+}
+
+.swiper-reviews, .swiper-pagination-review {
+    overflow-x: hidden; /* Отключает горизонтальную прокрутку */
+    width: 100%;
+}
+
+.swiper-reviews .swiper-wrapper {
+    flex-wrap: nowrap; /* Запрещает перенос слайдов на новую строку */
 }
