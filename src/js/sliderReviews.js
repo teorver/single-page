@@ -1,15 +1,15 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const swiper = new Swiper('.swiper', {
-        direction: 'horizontal', // Default direction
+    const swiper = new Swiper('.swiper-reviews', {
+        direction: 'horizontal',
         loop: true,
-        slidesPerView: 3, // Show up to 4 elements
-        slidesPerGroup: 3,
-        spaceBetween: 20,
+        slidesPerView: 2,
+        slidesPerGroup: 2,
+        spaceBetween: 50,
 
-        // Pagination
         pagination: {
-            el: '.swiper-pagination',
+            el: '.swiper-pagination-review',
             clickable: true,
+
         },
     });
 
@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
         },
         on: {
             close: () => {
-                document.activeElement.blur(); // Remove focus from the currently focused element
+                document.activeElement.blur();
             }
         }
     });
