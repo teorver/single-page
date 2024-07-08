@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
         loop: true,
         slidesPerView: 3, // Show up to 4 elements
         slidesPerGroup: 3,
-        spaceBetween: 20,
+        spaceBetween: 40,
 
         // Pagination
         pagination: {
