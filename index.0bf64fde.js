@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",()=>{let e=document.querySelector("header"),d=document.querySelector(".header__container");document.addEventListener("scroll",()=>{window.scrollY>e.offsetHeight?(e.classList.add("scrolled"),d.classList.add("scrolled-border")):(e.classList.remove("scrolled"),d.classList.remove("scrolled-border"))})});
