@@ -63,6 +63,7 @@
   display: flex;
   flex-direction: column;
   width: 300px;
+  margin-left: 65px;
 }
 
 .about-3-text{
@@ -96,6 +97,10 @@
   list-style: disc;
 }
 
+.text-modifier{
+  text-align: center;
+}
+
 //.about-item-text::before {
 //    content: "• ";
 //    color: #5F698A;
@@ -111,6 +116,6 @@
 
 .socials-img{
   display: flex;
-  padding: 6% 0;
+  padding: 8% 0;
   justify-content: space-between;
 }
