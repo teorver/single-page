@@ -6,31 +6,31 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" type="image/x-icon" href="/src/images/favicon_lotus.png">
+    <link rel="stylesheet" href="scss/index.scss">
     <title>Договор оферты</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: Roboto, sans-serif;
             line-height: 1.6;
-            margin: 20px;
-            background-color: #f4f4f4;
+            background-color: #f8f5f7;
         }
 
         h1 {
-            color: #333;
+            color: #5f698a;
             text-align: center;
         }
 
         .contract {
-            background: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            padding: 150px 20px 20px 20px;
             max-width: 800px;
             margin: auto;
+            text-align: justify;
+            border-radius: 8px;
         }
 
         .contract p, .contract ul {
             margin: 10px 0;
+            color: #5f698a;
         }
 
         .contract ul {
@@ -40,6 +40,7 @@
 
         .contract li {
             margin: 5px 0;
+            color: #5f698a;
         }
 
         .contract .section-title {
@@ -56,9 +57,33 @@
 </head>
 <body>
 
+<header class="header">
+        <div class="header__wrapper wrapper">
+            <div class="header__container">
+                <div class="header__logo">
+                    <h1 class="logo">Ирина Карпович</h1>
+                </div>
+                <div class="burger-menu">
+                    <div class="burger-icon line-1"></div>
+                    <div class="burger-icon line-2"></div>
+                    <div class="burger-icon line-3"></div>
+                </div>
+                <nav class="navigation nav-img">
+                    <a href="#about-me" class="tab__element">Обо мне</a>
+                    <a href="#services" class="tab__element">Услуги</a>
+                    <a href="#programs" class="tab__element">Программы</a>
+                    <a href="#payment" class="tab__element">Оплата</a>
+                    <a href="#education" class="tab__element">Образование</a>
+                    <a href="#reviews" class="tab__element">Отзывы</a>
+                    <a href="#contacts" class="tab__element">Контакты</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
 <div class="contract">
     <h1>ДОГОВОР ПУБЛИЧНОЙ ОФЕРТЫ</h1>
-    <p>на оказание информационно-консультационных услуг предлагается на условиях публичной оферты в соответствии со статьей 407 частью 2 Гражданского кодекса Республики Беларусь</p>
+    <p style="text-align: center; padding-bottom: 4%">на оказание информационно-консультационных услуг предлагается на условиях публичной оферты в соответствии со статьей 407 частью 2 Гражданского кодекса Республики Беларусь</p>
 
     <p>Настоящий публичный договор на оказание консультационных услуг (далее «Договор»), определяет порядок оказания Индивидуальным предпринимателем Карпович Ириной Михайловной (именуемой в дальнейшем «Исполнитель»), действующей на основании свидетельства о государственной регистрации №0463089, выданного Минским райисполкомом 01 ноября 2013 года, платных консультационных услуг физическим лицам, индивидуальным предпринимателям и юридическим лицам (их работникам) (далее – «Заказчики» или «Заказчик»), принявшим (акцептовавшим) публичное предложение (оферту) о заключении Договора, а также взаимные права, обязанности и порядок взаимоотношений между Исполнителем и Заказчиком.</p>
 
@@ -255,5 +280,6 @@
     Контактные данные: Тел. +375 44 515 75 44, E-mail: <a href="mailto:irina.karpovich@tut.by">irina.karpovich@tut.by</a></p>
 </div>
 
+<script src="js/burgerMenu.js"></script>
 </body>
 </html>
