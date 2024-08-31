@@ -78,7 +78,6 @@
   border-bottom: none;
 }
 
-// Media Queries for different screen sizes
 @media (max-width: 1630px) {
   .header__wrapper {
     padding: 0 120px;
@@ -177,7 +176,7 @@
   }
 
   .logo {
-    width: 200px;
+    font-size: 28px;
   }
 }
 
@@ -191,7 +190,7 @@
   }
 
   .logo {
-    width: 150px;
+    font-size: 25px;
   }
 
   .tab__element {
