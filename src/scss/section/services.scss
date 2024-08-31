@@ -5,7 +5,8 @@
 
 .services-tab{
   display: flex;
-  flex-direction: row;
+  //flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   padding: 20px 75px;
   gap: 20px;
@@ -13,10 +14,16 @@
 
 .services-info{
   display: flex;
-  flex-direction: column;
+  // flex-direction: column;
+  flex-direction: row;
   width: 100%;
-  padding: 74px 0 0 0;
+  padding: 24px 0 0 0;
   gap: 30px;
+  justify-content: space-around;
+
+  @media (max-width: 1550px) {
+    flex-direction: column;
+  }
 }
 
 .services-list{
@@ -24,13 +31,41 @@
   flex-direction: column;
   text-align: left;
   padding: 0 0 0 30px;
+  width: 70%;
+
+  @media (max-width: 1550px) {
+    width: 100%;
+    padding: 0;
+  }
 }
 
 .services-header{
   font-weight: bold;
   font-size: 64px;
   color: white;
-  text-align: center;
+  // text-align: center;
+  padding-left: 2%;
+
+  @media (max-width: 1550px) {
+    padding-left: 0;
+    text-align: center;
+  }
+
+  @media (max-width: 1025px) {
+    font-size: 58px;
+  }
+
+  @media (max-width: 945px) {
+    font-size: 55px;
+  }
+
+  @media (max-width: 910px) {
+    font-size: 50px;
+  }
+
+  @media (max-width: 840px) {
+    font-size: 48px;
+  }
 }
 
 .services-list-wrapper{
@@ -48,6 +83,10 @@
   border-bottom: 3px solid white;
   position: relative;
   cursor: pointer;
+
+  @media (max-width: 840px) {
+    font-size: 18px;
+  }
 }
 
 .services-list-item:after{
@@ -112,8 +151,14 @@
 
 .services-video{
   display: flex;
-  flex-direction: row;
-  align-items: flex-end;
+  //flex-direction: row;
+  //align-items: flex-end;
+}
+
+.services-main-video{
+  //width: 800px;
+  //height: 600px;
+  width: 100%;
 }
 
 .services-btn{
@@ -125,6 +170,10 @@
   margin: 0 auto;
   font-size: 25px;
   justify-content: center;
+
+  @media (max-width: 890px) {
+    width: 50%;
+  }
 }
 
 .modal-btn{
