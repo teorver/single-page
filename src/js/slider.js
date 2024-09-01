@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function () {
         },
         on: {
             close: () => {
-                document.activeElement.blur(); // Remove focus from the currently focused element
+                document.activeElement.blur();
             }
         }
     });
