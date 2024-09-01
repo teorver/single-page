@@ -87,6 +87,10 @@
   @media (max-width: 840px) {
     font-size: 18px;
   }
+
+  @media (max-width: 470px) {
+    font-size: 16px;
+  }
 }
 
 .services-list-item:after{
@@ -96,6 +100,11 @@
   right: 5px; /* Adjust to match padding */
   top: 50%;
   transform: translateY(-50%);
+
+  @media (max-width: 470px) {
+    font-size: 18px;
+    right: 2px;
+  }
 }
 
 .services-modal {
@@ -120,6 +129,20 @@
   display: flex;
   flex-direction: column;
   height: 400px;
+
+  @media (max-width: 1390px) {
+    width: 40%;
+  }
+
+  @media (max-width: 900px) {
+    width: 50%;
+    height: 40%;
+  }
+
+  @media (max-width: 580px) {
+    width: 90%;
+    gap: 5px;
+  }
 }
 
 .close {
@@ -161,6 +184,17 @@
   width: 100%;
 }
 
+.service-span-1{
+
+  @media (max-width: 610px) {
+    font-size: 22px;
+  }
+
+  @media (max-width: 510px) {
+    font-size: 16px;
+  }
+}
+
 .services-btn{
   background-color: #df968c;
   padding: 20px;
@@ -185,6 +219,16 @@
   margin: 0 auto;
   font-size: 25px;
   justify-content: center;
+
+  @media (max-width: 1100px) {
+    font-size: 20px;
+    padding: 10px;
+    width: 100%;
+  }
+
+  @media (max-width: 580px) {
+    margin-top: auto;
+  }
 }
 
 .modal-text{
@@ -192,4 +236,8 @@
   font-weight: 300;
   color: #5f698a;
   text-align: justify;
+
+  @media (max-width: 1100px) {
+    font-size: 20px;
+  }
 }
