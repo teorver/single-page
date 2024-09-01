@@ -2,6 +2,14 @@
   max-width: 100%;
   background-color: #f8f5f7;
   padding: 70px 115px;
+
+  @media (max-width: 940px) {
+    padding: 50px;
+  }
+
+  @media (max-width: 850px) {
+    padding: 30px 20px;
+  }
 }
 
 .programs-tab{
@@ -14,6 +22,17 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+
+  @media (max-width: 1250px) {
+    gap: 3%;
+  }
+
+  @media (max-width: 850px) {
+    flex-direction: column;
+    gap: 50px;
+    width: 80%;
+    margin: 0 auto;
+  }
 }
 
 .programs-header{
@@ -21,6 +40,15 @@
   font-size: 64px;
   color: #5F698A;
   text-align: left;
+
+  @media (max-width: 850px) {
+    text-align: center;
+    font-size: 50px;
+  }
+
+  @media (max-width: 350px) {
+    font-size: 20px;
+  }
 }
 
 .program-item{
@@ -32,6 +60,15 @@
   padding: 26px 30px;
   justify-content: space-between;
   background-color: white;
+
+  @media (max-width: 1250px) {
+    width: 100%;
+  }
+
+  @media (max-width: 350px) {
+    font-size: 30px;
+    padding: 3%;
+  }
 }
 
 .program-item__header{
@@ -41,14 +78,28 @@
   //height: 20%;
   height: 35%;
   font-size: 30px;
+
+  @media (max-width: 350px) {
+    font-size: 20px;
+  }
 }
 
-.program__list{}
+.payment-modifier{
+
+  @media (max-width: 850px) {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
 
 .program__list-item{
   color: #5F698A;
   font-size: 18px;
   font-weight: 400;
+
+  @media (max-width: 350px) {
+    font-size: 16px;
+  }
 }
 
 .product-btn{
@@ -60,4 +111,14 @@
   margin: 0 auto;
   font-size: 25px;
   justify-content: center;
+
+  @media (max-width: 1560px) {
+    width: 100%;
+    padding: 15px;
+  }
+
+  @media (max-width: 350px) {
+    font-size: 16px;
+    padding: 5px;
+  }
 }
