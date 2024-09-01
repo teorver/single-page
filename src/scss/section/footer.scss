@@ -8,21 +8,39 @@
   flex-direction: row;
   justify-content: space-around;
   padding: 80px 0;
+
+  @media (max-width: 450px) {
+    flex-direction: column;
+    gap: 35px;
+  }
 }
 
-.footer-info{}
+.footer-info{
+
+  @media (max-width: 450px) {
+    text-align: center;
+  }
+}
 
 .footer-item{
   color: white;
   padding: 10px 20px;
   font-size: 20px;
   font-weight: 600;
+
+  @media (max-width: 590px) {
+    font-size: 16px;
+  }
 }
 
 .footer-sub-info{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  @media (max-width: 450px) {
+    align-items: center;
+  }
 }
 
 .footer-sub-item{

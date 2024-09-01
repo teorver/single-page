@@ -2,6 +2,26 @@
   background-color: #f8f5f7;
   max-width: 100%;
   padding: 70px 115px;
+
+  @media (max-width: 920px) {
+    padding: 50px 10px;
+  }
+}
+
+.contacts-header{
+  font-weight: bold;
+  font-size: 64px;
+  color: #5F698A;
+  text-align: left;
+
+  @media (max-width: 1230px) {
+    text-align: center;
+    font-size: 58px;
+  }
+
+  @media (max-width: 550px) {
+    font-size: 32px;
+  }
 }
 
 .contacts-tab{
@@ -14,6 +34,10 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
+
+  @media (max-width: 700px) {
+    flex-direction: column;
+  }
 }
 
 .contact-socials{
@@ -22,6 +46,14 @@
   gap: 45px;
   width: 25%;
   margin-top: 80px;
+
+  @media (max-width: 1230px) {
+    width: auto;
+  }
+
+  @media (max-width: 350px) {
+    width: 100%;
+  }
 }
 
 .contact-item{
@@ -31,6 +63,10 @@
   border-radius: 45px;
   padding: 20px;
   background-color: white;
+
+  @media (max-width: 1580px) {
+    padding: 10px;
+  }
 }
 
 .social-info{
@@ -39,6 +75,10 @@
   justify-content: center;
   margin: 0 auto;
   gap: 5px;
+
+  @media (max-width: 1580px) {
+    width: 70%;
+  }
 }
 
 .contact-video{
@@ -49,6 +89,11 @@
   width: 60px;
   height: 60px;
   margin: auto;
+
+  @media (max-width: 1580px) {
+    width: 45px;
+    height: auto;
+  }
 }
 
 .text-1{
@@ -56,17 +101,34 @@
   font-weight: 500;
   width: 250px;
   color: #5f698a;
+
+  @media (max-width: 550px) {
+    font-size: 18px;
+  }
 }
 
 .text-2{
-    padding: 10px 0;
-    text-align: center;
-    background-color: #df968c;
-    color: white;
-    border-radius: 20px;
+  padding: 10px 0;
+  text-align: center;
+  background-color: #df968c;
+  color: white;
+  border-radius: 20px;
   font-size: 20px;
+
+  @media (max-width: 550px) {
+    font-size: 16px;
+  }
 }
 
 .modifier-1{
   color: #7E5D6F;
+}
+
+.contacts-main-video{
+  width: 800px;
+  height: 600px;
+
+  @media (max-width: 1230px) {
+    width: 100%;
+  }
 }
