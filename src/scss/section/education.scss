@@ -6,6 +6,10 @@
   margin: 0 auto;
   padding: 40px 87px;
   background: #f8f5f7;
+
+  @media (max-width: 1200px) {
+    padding: 40px;
+  }
 }
 
 .swiper-reviews {
@@ -16,8 +20,11 @@
   margin: 0 auto;
   padding: 40px 87px;
   background: #f8f5f7;
-}
 
+  @media (max-width: 1540px) {
+    padding: 40px;
+  }
+}
 
 .swiper-wrapper {
   display: flex;
@@ -30,13 +37,29 @@
   display: flex;
   justify-content: center;
   flex: 0 0 auto;
-  width: 300px; /* Set a fixed width for slides */
-  height: 300px; /* Set a fixed height for slides */
-  overflow: hidden; /* Ensures content does not overflow the slide container */
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+
+  @media (max-width: 780px) {
+    height: auto;
+  }
 }
 
 .swiper-slide-modifier{
   margin: 0;
+}
+
+.swiper-review-modifier{
+  display: flex;
+  justify-content: center;
+  flex: 0 0 auto;
+  width: 200px;
+  overflow: hidden;
+
+  @media (max-width: 900px) {
+     height: auto;
+   }
 }
 
 .swiper-pagination {
@@ -137,7 +160,11 @@
   height: 200px;
 
   @media (max-width: 590px) {
-    width: 80%;
+    width: 180%;
+  }
+
+  @media (max-width: 400px) {
+    width: 300%;
   }
 }
 
@@ -148,15 +175,34 @@
   text-align: left;
   padding: 40px 120px;
   background-color: #f8f5f7;
+
+  @media (max-width: 1200px) {
+    text-align: center;
+    font-size: 58px;
+  }
+
+  @media (max-width: 850px) {
+    font-size: 50px;
+  }
+
+  @media (max-width: 550px) {
+    font-size: 32px;
+    padding: 0;
+  }
+
+  @media (max-width: 400px) {
+    font-size: 20px;
+    padding: 40px 0;
+  }
 }
 
 .swiper-reviews, .swiper-pagination-review {
-    overflow-x: hidden; /* Отключает горизонтальную прокрутку */
+    overflow-x: hidden;
     width: 100%;
 }
 
 .swiper-reviews .swiper-wrapper {
-    flex-wrap: nowrap; /* Запрещает перенос слайдов на новую строку */
+    flex-wrap: nowrap;
 }
 
 .edu-3{
