@@ -10,6 +10,10 @@
   justify-content: space-between;
   padding: 20px 75px;
   gap: 20px;
+
+  @media (max-width: 450px) {
+    padding: 18px 5px;
+  }
 }
 
 .services-info{
@@ -65,6 +69,14 @@
 
   @media (max-width: 840px) {
     font-size: 48px;
+  }
+
+  @media (max-width: 450px) {
+    font-size: 36px;
+  }
+
+  @media (max-width: 2700px) {
+    font-size: 28px;
   }
 }
 
