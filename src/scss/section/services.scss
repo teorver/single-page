@@ -35,7 +35,7 @@
   flex-direction: column;
   text-align: left;
   padding: 0 0 0 30px;
-  width: 70%;
+  width: 100%;
 
   @media (max-width: 1550px) {
     width: 100%;
@@ -190,13 +190,9 @@
 
 .services-video{
   display: flex;
-  //flex-direction: row;
-  //align-items: flex-end;
 }
 
 .services-main-video{
-  //width: 800px;
-  //height: 600px;
   width: 100%;
 }
 
@@ -267,4 +263,13 @@
   @media (max-width: 450px) {
     width: 100%;
   }
+}
+
+.services-img{
+  display: flex;
+  justify-content: center;
+}
+
+.services-img-modifier{
+  width: 50%;
 }
