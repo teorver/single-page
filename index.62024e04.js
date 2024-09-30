@@ -1,0 +1,1 @@
+let e=document.getElementById("servicesModal"),n=document.getElementsByClassName("close")[0];document.querySelectorAll(".services-list-item").forEach(function(n){n.addEventListener("click",function(){e.style.display="flex"})}),n.onclick=function(){e.style.display="none"},window.onclick=function(n){n.target==e&&(e.style.display="none")};
