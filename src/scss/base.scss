@@ -74,7 +74,7 @@
     padding: 13% 5% 0 5%;
   }
 
-  @media (max-width: 430px) {
+  @media (max-width: 450px) {
     flex-direction: column-reverse;
   }
 }
@@ -230,12 +230,12 @@
 
   @media (max-width: 690px) {
     padding: 0;
-    width: 220px;
-  }
-
-  @media (max-width: 450px) {
     width: 100%;
   }
+
+  //@media (max-width: 450px) {
+  //  width: 100%;
+  //}
 }
 
 .socials-img {
