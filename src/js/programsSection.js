@@ -62,9 +62,6 @@ document.addEventListener("DOMContentLoaded", () => {
         } else if (width <= 1390) {
             programsModalContent.style.width = "70%";
             programsModalText.style.fontSize = "17px";
-        } else {
-            programsModalContent.style.width = "50%"; // Default width
-            programsModalText.style.fontSize = "25px"; // Default font size
         }
     }
 
