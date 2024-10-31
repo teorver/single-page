@@ -3,7 +3,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const modalContent = programsModal.querySelector(".programs-modal-text");
     const closeModal = programsModal.querySelector(".close");
 
-    // Define descriptions for each program item
     const programDescriptions = {
         "program-item-1": "Иногда лучшее, что может сделать человек для тебя – уйти из твоей жизни. \n" +
             "Больно. Горько. Гадко. По-разному бывает. \n" +
@@ -50,28 +49,22 @@ document.addEventListener("DOMContentLoaded", () => {
             "*Длительность консультации 50 минут.",
     };
 
-    // Attach event listeners to each 'product-item-btn'
     document.querySelectorAll(".product-item-btn").forEach(button => {
         button.addEventListener("click", (event) => {
             event.preventDefault();
 
-            // Get the ID of the parent program item
             const programId = button.closest(".program-item").id;
 
-            // Set the modal content based on the program item ID
             modalContent.textContent = programDescriptions[programId] || "Program description not available.";
 
-            // Show the modal
             programsModal.style.display = "block";
         });
     });
 
-    // Close modal when clicking on the 'x' button
     closeModal.addEventListener("click", () => {
         programsModal.style.display = "none";
     });
 
-    // Close modal when clicking outside the modal content
     window.addEventListener("click", (event) => {
         if (event.target === programsModal) {
             programsModal.style.display = "none";

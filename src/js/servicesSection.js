@@ -19,44 +19,40 @@ const modalContentEN = {
     "item-8": "Your trauma is not your fault, but healing is your responsibility."
 };
 
-// Function to determine if the page is in English
 function isEnglishPage() {
-    return window.location.pathname.includes('en.html' || 'en');
+    if (window.location.pathname.includes("en")) {
+        return window.location.pathname.includes('en');
+    } else if (window.location.pathname.includes("en.html")) {
+        return window.location.pathname.includes('en.html');
+    }
 }
 
-// Function to open the modal with specific content
 function openModal(itemId) {
     const modal = document.getElementById('servicesModal');
     const modalText = document.querySelector('.modal-text');
 
-    // Check if the page is in English and set the appropriate content
     if (isEnglishPage()) {
         modalText.textContent = modalContentEN[itemId];
     } else {
         modalText.textContent = modalContentRU[itemId];
     }
 
-    // Display the modal
     modal.style.display = "block";
 }
 
-// Function to close the modal
 function closeModal() {
     const modal = document.getElementById('servicesModal');
     modal.style.display = "none";
 }
 
-// Add event listeners to each list item
 document.querySelectorAll('.services-list-item').forEach(item => {
     item.addEventListener('click', function() {
         openModal(this.id);
     });
 });
 
-// Close the modal when clicking the close button
 document.querySelector('.close').addEventListener('click', closeModal);
 
-// Close the modal when clicking outside the modal content
 window.addEventListener('click', function(event) {
     const modal = document.getElementById('servicesModal');
     if (event.target === modal) {

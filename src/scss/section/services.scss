@@ -5,7 +5,6 @@
 
 .services-tab{
   display: flex;
-  //flex-direction: row;
   flex-direction: column;
   justify-content: space-between;
   padding: 20px 75px;
@@ -18,7 +17,6 @@
 
 .services-info{
   display: flex;
-  // flex-direction: column;
   flex-direction: row;
   width: 100%;
   padding: 24px 0 0 0;
@@ -106,10 +104,10 @@
 }
 
 .services-list-item:after{
-  content: '→'; /* Unicode character for an arrow */
-  font-size: 35px; /* Adjust size to match the text */
+  content: '→';
+  font-size: 35px;
   position: absolute;
-  right: 5px; /* Adjust to match padding */
+  right: 5px;
   top: 50%;
   transform: translateY(-50%);
 
@@ -120,24 +118,24 @@
 }
 
 .services-modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 9999; /* Sit on top of all content */
+  display: none;
+  position: fixed;
+  z-index: 9999;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgba(128, 128, 128, 0.9); /* Grey background with opacity */
+  overflow: auto;
+  background-color: rgba(128, 128, 128, 0.9);
 }
 
 .modal-content {
   background-color: #f8f5f7;
-  margin: 15% auto; /* 15% from the top and centered */
+  margin: 15% auto;
   padding: 20px;
   gap: 45px;
   border: 1px solid #888;
-  width: 25%; /* Could be more or less, depending on screen size */
+  width: 25%;
   display: flex;
   flex-direction: column;
   height: 400px;
@@ -278,24 +276,24 @@
 }
 
 .programs-modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 9999; /* Sit on top of all content */
+  display: none;
+  position: fixed;
+  z-index: 9999;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgba(128, 128, 128, 0.9); /* Grey background with opacity */
+  overflow: auto;
+  background-color: rgba(128, 128, 128, 0.9);
 }
 
 .programs-modal-content {
   background-color: #f8f5f7;
-  margin: 15% auto; /* 15% from the top and centered */
+  margin: 15% auto;
   padding: 20px;
   gap: 45px;
   border: 1px solid #888;
-  width: 25%; /* Could be more or less, depending on screen size */
+  width: 25%;
   display: flex;
   flex-direction: column;
   height: 400px;
