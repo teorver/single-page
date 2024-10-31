@@ -300,18 +300,17 @@
   flex-direction: column;
 
   @media (max-width: 1390px) {
-    width: 40%;
+    width: 50%;
   }
 
   @media (max-width: 900px) {
-    width: 50%;
-    height: 40%;
+    width: 90%;
   }
 
   @media (max-width: 580px) {
-    width: 90%;
+    width: 95%;
     gap: 5px;
-    height: auto;
+    // height: auto;
   }
 }
 
