@@ -87,8 +87,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 programsModalContent.style.gap = "45px";
                 programsModalContent.style.padding = "20px 40px";
                 programsModalText.style.fontSize = "25px";
-
-                window.removeEventListener("resize", adjustModalStyles);
             }
         });
     });
