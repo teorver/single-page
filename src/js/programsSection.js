@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const modalContent = programsModal.querySelector(".programs-modal-text");
     const closeModal = programsModal.querySelector(".close");
 
-    // Define content for each program item
+    // Define descriptions for each program item
     const programDescriptions = {
         "program-item-1": "Иногда лучшее, что может сделать человек для тебя – уйти из твоей жизни. \n" +
             "Больно. Горько. Гадко. По-разному бывает. \n" +
@@ -50,8 +50,8 @@ document.addEventListener("DOMContentLoaded", () => {
             "*Длительность консультации 50 минут.",
     };
 
-    // Attach event listeners to each program button
-    document.querySelectorAll(".product-btn").forEach(button => {
+    // Attach event listeners to each 'product-item-btn'
+    document.querySelectorAll(".product-item-btn").forEach(button => {
         button.addEventListener("click", (event) => {
             event.preventDefault();
 
@@ -66,12 +66,12 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // Close modal on 'x' button click
+    // Close modal when clicking on the 'x' button
     closeModal.addEventListener("click", () => {
         programsModal.style.display = "none";
     });
 
-    // Close modal when clicking outside the content area
+    // Close modal when clicking outside the modal content
     window.addEventListener("click", (event) => {
         if (event.target === programsModal) {
             programsModal.style.display = "none";
