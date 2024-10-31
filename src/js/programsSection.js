@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             const programId = button.closest(".program-item").id;
 
-            modalContent.innerHTML = programDescriptions[programId] || "Program description not available.";
+            modalContent.textContent = programDescriptions[programId] || "Program description not available.";
 
             programsModal.style.display = "flex";
         });
