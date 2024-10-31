@@ -52,27 +52,6 @@ document.addEventListener("DOMContentLoaded", () => {
             "*Длительность консультации 50 минут.<br>",
     };
 
-    // document.querySelectorAll(".product-item-btn").forEach(button => {
-    //     button.addEventListener("click", (event) => {
-    //         event.preventDefault();
-    //
-    //         const programId = button.closest(".program-item").id;
-    //
-    //         modalContent.innerHTML = programDescriptions[programId] || "Program description not available.";
-    //
-    //         programsModal.style.display = "flex";
-    //     });
-    // });
-    //
-    // closeModal.addEventListener("click", () => {
-    //     programsModal.style.display = "none";
-    // });
-    //
-    // window.addEventListener("click", (event) => {
-    //     if (event.target === programsModal) {
-    //         programsModal.style.display = "none";
-    //     }
-    // });
     document.querySelectorAll(".product-item-btn").forEach(button => {
         button.addEventListener("click", (event) => {
             event.preventDefault();
@@ -89,6 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 programsModalContent.style.gap = "10px";
                 programsModalContent.style.padding = "6px 15px";
                 programsModalText.style.fontSize = "20px";
+                programsModalText.style.flexDirection = "column"
             } else {
                 // Reset to default styles if another item is opened
                 programsModalContent.style.gap = "45px";
