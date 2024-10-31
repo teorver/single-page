@@ -58,22 +58,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
             const programId = button.closest(".program-item").id;
 
-            // Set the modal content
             modalContent.innerHTML = programDescriptions[programId] || "Program description not available.";
 
             programsModal.style.display = "flex";
 
-            // Apply specific styles if program-item-3 is opened
             if (programId === "program-item-3") {
                 programsModalContent.style.gap = "10px";
                 programsModalContent.style.padding = "6px 15px";
                 programsModalText.style.fontSize = "20px";
                 programsModalText.style.flexDirection = "column"
-            } else {
-                // Reset to default styles if another item is opened
-                programsModalContent.style.gap = "45px";
-                programsModalContent.style.padding = "20px 40px";
-                programsModalText.style.fontSize = "25px";
             }
         });
     });
