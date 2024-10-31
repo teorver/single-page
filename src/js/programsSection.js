@@ -1,5 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     const programsModal = document.getElementById("programsModal");
+    const programsModalContent = document.getElementById("programsModalContent");
+    const programsModalText = document.getElementById("programsModalText");
     const modalContent = programsModal.querySelector(".programs-modal-text");
     const closeModal = programsModal.querySelector(".close");
 
@@ -80,19 +82,19 @@ document.addEventListener("DOMContentLoaded", () => {
             // Set the modal content
             modalContent.innerHTML = programDescriptions[programId] || "Program description not available.";
 
+            programsModal.style.display = "flex";
+
             // Apply specific styles if program-item-3 is opened
             if (programId === "program-item-3") {
-                modalContentContainer.style.gap = "10px";
-                modalContentContainer.style.padding = "6px 15px";
-                modalContent.style.fontSize = "20px";
+                programsModalContent.style.gap = "10px";
+                programsModalContent.style.padding = "6px 15px";
+                programsModalText.style.fontSize = "20px";
             } else {
                 // Reset to default styles if another item is opened
-                modalContentContainer.style.gap = "45px";
-                modalContentContainer.style.padding = "20px 40px";
-                modalContent.style.fontSize = "25px";
+                programsModalContent.style.gap = "45px";
+                programsModalContent.style.padding = "20px 40px";
+                programsModalText.style.fontSize = "25px";
             }
-
-            programsModal.style.display = "flex";
         });
     });
 
