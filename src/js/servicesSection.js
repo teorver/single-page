@@ -1,21 +1,65 @@
-let modal = document.getElementById("servicesModal");
+const modalContentRU = {
+    "item-1": "Никто не выбирает быть зависимым. Это как клетка, которая находит птицу сама. Вы – человек, и пока Вы здесь у Вас есть выбор.",
+    "item-2": "Верю в то, что при обоюдном желании если не все отношения, то многие можно починить. Готовы?",
+    "item-3": "Никогда не поздно себе устроить счастливое детство. Долюбить. Добаюкать. И жить по своим правилам. Хотите?",
+    "item-4": "Не нравится? Не клеится? Всё достало? Не успешный не успех? А как вкусно именно Вам?",
+    "item-5": "Самое лучшее время для себя – сейчас.",
+    "item-6": "Цена vs ценность, говорить и быть услышанным, сказать: «Да» себе.",
+    "item-7": "Любая боль конечна. И только Вам решать, что будет определять Вашу дальнейшую жизнь."
+};
 
-  let span = document.getElementsByClassName("close")[0];
+const modalContentEN = {
+    "item-1": "Who or what controls your life?",
+    "item-2": "Find joy in relationships you choose. It’s your responsibility to love it or to change it.",
+    "item-3": "The most important thing in the world is family and love. If something is broken let’s try to fix it.",
+    "item-4": "If something is no longer working for you, you may change it.",
+    "item-5": "The better you feel about yourself, the less you feel the need to show off.",
+    "item-6": "Inhale confidence, exhale doubt.",
+    "item-7": "It’s not stress but your reaction on it is important.",
+    "item-8": "Your trauma is not your fault, but healing is your responsibility."
+};
 
-  let serviceItems = document.querySelectorAll('.services-list-item');
+// Function to determine if the page is in English
+function isEnglishPage() {
+    return window.location.pathname.includes('en.html');
+}
 
-  serviceItems.forEach(function(item) {
-    item.addEventListener('click', function() {
-      modal.style.display = "flex";
-    });
-  });
+// Function to open the modal with specific content
+function openModal(itemId) {
+    const modal = document.getElementById('servicesModal');
+    const modalText = document.querySelector('.modal-text');
 
-  span.onclick = function() {
-    modal.style.display = "none";
-  }
-
-  window.onclick = function(event) {
-    if (event.target == modal) {
-      modal.style.display = "none";
+    // Check if the page is in English and set the appropriate content
+    if (isEnglishPage()) {
+        modalText.textContent = modalContentEN[itemId];
+    } else {
+        modalText.textContent = modalContentRU[itemId];
     }
-  }
+
+    // Display the modal
+    modal.style.display = "block";
+}
+
+// Function to close the modal
+function closeModal() {
+    const modal = document.getElementById('servicesModal');
+    modal.style.display = "none";
+}
+
+// Add event listeners to each list item
+document.querySelectorAll('.services-list-item').forEach(item => {
+    item.addEventListener('click', function() {
+        openModal(this.id);
+    });
+});
+
+// Close the modal when clicking the close button
+document.querySelector('.close').addEventListener('click', closeModal);
+
+// Close the modal when clicking outside the modal content
+window.addEventListener('click', function(event) {
+    const modal = document.getElementById('servicesModal');
+    if (event.target === modal) {
+        closeModal();
+    }
+});
