@@ -30,33 +30,67 @@ document.addEventListener("DOMContentLoaded", () => {
             "- Программа вписывается в Ваш привычный график жизни и работы<br>" +
             "- В работу включаетесь с первого дня программы<br>" +
             "- Анонимно, конфиденциально<br>" +
-            "<strong>Что внутри:</strong><br>" +
+            "<strong>Что внутри:</strong>" +
             "- Понимание причины и следствия употребления/созависимого поведения<br>" +
             "- Разгребаем историю употребления и его последствий<br>" +
             "- Восстанавливаем сон, эмоциональную стабильность<br>" +
             "- Повышаем социальную активность<br>" +
             "- Заменяем деструктивные привычки на здоровые<br>" +
             "- На выходе Ваша физическая сила, выносливость и активность вырастут<br>" +
-            "<strong>В работе использованы:</strong><br>" +
+            "<strong>В работе использованы:</strong>" +
             "Минессотская модель выздоровления (12 шагов+психология)<br>" +
             "Комплекс физиологического восстановления<br>" +
             "28 дней медитативных практик, направленных визуализаций<br>" +
             "Видео материалы без нудных лекций<br>" +
             "Стабилизационный комплекс день-ночь<br>" +
-            "<strong>Формат онлайн работы:</strong><br>" +
+            "<strong>Формат онлайн работы:</strong>" +
             "Ежедневно утро и вечер.<br>" +
             "Выходные – время формировать новые здоровые привычки.<br>" +
             "Онлайн консультации* 2 раза в неделю (всего 8 + 1 вводная консультация) + поддержка в чате.<br>" +
             "*Длительность консультации 50 минут.<br>",
     };
 
+    // document.querySelectorAll(".product-item-btn").forEach(button => {
+    //     button.addEventListener("click", (event) => {
+    //         event.preventDefault();
+    //
+    //         const programId = button.closest(".program-item").id;
+    //
+    //         modalContent.innerHTML = programDescriptions[programId] || "Program description not available.";
+    //
+    //         programsModal.style.display = "flex";
+    //     });
+    // });
+    //
+    // closeModal.addEventListener("click", () => {
+    //     programsModal.style.display = "none";
+    // });
+    //
+    // window.addEventListener("click", (event) => {
+    //     if (event.target === programsModal) {
+    //         programsModal.style.display = "none";
+    //     }
+    // });
     document.querySelectorAll(".product-item-btn").forEach(button => {
         button.addEventListener("click", (event) => {
             event.preventDefault();
 
             const programId = button.closest(".program-item").id;
 
+            // Set the modal content
             modalContent.innerHTML = programDescriptions[programId] || "Program description not available.";
+
+            // Apply specific styles if program-item-3 is opened
+            if (programId === "program-item-3") {
+                modalContentContainer.style.gap = "10px";
+                modalContentContainer.style.padding = "6px 15px";
+                modalContent.style.fontSize = "20px";
+            } else {
+                // Reset to default styles if another item is opened
+                modalContentContainer.style.gap = "45px";
+                modalContentContainer.style.padding = "20px 40px";
+                modalContent.style.fontSize = "25px";
+            }
 
             programsModal.style.display = "flex";
         });
