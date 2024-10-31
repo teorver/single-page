@@ -102,7 +102,7 @@
   }
 }
 
-.product-btn{
+.product-item-btn{
   background-color: #df968c;
   padding: 20px;
   color: white;
@@ -111,6 +111,7 @@
   margin: 0 auto;
   font-size: 25px;
   justify-content: center;
+  cursor: pointer;
 
   @media (max-width: 1560px) {
     width: 100%;

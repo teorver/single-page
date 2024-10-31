@@ -21,7 +21,7 @@ const modalContentEN = {
 
 // Function to determine if the page is in English
 function isEnglishPage() {
-    return window.location.pathname.includes('en.html');
+    return window.location.pathname.includes('en.html' || 'en');
 }
 
 // Function to open the modal with specific content
