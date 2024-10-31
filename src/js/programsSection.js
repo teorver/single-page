@@ -52,6 +52,22 @@ document.addEventListener("DOMContentLoaded", () => {
             "*Длительность консультации 50 минут.<br>",
     };
 
+    function adjustModalStyles() {
+        const width = window.innerWidth;
+
+        if (width <= 480) {
+            programsModalText.style.fontSize = "14px";
+        } else if (width <= 640) {
+            programsModalText.style.fontSize = "15px";
+        } else if (width <= 1390) {
+            programsModalContent.style.width = "70%";
+            programsModalText.style.fontSize = "17px";
+        } else {
+            programsModalContent.style.width = "50%"; // Default width
+            programsModalText.style.fontSize = "25px"; // Default font size
+        }
+    }
+
     document.querySelectorAll(".product-item-btn").forEach(button => {
         button.addEventListener("click", (event) => {
             event.preventDefault();
@@ -66,7 +82,16 @@ document.addEventListener("DOMContentLoaded", () => {
                 programsModalContent.style.gap = "10px";
                 programsModalContent.style.padding = "6px 15px";
                 programsModalText.style.fontSize = "20px";
-                programsModalText.style.flexDirection = "column"
+                programsModalText.style.flexDirection = "column";
+
+                adjustModalStyles();
+                window.addEventListener("resize", adjustModalStyles);
+            } else {
+                programsModalContent.style.gap = "45px";
+                programsModalContent.style.padding = "20px 40px";
+                programsModalText.style.fontSize = "25px";
+
+                window.removeEventListener("resize", adjustModalStyles);
             }
         });
     });
