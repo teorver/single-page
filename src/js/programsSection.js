@@ -56,7 +56,9 @@ document.addEventListener("DOMContentLoaded", () => {
         const width = window.innerWidth;
 
         if (width <= 480) {
-            programsModalText.style.fontSize = "14px";
+            programsModalText.style.fontSize = "12px";
+            programsModalContent.style.gap = "5px";
+            programsModalContent.style.padding = "6px 5px";
         } else if (width <= 640) {
             programsModalText.style.fontSize = "15px";
         } else if (width <= 1390) {
@@ -74,6 +76,7 @@ document.addEventListener("DOMContentLoaded", () => {
             modalContent.innerHTML = programDescriptions[programId] || "Program description not available.";
 
             programsModal.style.display = "flex";
+            document.body.style.overflow = "hidden";
 
             if (programId === "program-item-3") {
                 programsModalContent.style.gap = "10px";
@@ -95,11 +98,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     closeModal.addEventListener("click", () => {
         programsModal.style.display = "none";
+        document.body.removeAttribute("overflow");
     });
 
     window.addEventListener("click", (event) => {
         if (event.target === programsModal) {
             programsModal.style.display = "none";
+            document.body.removeAttribute("overflow");
         }
     });
 });

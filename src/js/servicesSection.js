@@ -38,11 +38,13 @@ function openModal(itemId) {
     }
 
     modal.style.display = "block";
+    document.body.style.overflow = "hidden";
 }
 
 function closeModal() {
     const modal = document.getElementById('servicesModal');
     modal.style.display = "none";
+    document.body.removeAttribute("overflow");
 }
 
 document.querySelectorAll('.services-list-item').forEach(item => {
