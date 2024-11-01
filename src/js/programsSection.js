@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
             "*Длительность консультации 50 минут.<br>",
     };
 
-    function adjustModalStyles() {
+    function adjustRehabProgramModalStyles() {
         const width = window.innerWidth;
 
         if (width <= 480) {
@@ -67,6 +67,22 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
+    function adjustDefaultModalStyles() {
+        const width = window.innerWidth;
+
+        if (width <= 580) {
+            programsModalContent.style.gap = "5px";
+            programsModalContent.style.width = "95%";
+            programsModalContent.style.padding = "6px 10px";
+        } else if (width <= 900) {
+            programsModalContent.style.width = "90%";
+        } else if (width <= 1100) {
+            programsModalText.style.fontSize = "20px";
+        } else if (width <= 1390) {
+            programsModalContent.style.width = "50%";
+        }
+    }
+
     document.querySelectorAll(".product-item-btn").forEach(button => {
         button.addEventListener("click", (event) => {
             event.preventDefault();
@@ -75,25 +91,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
             modalContent.innerHTML = programDescriptions[programId] || "Program description not available.";
 
-            programsModal.style.display = "flex";
-            document.body.style.overflow = "hidden";
-
             if (programId === "program-item-3") {
                 programsModalContent.style.gap = "10px";
                 programsModalContent.style.padding = "6px 15px";
                 programsModalText.style.fontSize = "20px";
                 programsModalText.style.flexDirection = "column";
 
-                adjustModalStyles();
-                window.addEventListener("resize", adjustModalStyles);
+                adjustRehabProgramModalStyles();
+                window.addEventListener("resize", adjustRehabProgramModalStyles);
+            } else {
+                programsModalContent.style.gap = "45px";
+                programsModalContent.style.padding = "20px 40px";
+                programsModalText.style.fontSize = "25px";
+
+                adjustDefaultModalStyles();
+                window.addEventListener("resize", adjustDefaultModalStyles);
             }
-            // else {
-            //     programsModalContent.style.gap = "45px";
-            //     programsModalContent.style.padding = "20px 40px";
-            //     programsModalText.style.fontSize = "25px";
-            //
-            //     window.removeEventListener("resize", adjustModalStyles);
-            // }
+
+            programsModal.style.display = "flex";
+            document.body.style.overflow = "hidden";
         });
     });
 
