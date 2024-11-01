@@ -44,7 +44,7 @@ function openModal(itemId) {
 function closeModal() {
     const modal = document.getElementById('servicesModal');
     modal.style.display = "none";
-    document.body.removeAttribute("overflow");
+    document.body.style.overflow = "";
 }
 
 document.querySelectorAll('.services-list-item').forEach(item => {

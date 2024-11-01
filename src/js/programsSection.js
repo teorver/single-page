@@ -86,25 +86,26 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 adjustModalStyles();
                 window.addEventListener("resize", adjustModalStyles);
-            } else {
-                programsModalContent.style.gap = "45px";
-                programsModalContent.style.padding = "20px 40px";
-                programsModalText.style.fontSize = "25px";
-
-                window.removeEventListener("resize", adjustModalStyles);
             }
+            // else {
+            //     programsModalContent.style.gap = "45px";
+            //     programsModalContent.style.padding = "20px 40px";
+            //     programsModalText.style.fontSize = "25px";
+            //
+            //     window.removeEventListener("resize", adjustModalStyles);
+            // }
         });
     });
 
     closeModal.addEventListener("click", () => {
         programsModal.style.display = "none";
-        document.body.removeAttribute("overflow");
+        document.body.style.overflow = "";
     });
 
     window.addEventListener("click", (event) => {
         if (event.target === programsModal) {
             programsModal.style.display = "none";
-            document.body.removeAttribute("overflow");
+            document.body.style.overflow = "";
         }
     });
 });
