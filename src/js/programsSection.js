@@ -92,16 +92,6 @@ document.addEventListener("DOMContentLoaded", () => {
         const width = window.innerWidth;
         const devicePixelRatio = window.devicePixelRatio;
 
-        // if (width <= 480) {
-        //     programsModalText.style.fontSize = "11px";
-        //     programsModalContent.style.gap = "5px";
-        //     programsModalContent.style.padding = "6px 20px";
-        // } else if (width <= 640) {
-        //     programsModalText.style.fontSize = "14px";
-        // } else if (width <= 1390) {
-        //     programsModalContent.style.width = "70%";
-        //     programsModalText.style.fontSize = "16px";
-        // }
         if (width <= 480) {
             programsModalText.style.fontSize = devicePixelRatio === 1.25 ? "9" : "11px";
             programsModalContent.style.gap = devicePixelRatio === 1.25 ? "2" : "5px"
