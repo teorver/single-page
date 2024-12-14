@@ -90,16 +90,28 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function adjustRehabProgramModalStyles() {
         const width = window.innerWidth;
+        const devicePixelRatio = window.devicePixelRatio;
 
+        // if (width <= 480) {
+        //     programsModalText.style.fontSize = "11px";
+        //     programsModalContent.style.gap = "5px";
+        //     programsModalContent.style.padding = "6px 20px";
+        // } else if (width <= 640) {
+        //     programsModalText.style.fontSize = "14px";
+        // } else if (width <= 1390) {
+        //     programsModalContent.style.width = "70%";
+        //     programsModalText.style.fontSize = "16px";
+        // }
         if (width <= 480) {
-            programsModalText.style.fontSize = "11px";
-            programsModalContent.style.gap = "5px";
+            programsModalText.style.fontSize = devicePixelRatio === 1.25 ? "9" : "11px";
+            programsModalContent.style.gap = devicePixelRatio === 1.25 ? "2" : "5px"
             programsModalContent.style.padding = "6px 20px";
+            programsModalContent.style.gap = devicePixelRatio === 1.25 ? "1px" : "5px";
         } else if (width <= 640) {
-            programsModalText.style.fontSize = "14px";
+            programsModalText.style.fontSize = devicePixelRatio === 1.25 ? "11px" : "14px";
         } else if (width <= 1390) {
             programsModalContent.style.width = "70%";
-            programsModalText.style.fontSize = "16px";
+            programsModalText.style.fontSize = devicePixelRatio === 1.25 ? "14px" : "16px";
         }
     }
 
@@ -129,11 +141,12 @@ document.addEventListener("DOMContentLoaded", () => {
             modalContent.innerHTML = programDescriptions[programId] || "Program description not available.";
             programsModal.style.display = "flex";
             document.body.style.overflow = "hidden";
+            const devicePixelRatio = window.devicePixelRatio;
 
             if (programId === "program-item-3" || programId === "program-item-4") {
-                programsModalContent.style.gap = "10px";
+                programsModalContent.style.gap = devicePixelRatio === 1.25 ? "2px" : "10px";
                 programsModalContent.style.padding = "6px 15px";
-                programsModalText.style.fontSize = "18px";
+                programsModalText.style.fontSize = devicePixelRatio === 1.25 ? "13.75px" : "18px";
                 programsModalText.style.flexDirection = "column";
 
                 adjustRehabProgramModalStyles();
