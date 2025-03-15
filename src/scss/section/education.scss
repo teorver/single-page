@@ -160,32 +160,34 @@
   transform: rotate(90deg);
 }
 
-/* PhotoSwipe Custom Styles */
-.pswp {
+/* LightGallery Custom Styles */
+.lg-container {
   z-index: 10000; /* Ensure it’s on top */
 }
 
-.pswp__bg {
-  background: rgba(0, 0, 0, 0.8);
-}
-
-.pswp__img {
+.lg-image {
   border-radius: 8px;
   max-width: 90% !important;
   max-height: 90vh !important;
 }
 
-.pswp__caption__center {
+.lg-sub-html {
   color: #fff;
   font-size: 14px;
   padding: 10px;
   text-align: center;
 }
 
-.pswp__button {
+.lg-icon {
   opacity: 0.8;
 
   &:hover {
     opacity: 1;
   }
+}
+
+/* Ensure FlexSlider links are clickable */
+.flexslider .slides li a {
+  display: block !important;
+  pointer-events: auto !important;
 }

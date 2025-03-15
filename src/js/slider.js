@@ -25,7 +25,7 @@
 // });
 
 $(document).ready(function() {
-    console.log('Document ready, initializing FlexSlider and PhotoSwipe');
+    console.log('Document ready, initializing FlexSlider and LightGallery');
 
     // FlexSlider for Education
     $('.education-slider').flexslider({
@@ -61,49 +61,38 @@ $(document).ready(function() {
         }
     });
 
-    // PhotoSwipe initialization
-    const initPhotoSwipeFromDOM = function(gallerySelector) {
-        const galleryElements = document.querySelectorAll(gallerySelector);
-        galleryElements.forEach(function(element, index) {
-            element.setAttribute('data-pswp-index', index); // Add index for tracking
-            element.addEventListener('click', function(e) {
-                e.preventDefault();
-                console.log('Opening PhotoSwipe for:', this.getAttribute('data-pswp-src'));
+    // Initialize LightGallery for both sliders
+    lightGallery(document.querySelector('.education-slider .lg-gallery'), {
+        speed: 500,
+        download: false, // Disable download button
+        counter: true,
+        zoom: true,
+        thumbnail: true,
+        plugins: [],
+        dynamic: true,
+        dynamicEl: Array.from(document.querySelectorAll('.education-slider .lg-gallery a')).map(el => ({
+            src: el.getAttribute('data-src'),
+            thumb: el.querySelector('img').getAttribute('src'),
+            subHtml: el.getAttribute('data-sub-html')
+        })),
+        beforeOpen: () => console.log('LightGallery opening'),
+        afterOpen: () => console.log('LightGallery opened')
+    });
 
-                // Collect all gallery items
-                const items = [];
-                galleryElements.forEach(function(el) {
-                    const src = el.getAttribute('data-pswp-src');
-                    const width = parseInt(el.getAttribute('data-pswp-width'), 10);
-                    const height = parseInt(el.getAttribute('data-pswp-height'), 10);
-                    const alt = el.querySelector('img').getAttribute('alt');
-                    items.push({
-                        src: src,
-                        w: width,
-                        h: height,
-                        title: alt
-                    });
-                });
-
-                // Options for PhotoSwipe
-                const options = {
-                    index: parseInt(this.getAttribute('data-pswp-index'), 10),
-                    bgOpacity: 0.8,
-                    showHideOpacity: true,
-                    counterEl: true,
-                    shareEl: false,
-                    zoomEl: true,
-                    fullscreenEl: true
-                };
-
-                // Initialize PhotoSwipe
-                const pswpElement = document.querySelectorAll('.pswp')[0];
-                const gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, options);
-                gallery.init();
-            });
-        });
-    };
-
-    // Initialize PhotoSwipe for both sliders
-    initPhotoSwipeFromDOM('.image-gallery');
+    lightGallery(document.querySelector('.reviews-slider .lg-gallery'), {
+        speed: 500,
+        download: false,
+        counter: true,
+        zoom: true,
+        thumbnail: true,
+        plugins: [],
+        dynamic: true,
+        dynamicEl: Array.from(document.querySelectorAll('.reviews-slider .lg-gallery a')).map(el => ({
+            src: el.getAttribute('data-src'),
+            thumb: el.querySelector('img').getAttribute('src'),
+            subHtml: el.getAttribute('data-sub-html')
+        })),
+        beforeOpen: () => console.log('LightGallery opening'),
+        afterOpen: () => console.log('LightGallery opened')
+    });
 });
