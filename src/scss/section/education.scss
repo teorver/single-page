@@ -232,19 +232,20 @@
   justify-content: center !important;
   align-items: center !important;
   flex: 0 0 auto !important;
-  width: 300px !important; /* Override inline width */
-  height: auto !important; /* Override inline height if present */
-  margin-right: 0 !important; /* Override inline margin-right */
+  width: 33.33% !important; /* Approximately 1/3 for 3 items */
+  height: auto !important;
+  margin-right: 0 !important; /* Override inline margin */
   float: none !important; /* Override inline float */
   overflow: hidden;
   transition: transform 0.3s ease;
+  box-sizing: border-box; /* Include padding in width calculation */
 
   @media (max-width: 780px) {
-    width: 250px !important; /* Responsive override */
+    width: 33.33% !important; /* Maintain 3 items */
   }
 
   @media (max-width: 590px) {
-    width: 150px !important; /* Mobile override */
+    width: 50% !important; /* Reduce to 2 items on small screens */
   }
 
   &:hover {
@@ -252,23 +253,22 @@
   }
 }
 
-/* Override reviews slider to match education slider width */
 .reviews-slider .slides li {
-  width: 300px !important; /* Same base width as education slider */
+  width: 50% !important; /* Exactly 1/2 for 2 items */
   height: auto !important;
 
   @media (max-width: 780px) {
-    width: 250px !important; /* Match education slider */
+    width: 50% !important; /* Maintain 2 items */
   }
 
   @media (max-width: 590px) {
-    width: 150px !important; /* Match education slider */
+    width: 100% !important; /* 1 item on very small screens */
   }
 }
 
 .img__modifier, .img__modifier-review {
   width: 100%;
-  height: auto; /* Maintain aspect ratio */
+  height: auto;
   object-fit: cover;
   border-radius: 8px;
   cursor: pointer;
