@@ -213,31 +213,31 @@
   color: transparent;
   background: none;
 
-  &.flex-prev {
-    &::before {
-      content: '❮'; /* Custom left arrow */
-      font-size: 30px;
-      color: #333;
-      position: absolute;
-      left: 10px;
-      top: 50%;
-      transform: translateY(-50%);
-      text-indent: 0; /* Ensure the icon is visible */
-    }
-  }
-
-  &.flex-next {
-    &::before {
-      content: '❯'; /* Custom right arrow */
-      font-size: 30px;
-      color: #333;
-      position: absolute;
-      right: 10px;
-      top: 50%;
-      transform: translateY(-50%);
-      text-indent: 0; /* Ensure the icon is visible */
-    }
-  }
+  //&.flex-prev {
+  //  &::before {
+  //    content: '❮'; /* Custom left arrow */
+  //    font-size: 30px;
+  //    color: #333;
+  //    position: absolute;
+  //    left: 10px;
+  //    top: 50%;
+  //    transform: translateY(-50%);
+  //    text-indent: 0; /* Ensure the icon is visible */
+  //  }
+  //}
+  //
+  //&.flex-next {
+  //  &::before {
+  //    content: '❯'; /* Custom right arrow */
+  //    font-size: 30px;
+  //    color: #333;
+  //    position: absolute;
+  //    right: 10px;
+  //    top: 50%;
+  //    transform: translateY(-50%);
+  //    text-indent: 0; /* Ensure the icon is visible */
+  //  }
+  //}
 }
 
 /* Custom Image Viewer Styles */
