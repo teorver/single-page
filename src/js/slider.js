@@ -16,8 +16,8 @@ $(document).ready(function() {
         itemWidth: 300,
         itemMargin: 0,
         minItems: 1,
-        maxItems: 2,
-        move: 2,
+        maxItems: 3,
+        move: 3,
         controlNav: false,
     });
 
