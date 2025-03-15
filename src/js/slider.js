@@ -8,7 +8,6 @@ $(document).ready(function() {
         maxItems: 3,
         move: 3,
         controlNav: false,
-        directionNav: true,
     });
 
     $('.reviews-slider').flexslider({
@@ -20,7 +19,6 @@ $(document).ready(function() {
         maxItems: 2,
         move: 2,
         controlNav: false,
-        directionNav: true,
     });
 
     // Handle image viewer open event
