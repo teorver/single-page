@@ -113,7 +113,6 @@ $(document).ready(function() {
             .html('❮')
             .css({
                 position: 'absolute',
-                left: '20px',
                 top: '50%',
                 transform: 'translateY(-50%)',
                 fontSize: '40px',
@@ -132,7 +131,6 @@ $(document).ready(function() {
             .html('❯')
             .css({
                 position: 'absolute',
-                right: '20px',
                 top: '50%',
                 transform: 'translateY(-50%)',
                 fontSize: '40px',
