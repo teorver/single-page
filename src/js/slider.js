@@ -9,6 +9,12 @@ $(document).ready(function() {
         move: 3,
         controlNav: false,
         directionNav: true,
+        before: function(slider) {
+        // Remove default text from navigation
+        $('.flex-direction-nav a').each(function() {
+            $(this).text(''); // Clear the text
+        });
+    }
     });
 
     $('.reviews-slider').flexslider({
@@ -21,6 +27,12 @@ $(document).ready(function() {
         move: 2,
         controlNav: false,
         directionNav: true,
+        before: function(slider) {
+        // Remove default text from navigation
+        $('.flex-direction-nav a').each(function() {
+            $(this).text(''); // Clear the text
+        });
+    }
     });
 
     // Handle image viewer open event
@@ -75,45 +87,6 @@ $(document).ready(function() {
                 border: 'none'
             });
 
-        // Create navigation arrows
-        // const prevArrow = $('<div>').addClass('image-viewer-arrow image-viewer-arrow-prev')
-        //     .html('❮')
-        //     .css({
-        //         position: 'absolute',
-        //         left: '20px',
-        //         top: '50%',
-        //         transform: 'translateY(-50%)',
-        //         fontSize: '40px',
-        //         color: '#fff',
-        //         cursor: 'pointer',
-        //         opacity: 0.8,
-        //         zIndex: 10001
-        //     })
-        //     .on('click', function(e) {
-        //         e.stopPropagation(); // Prevent closing the overlay
-        //         currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
-        //         updateImage();
-        //     });
-        //
-        // const nextArrow = $('<div>').addClass('image-viewer-arrow image-viewer-arrow-next')
-        //     .html('❯')
-        //     .css({
-        //         position: 'absolute',
-        //         right: '20px',
-        //         top: '50%',
-        //         transform: 'translateY(-50%)',
-        //         fontSize: '40px',
-        //         color: '#fff',
-        //         cursor: 'pointer',
-        //         opacity: 0.8,
-        //         zIndex: 10001
-        //     })
-        //     .on('click', function(e) {
-        //         e.stopPropagation(); // Prevent closing the overlay
-        //         currentImageIndex = (currentImageIndex + 1) % images.length;
-        //         updateImage();
-        //     });
-
         // Function to update the image
         function updateImage() {
             const imageData = images[currentImageIndex];
@@ -141,7 +114,6 @@ $(document).ready(function() {
         });
 
         // Append elements
-        // imageContainer.append(prevArrow).append(image).append(nextArrow);
         imageContainer.append(image);
         overlay.append(imageContainer);
         $('body').append(overlay);
