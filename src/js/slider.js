@@ -8,7 +8,7 @@ $(document).ready(function() {
         maxItems: 3,
         controlNav: false,
         directionNav: true,
-        smoothHeight: true // Allows height to adapt responsively
+        smoothHeight: true // Allows height to adapt
     });
 
     $('.reviews-slider').flexslider({
