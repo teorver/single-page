@@ -5,7 +5,7 @@
   padding: 40px 87px;
   background: #f8f5f7;
   border: none;
-  overflow-x: hidden !important;
+  overflow-x: hidden;
 
   @media (max-width: 1200px) {
     padding: 40px;
@@ -25,8 +25,6 @@
   flex-direction: row;
   align-items: center;
   flex-wrap: nowrap;
-  width: 100%;
-  overflow-x: hidden;
 }
 
 .flexslider .slides li {
@@ -160,49 +158,6 @@
 
 .edu-3{
   transform: rotate(90deg);
-}
-
-/* Mobile Adjustments */
-@media (max-width: 768px) {
-  .flexslider {
-    .slides li {
-      width: 100% !important; /* Force single slide per view */
-    }
-
-    .slides li img {
-      width: 100% !important;
-      max-width: 100% !important; /* Prevent images from exceeding viewport */
-    }
-
-    /* Adjust navigation arrows for mobile */
-    .flex-direction-nav {
-      a {
-        width: 30px;
-        height: 30px;
-
-        &.flex-prev::before,
-        &.flex-next::before {
-          font-size: 24px;
-          left: 5px; /* Adjust for smaller arrows */
-          right: 5px;
-        }
-      }
-    }
-  }
-
-  /* Ensure education slider adjusts */
-  .education-slider {
-    .slides li {
-      width: 100% !important;
-    }
-  }
-
-  /* Ensure reviews slider adjusts */
-  .reviews-slider {
-    .slides li {
-      width: 100% !important;
-    }
-  }
 }
 
 .image-viewer-overlay {
