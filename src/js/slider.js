@@ -9,7 +9,6 @@ $(document).ready(function() {
         move: 3,        // Move 3 items at a time
         controlNav: false,
         directionNav: true,
-        smoothHeight: true
     });
 
     $('.reviews-slider').flexslider({
@@ -22,6 +21,5 @@ $(document).ready(function() {
         move: 2,        // Move 2 items at a time
         controlNav: false,
         directionNav: true,
-        smoothHeight: true
     });
 });
