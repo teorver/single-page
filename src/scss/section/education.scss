@@ -206,6 +206,10 @@
   object-fit: cover;
 }
 
+.flex-direction-nav a {
+  height: auto;
+}
+
 /* Custom Image Viewer Styles */
 .image-viewer-overlay {
   position: fixed;

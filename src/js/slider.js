@@ -9,12 +9,6 @@ $(document).ready(function() {
         move: 3,
         controlNav: false,
         directionNav: true,
-        before: function(slider) {
-        // Remove default text from navigation
-        $('.flex-direction-nav a').each(function() {
-            $(this).text(''); // Clear the text
-        });
-    }
     });
 
     $('.reviews-slider').flexslider({
@@ -27,12 +21,6 @@ $(document).ready(function() {
         move: 2,
         controlNav: false,
         directionNav: true,
-        before: function(slider) {
-        // Remove default text from navigation
-        $('.flex-direction-nav a').each(function() {
-            $(this).text(''); // Clear the text
-        });
-    }
     });
 
     // Handle image viewer open event
