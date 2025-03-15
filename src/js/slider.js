@@ -23,22 +23,36 @@ $(document).ready(function() {
         directionNav: true,
     });
 
-    // Initialize Magnific Popup for image galleries
     $('.image-gallery').magnificPopup({
         type: 'image',
         gallery: {
-            enabled: true, // Enable gallery mode
+            enabled: true,
             navigateByImgClick: true,
-            preload: [0,1] // Preload previous and next images
+            preload: [0, 1] // Preload previous and next images
         },
         image: {
             titleSrc: function(item) {
-                return item.el.find('img').attr('alt'); // Use the alt text as the caption
+                return item.el.find('img').attr('alt'); // Use alt text as caption
             }
         },
-        removalDelay: 300, // Delay for closing animation
-        mainClass: 'mfp-fade', // Fade animation
+        removalDelay: 300,
+        mainClass: 'mfp-fade',
         closeOnContentClick: true,
-        closeBtnInside: true
+        closeBtnInside: true,
+        callbacks: {
+            beforeOpen: function() {
+                console.log('Magnific Popup opening for:', this.st.el[0].href); // Debug log
+            },
+            open: function() {
+                console.log('Magnific Popup opened'); // Debug log
+            },
+            beforeClose: function() {
+                console.log('Magnific Popup closing'); // Debug log
+            }
+        }
+    }).on('click', function(e) {
+        e.preventDefault(); // Ensure default link behavior is prevented
+        console.log('Clicked link:', $(this).attr('href')); // Debug click event
+        $(this).magnificPopup('open');
     });
 });

@@ -131,6 +131,7 @@
 /* Magnific Popup Custom Styles */
 .mfp-container {
   padding: 20px;
+  visibility: visible !important;
 }
 
 .mfp-content {
@@ -202,6 +203,11 @@
   &.mfp-removing {
     opacity: 0;
   }
+}
+
+/* Ensure FlexSlider doesn't interfere */
+.flexslider .slides li a {
+  display: block !important; /* Ensure links are clickable */
 }
 
 .swiper-header{
