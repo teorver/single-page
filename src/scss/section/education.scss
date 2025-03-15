@@ -128,88 +128,6 @@
   }
 }
 
-/* Magnific Popup Custom Styles */
-.mfp-container {
-  visibility: visible !important;
-  opacity: 1 !important;
-}
-
-.mfp-content {
-  display: block !important;
-}
-
-.mfp-img {
-  display: block !important;
-  max-width: 100% !important;
-  max-height: 100% !important;
-}
-
-.mfp-figure {
-  background: #fff;
-  padding: 10px;
-  border-radius: 8px;
-}
-
-.mfp-title {
-  color: #333;
-  font-size: 14px;
-  padding: 10px 0;
-  text-align: center;
-}
-
-.mfp-close {
-  color: #fff;
-  font-size: 40px;
-  opacity: 0.8;
-  top: 10px;
-  right: 10px;
-
-  &:hover {
-    opacity: 1;
-  }
-}
-
-.mfp-arrow {
-  color: #fff;
-  font-size: 40px;
-  opacity: 0.8;
-
-  &:hover {
-    opacity: 1;
-  }
-}
-
-.mfp-fade.mfp-bg {
-  opacity: 0;
-  transition: opacity 0.3s ease-out;
-
-  &.mfp-ready {
-    opacity: 0.8;
-  }
-
-  &.mfp-removing {
-    opacity: 0;
-  }
-}
-
-.mfp-fade.mfp-wrap .mfp-content {
-  opacity: 0;
-  transition: opacity 0.3s ease-out;
-
-  &.mfp-ready {
-    opacity: 1;
-  }
-
-  &.mfp-removing {
-    opacity: 0;
-  }
-}
-
-/* Ensure FlexSlider doesn't interfere */
-.flexslider .slides li a {
-  display: block !important; /* Ensure links are clickable */
-}
-
 .swiper-header{
   font-weight: bold;
   font-size: 64px;
@@ -240,4 +158,34 @@
 
 .edu-3{
   transform: rotate(90deg);
+}
+
+/* PhotoSwipe Custom Styles */
+.pswp {
+  z-index: 10000; /* Ensure it’s on top */
+}
+
+.pswp__bg {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.pswp__img {
+  border-radius: 8px;
+  max-width: 90% !important;
+  max-height: 90vh !important;
+}
+
+.pswp__caption__center {
+  color: #fff;
+  font-size: 14px;
+  padding: 10px;
+  text-align: center;
+}
+
+.pswp__button {
+  opacity: 0.8;
+
+  &:hover {
+    opacity: 1;
+  }
 }
