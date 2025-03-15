@@ -62,28 +62,6 @@ $(document).ready(function() {
         }
     });
 
-    // $('.education-slider').flexslider({
-    //     animation: 'slide',
-    //     slideshow: false,
-    //     itemWidth: 300,
-    //     itemMargin: 0,
-    //     minItems: 1,
-    //     maxItems: 3,
-    //     move: 3,
-    //     controlNav: false,
-    // });
-    //
-    // $('.reviews-slider').flexslider({
-    //     animation: 'slide',
-    //     slideshow: false,
-    //     itemWidth: 300,
-    //     itemMargin: 0,
-    //     minItems: 1,
-    //     maxItems: 3,
-    //     move: 3,
-    //     controlNav: false,
-    // });
-
     $('.image-viewer-trigger').on('click', function(e) {
         e.preventDefault();
 
@@ -128,6 +106,45 @@ $(document).ready(function() {
                 cursor: 'pointer',
                 objectFit: 'cover',
                 border: 'none'
+            });
+
+        // Create navigation arrows
+        const prevArrow = $('<div>').addClass('image-viewer-arrow image-viewer-arrow-prev')
+            .html('❮')
+            .css({
+                position: 'absolute',
+                left: '20px',
+                top: '50%',
+                transform: 'translateY(-50%)',
+                fontSize: '40px',
+                color: '#fff',
+                cursor: 'pointer',
+                opacity: 0.8,
+                zIndex: 10001
+            })
+            .on('click', function (e) {
+                e.stopPropagation(); // Prevent closing the overlay
+                currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+                updateImage();
+            });
+
+        const nextArrow = $('<div>').addClass('image-viewer-arrow image-viewer-arrow-next')
+            .html('❯')
+            .css({
+                position: 'absolute',
+                right: '20px',
+                top: '50%',
+                transform: 'translateY(-50%)',
+                fontSize: '40px',
+                color: '#fff',
+                cursor: 'pointer',
+                opacity: 0.8,
+                zIndex: 10001
+            })
+            .on('click', function (e) {
+                e.stopPropagation(); // Prevent closing the overlay
+                currentImageIndex = (currentImageIndex + 1) % images.length;
+                updateImage();
             });
 
         function updateImage() {
