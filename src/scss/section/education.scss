@@ -185,3 +185,81 @@
     }
   }
 }
+
+/* Ensure FlexSlider links and images have no border or padding */
+.flexslider .slides li a {
+  display: block !important;
+  pointer-events: auto !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: none !important;
+}
+
+.flexslider .slides li img {
+  display: block;
+  width: 100%;
+  height: auto;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: none !important;
+  object-fit: cover;
+}
+
+/* Custom Image Viewer Styles */
+.image-viewer-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 10000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer; /* Indicate the overlay is clickable */
+}
+
+.image-viewer-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.viewer-image {
+  max-width: 90%;
+  max-height: 90vh;
+  border-radius: 8px;
+  cursor: pointer;
+  object-fit: cover;
+  border: none !important;
+  transition: opacity 0.3s ease;
+
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+.image-viewer-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 40px;
+  color: #fff;
+  cursor: pointer;
+  opacity: 0.8;
+  z-index: 10001;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.image-viewer-arrow-prev {
+  left: 20px;
+}
+
+.image-viewer-arrow-next {
+  right: 20px;
+}
