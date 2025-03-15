@@ -208,7 +208,7 @@
 
 .flex-direction-nav a {
   height: auto;
-  content: "";
+  color: transparent;
 
   &.flex-prev {
     &::before {
@@ -232,7 +232,7 @@
       right: 10px;
       top: 50%;
       transform: translateY(-50%);
-      text-indent: 0; /* Ensure the icon is visible */
+      text-indent: 0;
     }
   }
 }
