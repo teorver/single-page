@@ -5,12 +5,17 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="icon" type="image/x-icon" href="/src/images/favicon_lotus.png">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4/dist/fancybox.css"/>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4/dist/fancybox.umd.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/exif-js"></script>
+    <link rel="icon" type="image/x-icon" href="/images/favicon_lotus.png">
+    <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.7.2/flexslider.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4/dist/fancybox.css"/>-->
+    <!--<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>-->
+    <!--<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4/dist/fancybox.umd.js"></script>-->
+    <!--<script src="https://cdn.jsdelivr.net/npm/exif-js"></script>-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.7.2/jquery.flexslider.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!--<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4/dist/fancybox.umd.js"></script>-->
+    <!--<script src="https://cdn.jsdelivr.net/npm/exif-js"></script>-->
     <link rel="stylesheet" href="scss/index.scss">
     <title>Ирина Карпович</title>
 </head>
@@ -30,7 +35,7 @@
                     <a href="#about-me" class="tab__element">Обо мне</a>
                     <a href="#services" class="tab__element">Услуги</a>
                     <a href="#programs" class="tab__element">Программы</a>
-                    <a href="#payment" class="tab__element">Оплата</a>
+                    <!--<a href="#payment" class="tab__element">Оплата</a>-->
                     <a href="#education" class="tab__element">Образование</a>
                     <a href="#reviews" class="tab__element">Отзывы</a>
                     <a href="#contacts" class="tab__element">Контакты</a>
@@ -100,6 +105,18 @@
                         <source src="video/services_new.mp4" type="video/mp4">
                     </video>
                 </div>
+                <!--<div class="services-video">-->
+                <!--    <div class="video-wrapper">-->
+                <!--        <iframe-->
+                <!--            src="https://www.youtube.com/embed/xZgJ9-mVCIw?si=e82AUyZMQudNQs26&modestbranding=1&rel=0"-->
+                <!--            frameborder="0"-->
+                <!--            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"-->
+                <!--            referrerpolicy="strict-origin-when-cross-origin"-->
+                <!--            allowfullscreen-->
+                <!--            class="services-main-video">-->
+                <!--        </iframe>-->
+                <!--    </div>-->
+                <!--</div>-->
             </div>
         </div>
         <div class="services-apply">
@@ -107,6 +124,7 @@
                 <span class="service-span-1" >* по курсу НБРБ на день оплаты.</span>
                 <span class="service-span-1" >Работаю со взрослыми и подростками 18+</span>
                 <a href="https://t.me/irinakarpowitch" class="services-btn">Записаться</a>
+                <!--<a href="https://api.bepaid.by/products/prd_a49ad66717615573/pay" class="services-btn">Оплатить</a>-->
             </div>
     </section>
     <section class="wrapper programs-modifier" id="programs">
@@ -114,13 +132,14 @@
             <h2 class="programs-header">Программы</h2>
             <div class="programs-options">
                 <div class="program-item" id="program-item-1">
-                    <p class="program-item__header">Пережить расставание. Мини-курс</p>
+                    <p class="program-item__header">Пережить расставание. Мини-курс для самостоятельной работы</p>
                     <span class="program__list-item list-item_modifier">Скоро</span>
                     <ul class="program__list">
                         <li class="program__list-item">30$*/100 BYN/3000 RUB</li>
                         <li class="program__list-item">* по курсу НБРБ на день оплаты.</li>
                     </ul>
                     <button class="product-item-btn">Подробнее</button>
+                    <!--<a href="https://t.me/irinakarpowitch" class="product-item-btn">Оплатить</a>-->
                 </div>
                 <div class="program-item" id="program-item-2">
                     <p class="program-item__header">Пережить расставание. Heart rock. 21 день. Онлайн программа</p>
@@ -130,6 +149,7 @@
                         <li class="program__list-item">* по курсу НБРБ на день оплаты.</li>
                     </ul>
                     <button class="product-item-btn">Подробнее</button>
+                    <!--<a href="https://t.me/irinakarpowitch" class="product-item-btn">Оплатить</a>-->
                 </div>
                 <div class="program-item" id="program-item-3">
                     <p class="program-item__header">Rehab 28</p>
@@ -139,146 +159,285 @@
                         <li class="program__list-item">500$*/≈1700 BYN/≈50000 RUB</li>
                         <li class="program__list-item">* по курсу НБРБ на день оплаты.</li>
                     </ul>
-                    <button class="product-item-btn">Подробнее</button>
+                    <button class="product-item-btn__pay">Подробнее</button>
+                    <a href="https://api.bepaid.by/products/prd_075dcac89ecf24a8/pay" class="product-item-btn">Оплатить</a>
                 </div>
                 <div class="program-item" id="program-item-4">
                     <p class="program-item__header">Вне СОЗЫ доступа</p>
                     <ul class="program__list">
-                        <li class="program__list-item">COЗАВИСИМОСТЬ.</li>
+                        <li class="program__list-item">СОЗАВИСИМОСТЬ.</li>
                         <li class="program__list-item">Онлайн</li>
                         <li class="program__list-item">500$*/≈1700 BYN/≈50000 RUB</li>
                         <li class="program__list-item">* по курсу НБРБ на день оплаты.</li>
                     </ul>
                     <button class="product-item-btn">Подробнее</button>
+                    <a href="https://api.bepaid.by/products/prd_9edfaad83560cb7f/pay" class="product-item-btn__pay">Оплатить</a>
                 </div>
             </div>
-            <h2 class="programs-header" id="payment">Оплата</h2>
-            <div class="program-item payment-modifier">
-                    <p class="program-item__header">Свободный платёж</p>
-                    <ul>
-                        <li class="program__list-item">Стоимость по курсу НБРБ на день оплаты.</li>
-                    </ul>
-                    <a href="https://t.me/irinakarpowitch" class="modal-btn">Оплата</a>
-            </div>
+            <!--<h2 class="programs-header" id="payment">Оплата</h2>-->
+            <!--<div class="program-item payment-modifier">-->
+            <!--        <p class="program-item__header">Свободный платёж</p>-->
+            <!--        <ul>-->
+            <!--            <li class="program__list-item">Стоимость по курсу НБРБ на день оплаты.</li>-->
+            <!--        </ul>-->
+            <!--        <a href="https://t.me/irinakarpowitch" class="modal-btn">Оплата</a>-->
+            <!--</div>-->
         </div>
     </section>
     <h2 class="swiper-header" id="education">Образование</h2>
-    <section class="swiper">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <a href="images/education/edu_01.jpg" data-fancybox="gallery" class="fancybox-item">
-                    <img src="images/education/edu_01.jpg" alt="#" class="img__modifier">
+    <section class="flexslider education-slider">
+        <ul class="slides">
+            <li>
+                <a href="images/education/edu_01.jpg" data-src="images/education/edu_01.jpg">
+                    <img src="images/thumbnails/edu_011741983026.jpg" alt="Education 1" class="img__modifier">
                 </a>
-            </div>
-            <div class="swiper-slide">
-                <a href="images/education/edu_15.jpg" data-fancybox="gallery">
-                    <img src="images/education/edu_15.jpg" alt="#" class="img__modifier">
+            </li>
+            <li>
+                <a href="images/education/edu_15.jpg" data-src="images/education/edu_15.jpg" >
+                    <img src="images/thumbnails/edu_151741983028.jpg" alt="Education 15" class="img__modifier">
                 </a>
-            </div>
-            <div class="swiper-slide">
-                <a href="images/education/edu_02.jpg" data-fancybox="gallery">
-                    <img src="images/education/edu_02.jpg" alt="#" class="img__modifier">
+            </li>
+            <li>
+                <a href="images/education/edu_02.jpg" data-src="images/education/edu_02.jpg" data-fancybox="gallery" class="fancybox-item">
+                    <img src="images/thumbnails/edu_021741983027.jpg" alt="Education 2" class="img__modifier">
                 </a>
-            </div>
-            <div class="swiper-slide">
-                <a href="images/education/edu_03.jpg" data-fancybox="gallery">
-                    <img src="images/education/edu_03.jpg" alt="#" class="img__modifier">
+            </li>
+            <li>
+                <a href="images/education/edu_03.jpg" data-src="images/education/edu_03.jpg" data-fancybox="gallery" class="fancybox-item">
+                    <img src="images/thumbnails/edu_031741983026.jpg" alt="Education 3" class="img__modifier">
                 </a>
-            </div>
-            <div class="swiper-slide">
-                <a href="images/education/edu_04.jpg" data-fancybox="gallery">
-                    <img src="images/education/edu_04.jpg" alt="#" class="img__modifier">
+            </li>
+            <li>
+                <a href="images/education/edu_04.jpg" data-src="images/education/edu_04.jpg" data-fancybox="gallery" class="fancybox-item">
+                    <img src="images/thumbnails/edu_041741983026.jpg" alt="Education 4" class="img__modifier">
                 </a>
-            </div>
-            <div class="swiper-slide">
-                <a href="images/education/edu_05.jpg" data-fancybox="gallery">
-                    <img src="images/education/edu_05.jpg" alt="#" class="img__modifier">
+            </li>
+            <li>
+                <a href="images/education/edu_05.jpg" data-src="images/education/edu_05.jpg" data-fancybox="gallery" class="fancybox-item">
+                    <img src="images/thumbnails/edu_051741983026.jpg" alt="Education 5" class="img__modifier">
                 </a>
-            </div>
-            <div class="swiper-slide">
-                <a href="images/education/edu_06.jpg" data-fancybox="gallery">
-                    <img src="images/education/edu_06.jpg" alt="#" class="img__modifier">
+            </li>
+            <li>
+                <a href="images/education/edu_06.jpg" data-src="images/education/edu_06.jpg" data-fancybox="gallery" class="fancybox-item">
+                    <img src="images/thumbnails/edu_061741983027.jpg" alt="Education 6" class="img__modifier">
                 </a>
-            </div>
-            <div class="swiper-slide">
-                <a href="images/education/edu_07.jpg" data-fancybox="gallery">
-                    <img src="images/education/edu_07.jpg" alt="#" class="img__modifier">
+            </li>
+            <li>
+                <a href="images/education/edu_07.jpg" data-src="images/education/edu_07.jpg" data-fancybox="gallery" class="fancybox-item">
+                    <img src="images/thumbnails/edu_071741983027.jpg" alt="Education 7" class="img__modifier">
                 </a>
-            </div>
-            <div class="swiper-slide">
-                <a href="images/education/edu_09_1720426512299.jpg" data-fancybox="gallery">
-                    <img src="images/education/edu_09_1720426512299.jpg" alt="#" class="img__modifier">
+            </li>
+            <li>
+                <a href="images/education/edu_09_1720426512299.jpg" data-src="images/education/edu_09_1720426512299.jpg" data-fancybox="gallery" class="fancybox-item">
+                    <img src="images/thumbnails/edu_09_17204265122991741983027.jpg" alt="#" class="img__modifier">
                 </a>
-            </div>
-            <div class="swiper-slide">
-                <a href="images/education/edu_10_1720426553144.jpg" data-fancybox="gallery">
-                    <img src="images/education/edu_10_1720426553144.jpg" alt="#" class="img__modifier">
+            </li>
+            <li>
+                <a href="images/education/edu_10_1720426553144.jpg" data-src="images/education/edu_10_1720426553144.jpg" data-fancybox="gallery" class="fancybox-item">
+                    <img src="images/thumbnails/edu_10_17204265531441741983027.jpg" alt="#" class="img__modifier">
                 </a>
-            </div>
-            <div class="swiper-slide">
-                <a href="images/education/edu_11_1720426586749.jpg" data-fancybox="gallery">
-                    <img src="images/education/edu_11_1720426586749.jpg" alt="#" class="img__modifier">
+            </li>
+            <li>
+                <a href="images/education/edu_11_1720426586749.jpg" data-src="images/education/edu_11_1720426586749.jpg" data-fancybox="gallery" class="fancybox-item">
+                    <img src="images/thumbnails/edu_11_17204265867491741983027.jpg" alt="#" class="img__modifier">
                 </a>
-            </div>
-            <div class="swiper-slide">
-                <a href="images/education/edu_12.jpg" data-fancybox="gallery">
-                    <img src="images/education/edu_12.jpg" alt="#" class="img__modifier">
+            </li>
+            <li>
+                <a href="images/education/edu_12.jpg" data-src="images/education/edu_12.jpg" data-fancybox="gallery" class="fancybox-item">
+                    <img src="images/thumbnails/edu_121741983028.jpg" alt="#" class="img__modifier">
                 </a>
-            </div>
-            <div class="swiper-slide">
-                <a href="images/education/edu_13.jpg" data-fancybox="gallery">
-                    <img src="images/education/edu_13.jpg" alt="#" class="img__modifier">
+            </li>
+            <li>
+                <a href="images/education/edu_13.jpg" data-src="images/education/edu_13.jpg" data-fancybox="gallery" class="fancybox-item">
+                    <img src="images/thumbnails/edu_131741983028.jpg" alt="#" class="img__modifier">
                 </a>
-            </div>
-            <div class="swiper-slide">
-                <a href="images/education/edu_14_1720427019743.jpg" data-fancybox="gallery">
-                    <img src="images/education/edu_14_1720427019743.jpg" alt="#" class="img__modifier">
+            </li>
+            <li>
+                <a href="images/education/edu_14_1720427019743.jpg" data-src="images/education/edu_14_1720427019743.jpg" data-fancybox="gallery" class="fancybox-item">
+                    <img src="images/thumbnails/edu_14_17204270197431741983028.jpg" alt="#" class="img__modifier">
                 </a>
-            </div>
-        </div>
-        <div class="swiper-pagination"></div>
+            </li>
+            <li>
+                <a href="images/education/edu_16.jpg" data-src="images/education/edu_16.jpg" data-fancybox="gallery" class="fancybox-item">
+                    <img src="images/thumbnails/edu_161741983026.jpg" alt="#" class="img__modifier">
+                </a>
+            </li>
+            <li>
+                <a href="images/education/edu_17.jpg" data-src="images/education/edu_17.jpg" data-fancybox="gallery" class="fancybox-item">
+                    <img src="images/thumbnails/edu_171741983025.jpg" alt="#" class="img__modifier">
+                </a>
+            </li>
+        </ul>
     </section>
+
+    <!--<section class="swiper">-->
+    <!--    <div class="swiper-wrapper">-->
+    <!--        <div class="swiper-slide">-->
+    <!--            <a href="images/education/edu_01.jpg" data-src="images/education/edu_01.jpg" data-fancybox="gallery" class="fancybox-item">-->
+    <!--                <img src="images/thumbnails/edu_011741983026.jpg" alt="Education 1" class="img__modifier">-->
+    <!--            </a>-->
+    <!--        </div>-->
+    <!--        <div class="swiper-slide">-->
+    <!--            <a href="images/education/edu_15.jpg" data-src="images/education/edu_15.jpg" data-fancybox="gallery" class="fancybox-item">-->
+    <!--                <img src="images/thumbnails/edu_151741983028.jpg" alt="Education 15" class="img__modifier">-->
+    <!--            </a>-->
+    <!--        </div>-->
+    <!--        <div class="swiper-slide">-->
+    <!--            <a href="images/education/edu_02.jpg" data-src="images/education/edu_02.jpg" data-fancybox="gallery" class="fancybox-item">-->
+    <!--                <img src="images/thumbnails/edu_021741983027.jpg" alt="Education 2" class="img__modifier">-->
+    <!--            </a>-->
+    <!--        </div>-->
+    <!--        <div class="swiper-slide">-->
+    <!--            <a href="images/education/edu_03.jpg" data-src="images/education/edu_03.jpg" data-fancybox="gallery" class="fancybox-item">-->
+    <!--                <img src="images/thumbnails/edu_031741983026.jpg" alt="Education 3" class="img__modifier">-->
+    <!--            </a>-->
+    <!--        </div>-->
+    <!--        <div class="swiper-slide">-->
+    <!--            <a href="images/education/edu_04.jpg" data-src="images/education/edu_04.jpg" data-fancybox="gallery" class="fancybox-item">-->
+    <!--                <img src="images/thumbnails/edu_041741983026.jpg" alt="Education 4" class="img__modifier">-->
+    <!--            </a>-->
+    <!--        </div>-->
+    <!--        <div class="swiper-slide">-->
+    <!--            <a href="images/education/edu_05.jpg" data-src="images/education/edu_05.jpg" data-fancybox="gallery" class="fancybox-item">-->
+    <!--                <img src="images/thumbnails/edu_051741983026.jpg" alt="Education 5" class="img__modifier">-->
+    <!--            </a>-->
+    <!--        </div>-->
+    <!--        <div class="swiper-slide">-->
+    <!--            <a href="images/education/edu_06.jpg" data-src="images/education/edu_06.jpg" data-fancybox="gallery" class="fancybox-item">-->
+    <!--                <img src="images/thumbnails/edu_061741983027.jpg" alt="Education 6" class="img__modifier">-->
+    <!--            </a>-->
+    <!--        </div>-->
+    <!--        <div class="swiper-slide">-->
+    <!--            <a href="images/education/edu_07.jpg" data-src="images/education/edu_07.jpg" data-fancybox="gallery" class="fancybox-item">-->
+    <!--                <img src="images/thumbnails/edu_071741983027.jpg" alt="Education 7" class="img__modifier">-->
+    <!--            </a>-->
+    <!--        </div>-->
+    <!--        <div class="swiper-slide">-->
+    <!--            <a href="images/education/edu_09_1720426512299.jpg" data-src="images/education/edu_09_1720426512299.jpg" data-fancybox="gallery" class="fancybox-item">-->
+    <!--                <img src="images/thumbnails/edu_09_17204265122991741983027.jpg" alt="#" class="img__modifier">-->
+    <!--            </a>-->
+    <!--        </div>-->
+    <!--        <div class="swiper-slide">-->
+    <!--            <a href="images/education/edu_10_1720426553144.jpg" data-src="images/education/edu_10_1720426553144.jpg" data-fancybox="gallery" class="fancybox-item">-->
+    <!--                <img src="images/thumbnails/edu_10_17204265531441741983027.jpg" alt="#" class="img__modifier">-->
+    <!--            </a>-->
+    <!--        </div>-->
+    <!--        <div class="swiper-slide">-->
+    <!--            <a href="images/education/edu_11_1720426586749.jpg" data-src="images/education/edu_11_1720426586749.jpg" data-fancybox="gallery" class="fancybox-item">-->
+    <!--                <img src="images/thumbnails/edu_11_17204265867491741983027.jpg" alt="#" class="img__modifier">-->
+    <!--            </a>-->
+    <!--        </div>-->
+    <!--        <div class="swiper-slide">-->
+    <!--            <a href="images/education/edu_12.jpg" data-src="images/education/edu_12.jpg" data-fancybox="gallery" class="fancybox-item">-->
+    <!--                <img src="images/thumbnails/edu_121741983028.jpg" alt="#" class="img__modifier">-->
+    <!--            </a>-->
+    <!--        </div>-->
+    <!--        <div class="swiper-slide">-->
+    <!--            <a href="images/education/edu_13.jpg" data-src="images/education/edu_13.jpg" data-fancybox="gallery" class="fancybox-item">-->
+    <!--                <img src="images/thumbnails/edu_131741983028.jpg" alt="#" class="img__modifier">-->
+    <!--            </a>-->
+    <!--        </div>-->
+    <!--        <div class="swiper-slide">-->
+    <!--            <a href="images/education/edu_14_1720427019743.jpg" data-src="images/education/edu_14_1720427019743.jpg" data-fancybox="gallery" class="fancybox-item">-->
+    <!--                <img src="images/thumbnails/edu_14_17204270197431741983028.jpg" alt="#" class="img__modifier">-->
+    <!--            </a>-->
+    <!--        </div>-->
+    <!--        <div class="swiper-slide">-->
+    <!--            <a href="images/education/edu_16.jpg" data-src="images/education/edu_16.jpg" data-fancybox="gallery" class="fancybox-item">-->
+    <!--                <img src="images/thumbnails/edu_161741983026.jpg" alt="#" class="img__modifier">-->
+    <!--            </a>-->
+    <!--        </div>-->
+    <!--        <div class="swiper-slide">-->
+    <!--            <a href="images/education/edu_17.jpg" data-src="images/education/edu_17.jpg" data-fancybox="gallery" class="fancybox-item">-->
+    <!--                <img src="images/thumbnails/edu_171741983025.jpg" alt="#" class="img__modifier">-->
+    <!--            </a>-->
+    <!--        </div>-->
+    <!--    </div>-->
+    <!--    <div class="swiper-pagination"></div>-->
+    <!--</section>-->
+
     <h2 class="swiper-header reviews__header-modifier" id="reviews">Отзывы</h2>
-    <section class="swiper-reviews">
-        <div class="swiper-wrapper reviews__modifier">
-            <div class="swiper-slide swiper-review-modifier">
+    <section class="flexslider reviews-slider">
+        <ul class="slides">
+            <li>
                 <a href="images/reviews/review_02.png" data-fancybox="gallery" class="fancybox-item">
-                    <img src="images/reviews/review_02.png" alt="#" class="img__modifier-review">
+                    <img src="images/reviews/review_02.png" alt="Review 2" class="img__modifier-review" loading="lazy">
                 </a>
-            </div>
-            <div class="swiper-slide swiper-review-modifier">
-                <a href="images/reviews/review_03.png" data-fancybox="gallery" class="fancybox-item">
-                    <img src="images/reviews/review_03.png" alt="#" class="img__modifier-review">
+            </li>
+            <li>
+                <a href="images/reviews/review_03.png" data-fancybox="gallery">
+                    <img src="images/reviews/review_03.png" alt="Review 3" class="img__modifier-review" loading="lazy">
                 </a>
-            </div>
-            <div class="swiper-slide swiper-review-modifier">
-                <a href="images/reviews/review_04.png" data-fancybox="gallery" class="fancybox-item">
-                    <img src="images/reviews/review_04.png" alt="#" class="img__modifier-review">
+            </li>
+            <li>
+                <a href="images/reviews/review_04.png" data-fancybox="gallery">
+                    <img src="images/reviews/review_04.png" alt="Review 4" class="img__modifier-review" loading="lazy">
                 </a>
-            </div>
-            <div class="swiper-slide swiper-review-modifier">
-                <a href="images/reviews/review_05.png" data-fancybox="gallery" class="fancybox-item">
-                    <img src="images/reviews/review_05.png" alt="#" class="img__modifier-review">
+            </li>
+            <li>
+                <a href="images/reviews/review_05.png" data-fancybox="gallery">
+                    <img src="images/reviews/review_05.png" alt="Review 5" class="img__modifier-review" loading="lazy">
                 </a>
-            </div>
-            <div class="swiper-slide swiper-review-modifier">
-                <a href="images/reviews/review_06.jpg" data-fancybox="gallery" class="fancybox-item">
-                    <img src="images/reviews/review_06.jpg" alt="#" class="img__modifier-review">
+            </li>
+            <li>
+                <a href="images/reviews/review_06.jpg" data-fancybox="gallery">
+                    <img src="images/reviews/review_06.jpg" alt="Review 6" class="img__modifier-review" loading="lazy">
                 </a>
-            </div>
-            <div class="swiper-slide swiper-review-modifier">
-                <a href="images/reviews/review_07.jpg" data-fancybox="gallery" class="fancybox-item">
-                    <img src="images/reviews/review_07.jpg" alt="#" class="img__modifier-review">
+            </li>
+            <li>
+                <a href="images/reviews/review_07.jpg" data-fancybox="gallery">
+                    <img src="images/reviews/review_07.jpg" alt="Review 7" class="img__modifier-review" loading="lazy">
                 </a>
-            </div>
-            <div class="swiper-slide swiper-review-modifier">
-                <a href="images/reviews/review_08.jpg" data-fancybox="gallery" class="fancybox-item">
-                    <img src="images/reviews/review_08.jpg" alt="#" class="img__modifier-review">
+            </li>
+            <li>
+                <a href="images/reviews/review_08.jpg" data-fancybox="gallery">
+                    <img src="images/reviews/review_08.jpg" alt="Review 8" class="img__modifier-review" loading="lazy">
                 </a>
-            </div>
-        </div>
-        <div class="swiper-pagination-review"></div>
+            </li>
+        </ul>
     </section>
+
+    <!--<section class="swiper-reviews">-->
+    <!--    <div class="swiper-wrapper reviews__modifier">-->
+    <!--        <div class="swiper-slide swiper-review-modifier">-->
+    <!--            <a href="images/reviews/review_02.png" data-fancybox="gallery" class="fancybox-item">-->
+    <!--                <img src="images/reviews/review_02.png" alt="#" class="img__modifier-review" loading="lazy">-->
+    <!--            </a>-->
+    <!--        </div>-->
+    <!--        <div class="swiper-slide swiper-review-modifier">-->
+    <!--            <a href="images/reviews/review_03.png" data-fancybox="gallery" class="fancybox-item">-->
+    <!--                <img src="images/reviews/review_03.png" alt="#" class="img__modifier-review" loading="lazy">-->
+    <!--            </a>-->
+    <!--        </div>-->
+    <!--        <div class="swiper-slide swiper-review-modifier">-->
+    <!--            <a href="images/reviews/review_04.png" data-fancybox="gallery" class="fancybox-item">-->
+    <!--                <img src="images/reviews/review_04.png" alt="#" class="img__modifier-review" loading="lazy">-->
+    <!--            </a>-->
+    <!--        </div>-->
+    <!--        <div class="swiper-slide swiper-review-modifier">-->
+    <!--            <a href="images/reviews/review_05.png" data-fancybox="gallery" class="fancybox-item">-->
+    <!--                <img src="images/reviews/review_05.png" alt="#" class="img__modifier-review" loading="lazy">-->
+    <!--            </a>-->
+    <!--        </div>-->
+    <!--        <div class="swiper-slide swiper-review-modifier">-->
+    <!--            <a href="images/reviews/review_06.jpg" data-fancybox="gallery" class="fancybox-item">-->
+    <!--                <img src="images/reviews/review_06.jpg" alt="#" class="img__modifier-review" loading="lazy">-->
+    <!--            </a>-->
+    <!--        </div>-->
+    <!--        <div class="swiper-slide swiper-review-modifier">-->
+    <!--            <a href="images/reviews/review_07.jpg" data-fancybox="gallery" class="fancybox-item">-->
+    <!--                <img src="images/reviews/review_07.jpg" alt="#" class="img__modifier-review" loading="lazy">-->
+    <!--            </a>-->
+    <!--        </div>-->
+    <!--        <div class="swiper-slide swiper-review-modifier">-->
+    <!--            <a href="images/reviews/review_08.jpg" data-fancybox="gallery" class="fancybox-item">-->
+    <!--                <img src="images/reviews/review_08.jpg" alt="#" class="img__modifier-review" loading="lazy">-->
+    <!--            </a>-->
+    <!--        </div>-->
+    <!--    </div>-->
+    <!--    <div class="swiper-pagination-review"></div>-->
+    <!--</section>-->
+
     <section class="wrapper contacts-modifier" id="contacts">
         <div class="contacts-tab">
             <h2 class="contacts-header">Контакты</h2>
@@ -321,7 +480,7 @@
                     <video
                         class="contacts-main-video"
                         controls
-                        poster="/src/images/preview_img.jpg"
+                        poster="images/preview_img.jpg"
                     >
                         <source src="video/Irina_video.mp4" type="video/mp4">
                     </video>
@@ -335,15 +494,18 @@
                 <li class="footer-item">ИП Карпович Ирина Михайловна (УНП 192153626)</li>
                 <li class="footer-item">Свидетельство № 0463089 выдано 1 ноября 2013 г. Минским горисполкомом</li>
                 <li class="footer-item">р/с BY67PJCB30130320970000000933 "Приорбанк" ОАО</li>
+                <li class="footer-item">Адрес и телефон: г.Минск, пл.Свободы 8, +375 44 515 75 44</li>
+                <li class="footer-item">Email: irina.karpovich@tut.by</li>
+                <li class="footer-item">Время работы: понедельник - пятница 10:00-20:00; суббота, воскресенье - выходной</li>
             </ul>
             <ul class="footer-sub-info">
-                <a href="/src/offer-agreement.html">
+                <a href="/offer-agreement.html">
                     <li class="footer-sub-item">Договор оферты</li>
                 </a>
-                <a href="/src/Confidential.html">
+                <a href="/Confidential.html">
                     <li class="footer-sub-item">Политика конфиденциальности</li>
                 </a>
-                <a href="/src/payment-agreement.html">
+                <a href="/payment-agreement.html">
                     <li class="footer-sub-item">Способы оплаты</li>
                 </a>
                 <li class="footer-links">
@@ -360,6 +522,7 @@
                         <img src="images/whatsapp.png" alt="#" class="footer-icon">
                     </a>
                 </li>
+                <img src="images/bePaid_transparent.svg" alt="#" class="footer-bePaid-item" >
             </ul>
         </div>
     </footer>
@@ -369,6 +532,7 @@
             <span class="close">&times;</span>
             <span class="modal-text"></span>
             <a href="https://t.me/irinakarpowitch" class="modal-btn">Записаться</a>
+            <!--<a href="https://api.bepaid.by/products/prd_a49ad66717615573/pay" class="modal-btn">Оплатить</a>-->
         </div>
     </div>
 
@@ -383,7 +547,7 @@
     <script src="js/servicesSection.js"></script>
     <script src="js/programsSection.js"></script>
     <script src="js/slider.js"></script>
-    <script src="js/sliderReviews.js"></script>
+    <!--<script src="js/sliderReviews.js"></script>-->
     <script src="js/burgerMenu.js"></script>
 </body>
 </html>
