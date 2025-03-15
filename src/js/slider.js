@@ -24,8 +24,8 @@
 //     });
 // });
 
-$(document).ready(function () {
-    console.log('Document ready, initializing FlexSlider and Bootstrap Modal');
+$(document).ready(function() {
+    console.log('Document ready, initializing FlexSlider and Custom Image Viewer');
 
     // FlexSlider for Education
     $('.education-slider').flexslider({
@@ -39,7 +39,7 @@ $(document).ready(function () {
         controlNav: false,
         directionNav: true,
         smoothHeight: true,
-        start: function (slider) {
+        start: function(slider) {
             console.log('Education Slider initialized, slides:', slider.count);
         }
     });
@@ -56,27 +56,49 @@ $(document).ready(function () {
         controlNav: false,
         directionNav: true,
         smoothHeight: true,
-        start: function (slider) {
+        start: function(slider) {
             console.log('Reviews Slider initialized, slides:', slider.count);
         }
     });
 
-    // Handle modal open event
-    $('.image-modal-trigger').on('click', function (e) {
+    // Handle image viewer open event
+    $('.image-viewer-trigger').on('click', function(e) {
         e.preventDefault();
         const imageSrc = $(this).data('image-src');
         const caption = $(this).data('caption');
-        console.log('Opening modal with image:', imageSrc, 'caption:', caption);
+        console.log('Opening image viewer with image:', imageSrc, 'caption:', caption);
 
-        $('#modalImage').attr('src', imageSrc);
-        $('#imageModalLabel').text(caption);
-        $('#imageModal').modal('show');
-    });
+        // Create overlay
+        const overlay = $('<div>').addClass('image-viewer-overlay')
+            .css({
+                position: 'fixed',
+                top: 0,
+                left: 0,
+                width: '100%',
+                height: '100%',
+                background: 'rgba(0, 0, 0, 0.8)',
+                zIndex: 10000,
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center'
+            });
 
-    // Handle modal close event
-    $('#imageModal').on('hidden.bs.modal', function () {
-        console.log('Modal closed');
-        $('#modalImage').attr('src', ''); // Clear image source
-        $('#imageModalLabel').text(''); // Clear caption
+        // Create image element
+        const image = $('<img>').attr('src', imageSrc)
+            .css({
+                maxWidth: '90%',
+                maxHeight: '90vh',
+                borderRadius: '8px',
+                cursor: 'pointer'
+            })
+            .on('click', function() {
+                overlay.remove(); // Remove overlay and image on click
+            });
+
+        // Append to body
+        $('body').append(overlay.append(image));
+
+        // Optional: Log for debugging
+        console.log('Image viewer displayed');
     });
 });
