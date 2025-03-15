@@ -1,31 +1,92 @@
 $(document).ready(function() {
+    // Function to determine FlexSlider settings based on viewport
+    function getSliderSettings() {
+        const viewportWidth = $(window).width();
+        if (viewportWidth <= 600) {
+            return {
+                itemWidth: viewportWidth, // Fit to viewport width
+                maxItems: 1, // Show only 1 item on mobile
+                move: 1
+            };
+        }
+        return {
+            itemWidth: 300, // Default item width for larger screens
+            maxItems: 3, // Default for education slider
+            move: 3
+        };
+    }
+
+    // FlexSlider for Education
     $('.education-slider').flexslider({
         animation: 'slide',
         slideshow: false,
-        itemWidth: 300,
+        itemWidth: getSliderSettings().itemWidth,
         itemMargin: 0,
         minItems: 1,
-        maxItems: 3,
-        move: 3,
+        maxItems: getSliderSettings().maxItems,
+        move: getSliderSettings().move,
         controlNav: false,
+        directionNav: true,
+        start: function(slider) {
+            console.log('Education Slider initialized, slides:', slider.count);
+        },
+        before: function(slider) {
+            const settings = getSliderSettings();
+            slider.vars.itemWidth = settings.itemWidth;
+            slider.vars.maxItems = settings.maxItems;
+            slider.vars.move = settings.move;
+            slider.setup(); // Reinitialize slider with new settings
+        }
     });
 
+    // FlexSlider for Reviews
     $('.reviews-slider').flexslider({
         animation: 'slide',
         slideshow: false,
-        itemWidth: 300,
+        itemWidth: getSliderSettings().itemWidth,
         itemMargin: 0,
         minItems: 1,
-        maxItems: 3,
-        move: 3,
+        maxItems: getSliderSettings().maxItems, // Default to 3, adjusted by getSliderSettings
+        move: getSliderSettings().move,
         controlNav: false,
+        directionNav: true,
+        start: function(slider) {
+            console.log('Reviews Slider initialized, slides:', slider.count);
+        },
+        before: function(slider) {
+            const settings = getSliderSettings();
+            slider.vars.itemWidth = settings.itemWidth;
+            slider.vars.maxItems = settings.maxItems;
+            slider.vars.move = settings.move;
+            slider.setup(); // Reinitialize slider with new settings
+        }
     });
 
-    // Handle image viewer open event
+    // $('.education-slider').flexslider({
+    //     animation: 'slide',
+    //     slideshow: false,
+    //     itemWidth: 300,
+    //     itemMargin: 0,
+    //     minItems: 1,
+    //     maxItems: 3,
+    //     move: 3,
+    //     controlNav: false,
+    // });
+    //
+    // $('.reviews-slider').flexslider({
+    //     animation: 'slide',
+    //     slideshow: false,
+    //     itemWidth: 300,
+    //     itemMargin: 0,
+    //     minItems: 1,
+    //     maxItems: 3,
+    //     move: 3,
+    //     controlNav: false,
+    // });
+
     $('.image-viewer-trigger').on('click', function(e) {
         e.preventDefault();
 
-        // Get all images in the same slider (for navigation)
         const $slider = $(this).closest('.flexslider');
         const images = $slider.find('.image-viewer-trigger').map(function() {
             return {
@@ -34,11 +95,9 @@ $(document).ready(function() {
             };
         }).get();
 
-        // Get the current image index
         const currentIndex = $slider.find('.image-viewer-trigger').index(this);
         let currentImageIndex = currentIndex;
 
-        // Create overlay
         const overlay = $('<div>').addClass('image-viewer-overlay')
             .css({
                 position: 'fixed',
@@ -53,7 +112,6 @@ $(document).ready(function() {
                 alignItems: 'center'
             });
 
-        // Create image container
         const imageContainer = $('<div>').addClass('image-viewer-container')
             .css({
                 position: 'relative',
@@ -62,7 +120,6 @@ $(document).ready(function() {
                 alignItems: 'center'
             });
 
-        // Create image element
         const image = $('<img>').addClass('viewer-image')
             .css({
                 maxWidth: '90%',
@@ -73,33 +130,26 @@ $(document).ready(function() {
                 border: 'none'
             });
 
-        // Function to update the image
         function updateImage() {
             const imageData = images[currentImageIndex];
             image.attr('src', imageData.src);
             console.log('Displaying image:', imageData.src);
         }
-
-        // Initial image load
         updateImage();
 
-        // Close on image click
         image.on('click', function(e) {
-            e.stopPropagation(); // Prevent the overlay click handler from firing
+            e.stopPropagation();
             overlay.remove();
             console.log('Image viewer closed by clicking image');
         });
 
-        // Close on overlay click (outside the image)
         overlay.on('click', function(e) {
-            // Only close if the click target is the overlay itself
             if (e.target === this) {
                 overlay.remove();
                 console.log('Image viewer closed by clicking outside');
             }
         });
 
-        // Append elements
         imageContainer.append(image);
         overlay.append(imageContainer);
         $('body').append(overlay);
