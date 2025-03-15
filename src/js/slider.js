@@ -23,36 +23,59 @@ $(document).ready(function() {
         directionNav: true,
     });
 
+    // Initialize Magnific Popup for image galleries
+    // $('.image-gallery').magnificPopup({
+    //     type: 'image',
+    //     gallery: {
+    //         enabled: true,
+    //         navigateByImgClick: true,
+    //         preload: [0, 1]
+    //     },
+    //     image: {
+    //         titleSrc: function(item) {
+    //             return item.el.find('img').attr('alt');
+    //         }
+    //     },
+    //     removalDelay: 300,
+    //     mainClass: 'mfp-fade',
+    //     closeOnContentClick: true,
+    //     closeBtnInside: true,
+    //     disableOn: 0, // Always enable popup
+    //     callbacks: {
+    //         beforeOpen: function() {
+    //             console.log('Magnific Popup opening for:', this.st.el[0].href);
+    //         },
+    //         open: function() {
+    //             console.log('Magnific Popup opened, content:', $('.mfp-content').html());
+    //         },
+    //         beforeClose: function() {
+    //             console.log('Magnific Popup closing');
+    //         },
+    //         error: function() {
+    //             console.error('Magnific Popup error:', this);
+    //         }
+    //     }
+    // }).on('click', function(e) {
+    //     e.preventDefault();
+    //     console.log('Triggering Magnific Popup for:', $(this).attr('href'));
+    //     $(this).magnificPopup('open');
+    // });
     $('.image-gallery').magnificPopup({
         type: 'image',
-        gallery: {
-            enabled: true,
-            navigateByImgClick: true,
-            preload: [0, 1] // Preload previous and next images
-        },
-        image: {
-            titleSrc: function(item) {
-                return item.el.find('img').attr('alt'); // Use alt text as caption
-            }
-        },
-        removalDelay: 300,
-        mainClass: 'mfp-fade',
-        closeOnContentClick: true,
-        closeBtnInside: true,
+        gallery: {enabled: true},
         callbacks: {
-            beforeOpen: function() {
-                console.log('Magnific Popup opening for:', this.st.el[0].href); // Debug log
+            beforeOpen: function () {
+                console.log('Opening:', this.st.el[0].href);
             },
-            open: function() {
-                console.log('Magnific Popup opened'); // Debug log
+            open: function () {
+                console.log('Opened:', $('.mfp-img').attr('src'));
             },
-            beforeClose: function() {
-                console.log('Magnific Popup closing'); // Debug log
+            error: function () {
+                console.error('Error:', this);
             }
         }
-    }).on('click', function(e) {
-        e.preventDefault(); // Ensure default link behavior is prevented
-        console.log('Clicked link:', $(this).attr('href')); // Debug click event
+    }).on('click', function (e) {
+        e.preventDefault();
         $(this).magnificPopup('open');
     });
 });

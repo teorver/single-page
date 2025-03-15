@@ -130,18 +130,18 @@
 
 /* Magnific Popup Custom Styles */
 .mfp-container {
-  padding: 20px;
   visibility: visible !important;
+  opacity: 1 !important;
 }
 
 .mfp-content {
-  max-width: 90%;
-  margin: 0 auto;
+  display: block !important;
 }
 
 .mfp-img {
-  border-radius: 8px;
-  max-height: 80vh;
+  display: block !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
 }
 
 .mfp-figure {
