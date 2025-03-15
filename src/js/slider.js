@@ -167,7 +167,7 @@ $(document).ready(function() {
             }
         });
 
-        imageContainer.append(image);
+        imageContainer.append(prevArrow).append(image).append(nextArrow);
         overlay.append(imageContainer);
         $('body').append(overlay);
     });
