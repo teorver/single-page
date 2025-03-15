@@ -160,25 +160,26 @@
   transform: rotate(90deg);
 }
 
-/* LightGallery Custom Styles */
-.lg-container {
-  z-index: 10000; /* Ensure it’s on top */
-}
-
-.lg-image {
+/* Bootstrap Modal Custom Styles */
+#imageModal .modal-content {
   border-radius: 8px;
-  max-width: 90% !important;
-  max-height: 90vh !important;
 }
 
-.lg-sub-html {
-  color: #fff;
-  font-size: 14px;
-  padding: 10px;
-  text-align: center;
+#imageModal .modal-body {
+  padding: 20px;
 }
 
-.lg-icon {
+#imageModal .modal-body img {
+  max-width: 100%;
+  max-height: 80vh;
+  border-radius: 8px;
+}
+
+#imageModal .modal-title {
+  color: #333;
+}
+
+#imageModal .btn-close {
   opacity: 0.8;
 
   &:hover {

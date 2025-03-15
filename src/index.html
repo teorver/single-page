@@ -7,10 +7,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" type="image/x-icon" href="./images/favicon_lotus.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.7.2/flexslider.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/css/lightgallery-bundle.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" referrerpolicy="no-referrer">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.7.2/jquery.flexslider.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/lightgallery.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="scss/index.scss">
     <title>Ирина Карпович</title>
 </head>
@@ -181,16 +181,14 @@
     </section>
     <h2 class="swiper-header" id="education">Образование</h2>
     <section class="flexslider education-slider">
-        <ul class="slides lg-gallery">
+        <ul class="slides">
             <li>
-                <a href="#" data-src="images/education/edu_01.jpg"
-                   data-sub-html="<h4>Education 1</h4><p>Certificate description</p>">
+                <a href="#" class="image-modal-trigger" data-bs-toggle="modal" data-bs-target="#imageModal" data-image-src="images/education/edu_01.jpg" data-caption="Education 1">
                     <img src="images/thumbnails/edu_011741983026.jpg" alt="Education 1" class="img__modifier">
                 </a>
             </li>
             <li>
-                <a href="#" data-src="images/education/edu_15.jpg"
-                   data-sub-html="<h4>Education 15</h4><p>Certificate description</p>">
+                <a href="#" class="image-modal-trigger" data-bs-toggle="modal" data-bs-target="#imageModal" data-image-src="images/education/edu_15.jpg" data-caption="Education 15">
                     <img src="images/thumbnails/edu_151741983028.jpg" alt="Education 15" class="img__modifier">
                 </a>
             </li>
@@ -375,90 +373,44 @@
 
     <h2 class="swiper-header reviews__header-modifier" id="reviews">Отзывы</h2>
     <section class="flexslider reviews-slider">
-        <ul class="slides lg-gallery">
+        <ul class="slides">
             <li>
-                <a href="#" data-src="images/reviews/review_02.png"
-                   data-sub-html="<h4>Review 2</h4><p>Review description</p>">
+                <a href="#" class="image-modal-trigger" data-bs-toggle="modal" data-bs-target="#imageModal" data-image-src="images/reviews/review_02.png" data-caption="Review 2">
                     <img src="images/reviews/review_02.png" alt="Review 2" class="img__modifier-review">
                 </a>
             </li>
             <li>
-                <a href="#" data-src="images/reviews/review_03.png"
-                   data-sub-html="<h4>Review 3</h4><p>Review description</p>">
+                <a href="#" class="image-modal-trigger" data-bs-toggle="modal" data-bs-target="#imageModal" data-image-src="images/reviews/review_03.png" data-caption="Review 3">
                     <img src="images/reviews/review_03.png" alt="Review 3" class="img__modifier-review">
                 </a>
             </li>
             <li>
-                <a href="#" data-src="images/reviews/review_04.png"
-                   data-sub-html="<h4>Review 4</h4><p>Review description</p>">
+                <a href="images/reviews/review_04.png" >
                     <img src="images/reviews/review_04.png" alt="Review 4" class="img__modifier-review">
                 </a>
             </li>
             <li>
-                <a href="#" data-src="images/reviews/review_05.png"
-                   data-sub-html="<h4>Review 5</h4><p>Review description</p>">
+                <a href="images/reviews/review_05.png" >
                     <img src="images/reviews/review_05.png" alt="Review 5" class="img__modifier-review">
                 </a>
             </li>
             <li>
-                <a href="#" data-src="images/reviews/review_06.jpg"
-                   data-sub-html="<h4>Review 6</h4><p>Review description</p>">
+                <a href="images/reviews/review_06.jpg" >
                     <img src="images/reviews/review_06.jpg" alt="Review 6" class="img__modifier-review">
                 </a>
             </li>
             <li>
-                <a href="#" data-src="images/reviews/review_07.jpg"
-                   data-sub-html="<h4>Review 7</h4><p>Review description</p>">
+                <a href="images/reviews/review_07.jpg" >
                     <img src="images/reviews/review_07.jpg" alt="Review 7" class="img__modifier-review">
                 </a>
             </li>
             <li>
-                <a href="#" data-src="images/reviews/review_08.jpg"
-                   data-sub-html="<h4>Review 8</h4><p>Review description</p>">
+                <a href="images/reviews/review_08.jpg" >
                     <img src="images/reviews/review_08.jpg" alt="Review 8" class="img__modifier-review">
                 </a>
             </li>
         </ul>
     </section>
-<!--    <section class="flexslider reviews-slider">-->
-<!--        <ul class="slides">-->
-<!--            <li>-->
-<!--                <a href="images/reviews/review_02.png" class="image-gallery">-->
-<!--                    <img src="images/reviews/review_02.png" alt="Review 2" class="img__modifier-review">-->
-<!--                </a>-->
-<!--            </li>-->
-<!--            <li>-->
-<!--                <a href="images/reviews/review_03.png" class="image-gallery">-->
-<!--                    <img src="images/reviews/review_03.png" alt="Review 3" class="img__modifier-review">-->
-<!--                </a>-->
-<!--            </li>-->
-<!--            <li>-->
-<!--                <a href="images/reviews/review_04.png" class="image-gallery">-->
-<!--                    <img src="images/reviews/review_04.png" alt="Review 4" class="img__modifier-review">-->
-<!--                </a>-->
-<!--            </li>-->
-<!--            <li>-->
-<!--                <a href="images/reviews/review_05.png" class="image-gallery">-->
-<!--                    <img src="images/reviews/review_05.png" alt="Review 5" class="img__modifier-review">-->
-<!--                </a>-->
-<!--            </li>-->
-<!--            <li>-->
-<!--                <a href="images/reviews/review_06.jpg" class="image-gallery">-->
-<!--                    <img src="images/reviews/review_06.jpg" alt="Review 6" class="img__modifier-review">-->
-<!--                </a>-->
-<!--            </li>-->
-<!--            <li>-->
-<!--                <a href="images/reviews/review_07.jpg" class="image-gallery">-->
-<!--                    <img src="images/reviews/review_07.jpg" alt="Review 7" class="img__modifier-review">-->
-<!--                </a>-->
-<!--            </li>-->
-<!--            <li>-->
-<!--                <a href="images/reviews/review_08.jpg" class="image-gallery">-->
-<!--                    <img src="images/reviews/review_08.jpg" alt="Review 8" class="img__modifier-review">-->
-<!--                </a>-->
-<!--            </li>-->
-<!--        </ul>-->
-<!--    </section>-->
 
     <section class="wrapper contacts-modifier" id="contacts">
         <div class="contacts-tab">
@@ -566,36 +518,19 @@
         </div>
     </div>
 
-    <!-- PhotoSwipe UI Container -->
-    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="pswp__bg"></div>
-        <div class="pswp__scroll-wrap">
-            <div class="pswp__container">
-                <div class="pswp__item"></div>
-                <div class="pswp__item"></div>
-                <div class="pswp__item"></div>
-            </div>
-            <div class="pswp__ui pswp__ui--hidden">
-                <div class="pswp__top-bar">
-                    <div class="pswp__counter"></div>
-                    <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-                    <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-                    <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-                    <div class="pswp__preloader">
-                        <div class="pswp__preloader__icn">
-                            <div class="pswp__preloader__cut">
-                                <div class="pswp__preloader__donut"></div>
-                            </div>
-                        </div>
-                    </div>
+    <!-- Bootstrap Modal -->
+    <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="imageModalLabel"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-                    <div class="pswp__share-tooltip"></div>
+                <div class="modal-body text-center">
+                    <img src="" id="modalImage" class="img-fluid" alt="Modal Image">
                 </div>
-                <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
-                <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
-                <div class="pswp__caption">
-                    <div class="pswp__caption__center"></div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>

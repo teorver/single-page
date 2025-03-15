@@ -24,8 +24,8 @@
 //     });
 // });
 
-$(document).ready(function() {
-    console.log('Document ready, initializing FlexSlider and LightGallery');
+$(document).ready(function () {
+    console.log('Document ready, initializing FlexSlider and Bootstrap Modal');
 
     // FlexSlider for Education
     $('.education-slider').flexslider({
@@ -39,7 +39,7 @@ $(document).ready(function() {
         controlNav: false,
         directionNav: true,
         smoothHeight: true,
-        start: function(slider) {
+        start: function (slider) {
             console.log('Education Slider initialized, slides:', slider.count);
         }
     });
@@ -56,38 +56,27 @@ $(document).ready(function() {
         controlNav: false,
         directionNav: true,
         smoothHeight: true,
-        start: function(slider) {
+        start: function (slider) {
             console.log('Reviews Slider initialized, slides:', slider.count);
         }
     });
 
-    // Function to initialize LightGallery
-    function initializeLightGallery(selector) {
-        const galleryElement = document.querySelector(selector);
-        if (!galleryElement) {
-            console.error('LightGallery element not found for selector:', selector);
-            return;
-        }
+    // Handle modal open event
+    $('.image-modal-trigger').on('click', function (e) {
+        e.preventDefault();
+        const imageSrc = $(this).data('image-src');
+        const caption = $(this).data('caption');
+        console.log('Opening modal with image:', imageSrc, 'caption:', caption);
 
-        console.log('Initializing LightGallery for:', selector);
-        lightGallery(galleryElement, {
-            speed: 500,
-            download: false,
-            counter: true,
-            zoom: true,
-            thumbnail: true,
-            plugins: [],
-            dynamic: true,
-            dynamicEl: Array.from(document.querySelectorAll(`${selector} a`)).map(el => ({
-                src: el.getAttribute('data-src'),
-                thumb: el.querySelector('img').getAttribute('src'),
-                subHtml: el.getAttribute('data-sub-html')
-            })),
-            beforeOpen: () => console.log('LightGallery opening for:', selector),
-            afterOpen: () => console.log('LightGallery opened for:', selector),
-            onInit: () => console.log('LightGallery initialized for:', selector)
-        }).on('onBeforeSlide', function() {
-            console.log('Slide changed to index:', this.index);
-        });
-    }
+        $('#modalImage').attr('src', imageSrc);
+        $('#imageModalLabel').text(caption);
+        $('#imageModal').modal('show');
+    });
+
+    // Handle modal close event
+    $('#imageModal').on('hidden.bs.modal', function () {
+        console.log('Modal closed');
+        $('#modalImage').attr('src', ''); // Clear image source
+        $('#imageModalLabel').text(''); // Clear caption
+    });
 });
