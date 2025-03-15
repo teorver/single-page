@@ -61,38 +61,33 @@ $(document).ready(function() {
         }
     });
 
-    // Initialize LightGallery for both sliders
-    lightGallery(document.querySelector('.education-slider .lg-gallery'), {
-        speed: 500,
-        download: false, // Disable download button
-        counter: true,
-        zoom: true,
-        thumbnail: true,
-        plugins: [],
-        dynamic: true,
-        dynamicEl: Array.from(document.querySelectorAll('.education-slider .lg-gallery a')).map(el => ({
-            src: el.getAttribute('data-src'),
-            thumb: el.querySelector('img').getAttribute('src'),
-            subHtml: el.getAttribute('data-sub-html')
-        })),
-        beforeOpen: () => console.log('LightGallery opening'),
-        afterOpen: () => console.log('LightGallery opened')
-    });
+    // Function to initialize LightGallery
+    function initializeLightGallery(selector) {
+        const galleryElement = document.querySelector(selector);
+        if (!galleryElement) {
+            console.error('LightGallery element not found for selector:', selector);
+            return;
+        }
 
-    lightGallery(document.querySelector('.reviews-slider .lg-gallery'), {
-        speed: 500,
-        download: false,
-        counter: true,
-        zoom: true,
-        thumbnail: true,
-        plugins: [],
-        dynamic: true,
-        dynamicEl: Array.from(document.querySelectorAll('.reviews-slider .lg-gallery a')).map(el => ({
-            src: el.getAttribute('data-src'),
-            thumb: el.querySelector('img').getAttribute('src'),
-            subHtml: el.getAttribute('data-sub-html')
-        })),
-        beforeOpen: () => console.log('LightGallery opening'),
-        afterOpen: () => console.log('LightGallery opened')
-    });
+        console.log('Initializing LightGallery for:', selector);
+        lightGallery(galleryElement, {
+            speed: 500,
+            download: false,
+            counter: true,
+            zoom: true,
+            thumbnail: true,
+            plugins: [],
+            dynamic: true,
+            dynamicEl: Array.from(document.querySelectorAll(`${selector} a`)).map(el => ({
+                src: el.getAttribute('data-src'),
+                thumb: el.querySelector('img').getAttribute('src'),
+                subHtml: el.getAttribute('data-sub-html')
+            })),
+            beforeOpen: () => console.log('LightGallery opening for:', selector),
+            afterOpen: () => console.log('LightGallery opened for:', selector),
+            onInit: () => console.log('LightGallery initialized for:', selector)
+        }).on('onBeforeSlide', function() {
+            console.log('Slide changed to index:', this.index);
+        });
+    }
 });
