@@ -188,7 +188,15 @@
 //  //}
 //}
 
-// Flexslider css
+//.swiper-reviews, .swiper-pagination-review {
+//    overflow-x: hidden;
+//    width: 100%;
+//}
+//
+//.swiper-reviews .swiper-wrapper {
+//    flex-wrap: nowrap;
+//}
+
 .flexslider {
   width: 100%;
   height: auto;
@@ -201,6 +209,14 @@
 
   @media (max-width: 1200px) {
     padding: 40px;
+  }
+
+  @media (max-width: 780px) {
+    padding: 20px;
+  }
+
+  @media (max-width: 590px) {
+    padding: 10px;
   }
 }
 
@@ -216,19 +232,17 @@
   justify-content: center;
   align-items: center;
   flex: 0 0 auto;
-  width: 300px; /* Matches itemWidth in JS */
-  height: auto;
+  width: 300px; /* Consistent base width for all slides */
+  height: auto; /* Let height adjust to image aspect ratio */
   overflow: hidden;
   transition: transform 0.3s ease;
 
   @media (max-width: 780px) {
-    width: 250px;
-    height: 250px;
+    width: 250px; /* Uniform reduction for medium screens */
   }
 
   @media (max-width: 590px) {
-    width: 200px;
-    height: 200px;
+    width: 150px; /* Smaller uniform width for mobile */
   }
 
   &:hover {
@@ -236,24 +250,23 @@
   }
 }
 
+/* Override reviews slider to match education slider width */
 .reviews-slider .slides li {
-  width: 200px;
-  height: 200px;
+  width: 300px; /* Same base width as education slider */
+  height: auto;
 
   @media (max-width: 780px) {
-    width: 150px;
-    height: 150px;
+    width: 250px; /* Match education slider */
   }
 
   @media (max-width: 590px) {
-    width: 120px;
-    height: 120px;
+    width: 150px; /* Match education slider */
   }
 }
 
 .img__modifier, .img__modifier-review {
   width: 100%;
-  height: 100%;
+  height: auto; /* Maintain aspect ratio */
   object-fit: cover;
   border-radius: 8px;
   cursor: pointer;
@@ -339,15 +352,6 @@
     padding: 40px 0;
   }
 }
-
-//.swiper-reviews, .swiper-pagination-review {
-//    overflow-x: hidden;
-//    width: 100%;
-//}
-//
-//.swiper-reviews .swiper-wrapper {
-//    flex-wrap: nowrap;
-//}
 
 .edu-3{
   transform: rotate(90deg);
