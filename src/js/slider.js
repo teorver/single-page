@@ -22,4 +22,23 @@ $(document).ready(function() {
         controlNav: false,
         directionNav: true,
     });
+
+    // Initialize Magnific Popup for image galleries
+    $('.image-gallery').magnificPopup({
+        type: 'image',
+        gallery: {
+            enabled: true, // Enable gallery mode
+            navigateByImgClick: true,
+            preload: [0,1] // Preload previous and next images
+        },
+        image: {
+            titleSrc: function(item) {
+                return item.el.find('img').attr('alt'); // Use the alt text as the caption
+            }
+        },
+        removalDelay: 300, // Delay for closing animation
+        mainClass: 'mfp-fade', // Fade animation
+        closeOnContentClick: true,
+        closeBtnInside: true
+    });
 });
