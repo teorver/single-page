@@ -1,33 +1,4 @@
-// $(document).ready(function() {
-//     $('.education-slider').flexslider({
-//         animation: 'slide',
-//         slideshow: false,
-//         itemWidth: 300, // Base width per item
-//         itemMargin: 0,  // No margin to avoid gaps
-//         minItems: 1,
-//         maxItems: 3,    // Show 3 items
-//         move: 3,        // Move 3 items at a time
-//         controlNav: false,
-//         directionNav: true,
-//     });
-//
-//     $('.reviews-slider').flexslider({
-//         animation: 'slide',
-//         slideshow: false,
-//         itemWidth: 300, // Base width per item
-//         itemMargin: 0,  // No margin to avoid gaps
-//         minItems: 1,
-//         maxItems: 2,    // Show 2 items
-//         move: 2,        // Move 2 items at a time
-//         controlNav: false,
-//         directionNav: true,
-//     });
-// });
-
 $(document).ready(function() {
-    console.log('Document ready, initializing FlexSlider and Custom Image Viewer');
-
-    // FlexSlider for Education
     $('.education-slider').flexslider({
         animation: 'slide',
         slideshow: false,
@@ -38,13 +9,8 @@ $(document).ready(function() {
         move: 3,
         controlNav: false,
         directionNav: true,
-        smoothHeight: true,
-        start: function(slider) {
-            console.log('Education Slider initialized, slides:', slider.count);
-        }
     });
 
-    // FlexSlider for Reviews
     $('.reviews-slider').flexslider({
         animation: 'slide',
         slideshow: false,
@@ -55,10 +21,6 @@ $(document).ready(function() {
         move: 2,
         controlNav: false,
         directionNav: true,
-        smoothHeight: true,
-        start: function(slider) {
-            console.log('Reviews Slider initialized, slides:', slider.count);
-        }
     });
 
     // Handle image viewer open event
@@ -114,43 +76,43 @@ $(document).ready(function() {
             });
 
         // Create navigation arrows
-        const prevArrow = $('<div>').addClass('image-viewer-arrow image-viewer-arrow-prev')
-            .html('❮')
-            .css({
-                position: 'absolute',
-                left: '20px',
-                top: '50%',
-                transform: 'translateY(-50%)',
-                fontSize: '40px',
-                color: '#fff',
-                cursor: 'pointer',
-                opacity: 0.8,
-                zIndex: 10001
-            })
-            .on('click', function(e) {
-                e.stopPropagation(); // Prevent closing the overlay
-                currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
-                updateImage();
-            });
-
-        const nextArrow = $('<div>').addClass('image-viewer-arrow image-viewer-arrow-next')
-            .html('❯')
-            .css({
-                position: 'absolute',
-                right: '20px',
-                top: '50%',
-                transform: 'translateY(-50%)',
-                fontSize: '40px',
-                color: '#fff',
-                cursor: 'pointer',
-                opacity: 0.8,
-                zIndex: 10001
-            })
-            .on('click', function(e) {
-                e.stopPropagation(); // Prevent closing the overlay
-                currentImageIndex = (currentImageIndex + 1) % images.length;
-                updateImage();
-            });
+        // const prevArrow = $('<div>').addClass('image-viewer-arrow image-viewer-arrow-prev')
+        //     .html('❮')
+        //     .css({
+        //         position: 'absolute',
+        //         left: '20px',
+        //         top: '50%',
+        //         transform: 'translateY(-50%)',
+        //         fontSize: '40px',
+        //         color: '#fff',
+        //         cursor: 'pointer',
+        //         opacity: 0.8,
+        //         zIndex: 10001
+        //     })
+        //     .on('click', function(e) {
+        //         e.stopPropagation(); // Prevent closing the overlay
+        //         currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+        //         updateImage();
+        //     });
+        //
+        // const nextArrow = $('<div>').addClass('image-viewer-arrow image-viewer-arrow-next')
+        //     .html('❯')
+        //     .css({
+        //         position: 'absolute',
+        //         right: '20px',
+        //         top: '50%',
+        //         transform: 'translateY(-50%)',
+        //         fontSize: '40px',
+        //         color: '#fff',
+        //         cursor: 'pointer',
+        //         opacity: 0.8,
+        //         zIndex: 10001
+        //     })
+        //     .on('click', function(e) {
+        //         e.stopPropagation(); // Prevent closing the overlay
+        //         currentImageIndex = (currentImageIndex + 1) % images.length;
+        //         updateImage();
+        //     });
 
         // Function to update the image
         function updateImage() {
@@ -179,7 +141,8 @@ $(document).ready(function() {
         });
 
         // Append elements
-        imageContainer.append(prevArrow).append(image).append(nextArrow);
+        // imageContainer.append(prevArrow).append(image).append(nextArrow);
+        imageContainer.append(image);
         overlay.append(imageContainer);
         $('body').append(overlay);
     });
