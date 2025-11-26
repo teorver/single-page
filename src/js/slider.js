@@ -1,22 +1,20 @@
 $(document).ready(function() {
-    // Function to determine FlexSlider settings based on viewport
     function getSliderSettings() {
         const viewportWidth = $(window).width();
         if (viewportWidth <= 600) {
             return {
-                itemWidth: viewportWidth, // Fit to viewport width
-                maxItems: 1, // Show only 1 item on mobile
+                itemWidth: viewportWidth, 
+                maxItems: 1,
                 move: 1
             };
         }
         return {
-            itemWidth: 300, // Default item width for larger screens
-            maxItems: 3, // Default for education slider
+            itemWidth: 300,
+            maxItems: 3,
             move: 3
         };
     }
 
-    // FlexSlider for Education
     $('.education-slider').flexslider({
         animation: 'slide',
         slideshow: false,
@@ -27,38 +25,31 @@ $(document).ready(function() {
         move: getSliderSettings().move,
         controlNav: false,
         directionNav: true,
-        start: function(slider) {
-            console.log('Education Slider initialized, slides:', slider.count);
-        },
         before: function(slider) {
             const settings = getSliderSettings();
             slider.vars.itemWidth = settings.itemWidth;
             slider.vars.maxItems = settings.maxItems;
             slider.vars.move = settings.move;
-            slider.setup(); // Reinitialize slider with new settings
+            slider.setup();
         }
     });
 
-    // FlexSlider for Reviews
     $('.reviews-slider').flexslider({
         animation: 'slide',
         slideshow: false,
         itemWidth: getSliderSettings().itemWidth,
         itemMargin: 0,
         minItems: 1,
-        maxItems: getSliderSettings().maxItems, // Default to 3, adjusted by getSliderSettings
+        maxItems: getSliderSettings().maxItems,
         move: getSliderSettings().move,
         controlNav: false,
         directionNav: true,
-        start: function(slider) {
-            console.log('Reviews Slider initialized, slides:', slider.count);
-        },
         before: function(slider) {
             const settings = getSliderSettings();
             slider.vars.itemWidth = settings.itemWidth;
             slider.vars.maxItems = settings.maxItems;
             slider.vars.move = settings.move;
-            slider.setup(); // Reinitialize slider with new settings
+            slider.setup();
         }
     });
 
@@ -107,7 +98,7 @@ $(document).ready(function() {
                 objectFit: 'cover',
                 border: 'none'
             });
-
+            
         // Create navigation arrows
         const prevArrow = $('<div>').addClass('image-viewer-arrow image-viewer-arrow-prev')
             .html('❮')
@@ -122,7 +113,7 @@ $(document).ready(function() {
                 zIndex: 10001
             })
             .on('click', function (e) {
-                e.stopPropagation(); // Prevent closing the overlay
+                e.stopPropagation();
                 currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
                 updateImage();
             });
@@ -140,28 +131,25 @@ $(document).ready(function() {
                 zIndex: 10001
             })
             .on('click', function (e) {
-                e.stopPropagation(); // Prevent closing the overlay
+                e.stopPropagation();
                 currentImageIndex = (currentImageIndex + 1) % images.length;
                 updateImage();
-            });
+            });    
 
         function updateImage() {
             const imageData = images[currentImageIndex];
             image.attr('src', imageData.src);
-            console.log('Displaying image:', imageData.src);
         }
         updateImage();
 
         image.on('click', function(e) {
             e.stopPropagation();
             overlay.remove();
-            console.log('Image viewer closed by clicking image');
         });
 
         overlay.on('click', function(e) {
             if (e.target === this) {
                 overlay.remove();
-                console.log('Image viewer closed by clicking outside');
             }
         });
 

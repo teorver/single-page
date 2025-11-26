@@ -59,12 +59,12 @@ document.addEventListener("DOMContentLoaded", () => {
             "- Что тебе хочется на ужин?\n" +
             "- То же, что и ты…<br>" +
             "- Я же для него/нее все…, а он/она…<br>" +
-            "- Я так старалась/старался…<br>" + "- Что я могу еще для тебя сделать?..<br>" +
+            "- Я так старалась/старался…<br>" + "- Что я могу еще для тебя сделать?..<br>" + 
             "Пришло время сделать что-то для себя: подарить себе себя, вернуть себе свои чувства, мысли, желания и ценности.<br>" +
             "<strong>Эта программа для того, чтобы:</strong>" +
-            "√ обрести себя, свои опоры и смыслы<br>" +
+            "√ обрести себя, свои опоры и смыслы<br>" + 
             "√ уйти из токсичных, зависимых, разрушающих отношений<br>" +
-            "√ жить свою жизнь<br>" + "√ говорить о себе своим голосом<br>" + "√ выбирать себя и свои ценности<br>" + "√следовать своим правилам.<br>" +
+            "√ жить свою жизнь<br>" + "√ говорить о себе своим голосом<br>" + "√ выбирать себя и свои ценности<br>" + "√ следовать своим правилам.<br>" +
             "<strong>Что будет:</strong>" +
             "- совместная работа 28 дней\n" +
             "- элементы арт-терапии\n" +
@@ -91,7 +91,7 @@ document.addEventListener("DOMContentLoaded", () => {
     function adjustRehabProgramModalStyles() {
         const width = window.innerWidth;
         const devicePixelRatio = window.devicePixelRatio;
-
+        
         if (width <= 480) {
             programsModalText.style.fontSize = devicePixelRatio === 1.25 ? "9" : "11px";
             programsModalContent.style.gap = devicePixelRatio === 1.25 ? "2" : "5px"
@@ -103,6 +103,7 @@ document.addEventListener("DOMContentLoaded", () => {
             programsModalContent.style.width = "70%";
             programsModalText.style.fontSize = devicePixelRatio === 1.25 ? "14px" : "16px";
         }
+        
     }
 
     function adjustDefaultModalStyles() {
@@ -124,6 +125,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     document.querySelectorAll(".product-item-btn").forEach(button => {
         button.addEventListener("click", (event) => {
+            if (button.tagName.toLowerCase() === "a") {
+                return; 
+            }
+            
             event.preventDefault();
 
             const programId = button.closest(".program-item").id;
@@ -136,7 +141,7 @@ document.addEventListener("DOMContentLoaded", () => {
             if (programId === "program-item-3" || programId === "program-item-4") {
                 programsModalContent.style.gap = devicePixelRatio === 1.25 ? "2px" : "10px";
                 programsModalContent.style.padding = "6px 15px";
-                programsModalText.style.fontSize = devicePixelRatio === 1.25 ? "13.75px" : "18px";
+                programsModalText.style.fontSize = devicePixelRatio === 1.25 ? "13.75px" : "16px";
                 programsModalText.style.flexDirection = "column";
 
                 adjustRehabProgramModalStyles();

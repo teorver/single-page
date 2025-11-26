@@ -5,13 +5,13 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="icon" type="image/x-icon" href="./images/favicon_lotus.png">
+    <link rel="icon" type="image/x-icon" href="/images/favicon_lotus.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.7.2/flexslider.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" referrerpolicy="no-referrer">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.7.2/jquery.flexslider.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="scss/index.scss">
+    <link rel="stylesheet" href="css/index.css">
     <title>Ирина Карпович</title>
 </head>
 <body>
@@ -49,7 +49,8 @@
                 </ul>
             </div>
             <div class="about-2">
-                <img src="images/BackgroundEraser_20241019_225028136.png" alt="#" class="about-me-main-img">
+                <!--<img src="images/BackgroundEraser_20241019_225028136.png" alt="#" class="about-me-main-img">-->
+                <img src="images/1000033919.png" alt="#" class="about-me-main-img">
             </div>
             <div class="about-3">
                 <div class="about-3-text">
@@ -100,6 +101,18 @@
                         <source src="video/services_new.mp4" type="video/mp4">
                     </video>
                 </div>
+                <!--<div class="services-video">-->
+                <!--    <div class="video-wrapper">-->
+                <!--        <iframe-->
+                <!--            src="https://www.youtube.com/embed/xZgJ9-mVCIw?si=e82AUyZMQudNQs26&modestbranding=1&rel=0"-->
+                <!--            frameborder="0"-->
+                <!--            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"-->
+                <!--            referrerpolicy="strict-origin-when-cross-origin"-->
+                <!--            allowfullscreen-->
+                <!--            class="services-main-video">-->
+                <!--        </iframe>-->
+                <!--    </div>-->
+                <!--</div>-->
             </div>
         </div>
         <div class="services-apply">
@@ -107,56 +120,82 @@
                 <span class="service-span-1" >* по курсу НБРБ на день оплаты.</span>
                 <span class="service-span-1" >Работаю со взрослыми и подростками 18+</span>
                 <a href="https://t.me/irinakarpowitch" class="services-btn">Записаться</a>
-                <!--<a href="https://api.bepaid.by/products/prd_a49ad66717615573/pay" class="services-btn">Оплатить</a>-->
+                <a href="https://api.bepaid.by/products/prd_a49ad66717615573/pay" class="services-btn">Оплатить</a>
             </div>
     </section>
     <section class="wrapper programs-modifier" id="programs">
         <div class="programs-tab">
             <h2 class="programs-header">Программы</h2>
             <div class="programs-options">
-                <div class="program-item" id="program-item-1">
-                    <p class="program-item__header">Пережить расставание. Мини-курс для самостоятельной работы</p>
-                    <span class="program__list-item list-item_modifier">Скоро</span>
-                    <ul class="program__list">
+                <!-- <div class="program-item" id="program-item-1">
+                    <p class="program-item__header">Пережить расставание</p>
+                    <span class="program__list-item list-item_modifier">Мини-курс для самостоятельной работы</span> -->
+                    <!-- <ul class="program__list">
                         <li class="program__list-item">30$*/100 BYN/3000 RUB</li>
                         <li class="program__list-item">* по курсу НБРБ на день оплаты.</li>
-                    </ul>
-                    <button class="product-item-btn">Подробнее</button>
-                    <!--<a href="https://t.me/irinakarpowitch" class="product-item-btn">Оплатить</a>-->
-                </div>
-                <div class="program-item" id="program-item-2">
-                    <p class="program-item__header">Пережить расставание. Heart rock. 21 день. Онлайн программа</p>
-                    <span class="program__list-item list-item_modifier">Скоро</span>
+                    </ul> -->
+                    <!-- <button class="product-item-btn">Подробнее</button>
+                    <a href="/programs/пережить-расставание-мини-курс.html" class="product-item-btn">Подробнее</a>
+                                    </div> -->
+                <!-- <div class="program-item" id="program-item-2">
+                    <p class="program-item__header">Пережить расставание</p>
+                    <span class="program__list-item list-item_modifier">Онлайн-программа</span>
                     <ul class="program__list">
-                        <li class="program__list-item">250$*/850 BYN/25000 RUB</li>
-                        <li class="program__list-item">* по курсу НБРБ на день оплаты.</li>
+                        <li class="program__list-item">21 день для того, чтобы привести в порядок тело, ум, эмоции</li>
+                        <li class="program__list-item">Даже если кажется, что «никогда не смогу» и «лучше не найду»</li>
+                        <li class="program__list-item">Пусть лучше болят мышцы, чем болит душа)</li>
                     </ul>
-                    <button class="product-item-btn">Подробнее</button>
-                    <!--<a href="https://t.me/irinakarpowitch" class="product-item-btn">Оплатить</a>-->
-                </div>
+                    <a href="/programs/пережить-расставание.html" class="product-item-btn">Подробнее</a>
+                </div> -->
                 <div class="program-item" id="program-item-3">
                     <p class="program-item__header">Rehab 28</p>
                     <ul class="program__list">
-                        <li class="program__list-item">ЗАВИСИМОСТЬ.</li>
-                        <li class="program__list-item">Онлайн</li>
-                        <li class="program__list-item">500$*/≈1700 BYN/≈50000 RUB</li>
-                        <li class="program__list-item">* по курсу НБРБ на день оплаты.</li>
+                        <li class="program__list-item">Зависимость – это болезнь, которую там и тогда Вы себе не выбирали. Здесь и сейчас выбор за Вами.</li>
+                        <li class="program__list-item">Трезвость нужна, чтобы чувствовать радость, счастье и свободу в своей жизни.</li>
                     </ul>
-                    <button class="product-item-btn__pay">Подробнее</button>
-                    <a href="https://api.bepaid.by/products/prd_075dcac89ecf24a8/pay" class="product-item-btn">Оплатить</a>
+                    <a href="/programs/rehab_28.html" class="product-item-btn">Подробнее</a>
+                    <!--<a href="https://api.bepaid.by/products/prd_075dcac89ecf24a8/pay" class="product-item-btn">Оплатить</a>-->
                 </div>
+                
                 <div class="program-item" id="program-item-4">
                     <p class="program-item__header">Вне СОЗЫ доступа</p>
                     <ul class="program__list">
-                        <li class="program__list-item">СОЗАВИСИМОСТЬ.</li>
-                        <li class="program__list-item">Онлайн</li>
-                        <li class="program__list-item">500$*/≈1700 BYN/≈50000 RUB</li>
-                        <li class="program__list-item">* по курсу НБРБ на день оплаты.</li>
+                        <li class="program__list-item">Где есть созависимость – там нет меня. Есть вещество или эмоция/состояние, которое управляет мной через другого. Ощущение «липучести», без тебя меня нет. И я правда не знаю ни своих желаний, ни чувств..</li>
+                        <li class="program__list-item">Пришло время сделать что-то для себя: подарить себе себя, вернуть себе свои чувства, мысли, желания и ценности.</li>
                     </ul>
-                    <button class="product-item-btn">Подробнее</button>
-                    <a href="https://api.bepaid.by/products/prd_9edfaad83560cb7f/pay" class="product-item-btn__pay">Оплатить</a>
+                    <a href="/programs/соза.html" class="product-item-btn">Подробнее</a>
                 </div>
+                <div class="program-item" id="program-item-5">
+                    <p class="program-item__header">Перезагрузка</p>
+                    <ul class="program__list">
+                        <li class="program__list-item">Всем нам порой необходима ПЕРЕЗАГРУЗКА для того, чтобы справиться со стрессом, пережить расставание, преодолеть кризис, улучшить сон, снизить тревожность и просто уделить время себе.</li>
+                        <li class="program__list-item">Если у Вас есть стрессовое состояние, неуверенность, нежелание вообще что-то делать, подавленное состояние – ПЕРЕЗАГРУЗКА – то, что надо сейчас.</li>
+                    </ul>
+                    <a href="/programs/перезагрузка.html" class="product-item-btn">Подробнее</a>
+                </div>
+                
             </div>
+            
+            <!-- <div class="programs-options" style="justify-content: normal; gap: 150px;">
+                <div class="program-item" id="program-item-4">
+                    <p class="program-item__header">Вне СОЗЫ доступа</p>
+                    <ul class="program__list">
+                        <li class="program__list-item">Где есть созависимость – там нет меня. Есть вещество или эмоция/состояние, которое управляет мной через другого. Ощущение «липучести», без тебя меня нет. И я правда не знаю ни своих желаний, ни чувств..</li>
+                        <li class="program__list-item">Пришло время сделать что-то для себя: подарить себе себя, вернуть себе свои чувства, мысли, желания и ценности.</li>
+                    </ul>
+                    <a href="/programs/соза.html" class="product-item-btn">Подробнее</a>
+                    <a href="https://api.bepaid.by/products/prd_9edfaad83560cb7f/pay" class="product-item-btn__pay">Оплатить</a> -->
+                <!-- </div> -->
+                <!-- <div class="program-item" id="program-item-5"> -->
+                    <!-- <p class="program-item__header">Перезагрузка</p> -->
+                    <!-- <ul class="program__list"> -->
+                        <!-- <li class="program__list-item">Всем нам порой необходима ПЕРЕЗАГРУЗКА для того, чтобы справиться со стрессом, пережить расставание, преодолеть кризис, улучшить сон, снизить тревожность и просто уделить время себе.</li> -->
+                        <!-- <li class="program__list-item">Если у Вас есть стрессовое состояние, неуверенность, нежелание вообще что-то делать, подавленное состояние – ПЕРЕЗАГРУЗКА – то, что надо сейчас.</li> -->
+                    <!-- </ul> -->
+                    <!-- <a href="/programs/перезагрузка.html" class="product-item-btn">Подробнее</a> -->
+                <!-- </div> -->
+            <!-- </div>-->
+            
             <!--<h2 class="programs-header" id="payment">Оплата</h2>-->
             <!--<div class="program-item payment-modifier">-->
             <!--        <p class="program-item__header">Свободный платёж</p>-->
@@ -272,7 +311,7 @@
             </li>
         </ul>
     </section>
-
+    
     <h2 class="swiper-header reviews__header-modifier" id="reviews">Отзывы</h2>
     <section class="flexslider reviews-slider">
         <ul class="slides">
@@ -320,7 +359,7 @@
             </li>
         </ul>
     </section>
-
+    
     <section class="wrapper contacts-modifier" id="contacts">
         <div class="contacts-tab">
             <h2 class="contacts-header">Контакты</h2>
@@ -377,18 +416,19 @@
                 <li class="footer-item">ИП Карпович Ирина Михайловна (УНП 192153626)</li>
                 <li class="footer-item">Свидетельство № 0463089 выдано 1 ноября 2013 г. Минским горисполкомом</li>
                 <li class="footer-item">р/с BY67PJCB30130320970000000933 "Приорбанк" ОАО</li>
-                <li class="footer-item">Адрес и телефон: г.Минск, пл.Свободы 8, +375 44 515 75 44</li>
+                <!-- <li class="footer-item">Адрес и телефон: г.Минск, ул. Ильянская 12, +375 44 515 75 44</li> -->
+                <li class="footer-item">Телефон: +375 44 515 75 44</li>
                 <li class="footer-item">Email: irina.karpovich@tut.by</li>
                 <li class="footer-item">Время работы: понедельник - пятница 10:00-20:00; суббота, воскресенье - выходной</li>
             </ul>
             <ul class="footer-sub-info">
-                <a href="./offer-agreement.html">
+                <a href="/offer-agreement.html" style="text-decoration: none;">
                     <li class="footer-sub-item">Договор оферты</li>
                 </a>
-                <a href="./Confidential.html">
+                <a href="/Confidential.html" style="text-decoration: none;">
                     <li class="footer-sub-item">Политика конфиденциальности</li>
                 </a>
-                <a href="./payment-agreement.html">
+                <a href="/payment-agreement.html" style="text-decoration: none;">
                     <li class="footer-sub-item">Способы оплаты</li>
                 </a>
                 <li class="footer-links">
@@ -405,7 +445,7 @@
                         <img src="images/whatsapp.png" alt="#" class="footer-icon">
                     </a>
                 </li>
-                <img src="#" alt="#" class="footer-bePaid-item" >
+                <img src="images/bePaid_transparent.svg" alt="#" class="footer-bePaid-item" >
             </ul>
         </div>
     </footer>
@@ -415,20 +455,23 @@
             <span class="close">&times;</span>
             <span class="modal-text"></span>
             <a href="https://t.me/irinakarpowitch" class="modal-btn">Записаться</a>
-            <!--<a href="https://api.bepaid.by/products/prd_a49ad66717615573/pay" class="modal-btn">Оплатить</a>-->
+            <a href="https://api.bepaid.by/products/prd_a49ad66717615573/pay" class="modal-btn">Оплатить</a>
         </div>
     </div>
 
-    <div class="programs-modal" id="programsModal" style="display: none;">
-        <div class="programs-modal-content" id="programsModalContent">
-            <span class="close">&times;</span>
-            <span class="programs-modal-text" id="programsModalText"></span>
-            <a href="https://t.me/irinakarpowitch" class="modal-btn">Записаться</a>
-        </div>
-    </div>
+    <!--<div class="programs-modal" id="programsModal" style="display: none;">-->
+    <!--    <div class="programs-modal-content" id="programsModalContent">-->
+    <!--        <span class="close">&times;</span>-->
+    <!--        <span class="programs-modal-text" id="programsModalText"></span>-->
+    <!--        <a href="https://t.me/irinakarpowitch" class="modal-btn">Записаться</a>-->
+    <!--    </div>-->
+    <!--</div>-->
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.7.2/jquery.flexslider.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     <script src="js/servicesSection.js"></script>
-    <script src="js/programsSection.js"></script>
+    <!--<script src="js/programsSection.js"></script>-->
     <script src="js/slider.js"></script>
     <script src="js/burgerMenu.js"></script>
 </body>
