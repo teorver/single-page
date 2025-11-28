@@ -124,6 +124,10 @@
     gap: 10px;
 }
 
+.about-group-modifier {
+    text-align: right;
+}
+
 @media (max-width: 750px) {
     .about-3-group {
         gap: 8px;
@@ -140,6 +144,7 @@
     font-size: 38px;
     font-weight: 600;
     color: #5f698a;
+    text-decoration: none;
 }
 
 @media (max-width: 1630px) {
@@ -279,4 +284,58 @@
     .about-socials-icon {
         width: 34px;
     }
+}
+
+.about-me-main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    color: #5F698A;
+    font-size: 21px;
+    padding: 1% 12%;
+    position: relative;
+    gap: 8px;
+    /*text-align: justify;*/
+    text-align: center;
+}
+
+.about-me-main_title {
+    text-align: center;
+    font-weight: 600;
+}
+
+.about-me-main_text {}
+
+.my-work-section {
+    display: flex;
+    flex-direction: column;
+    gap: 42px;
+    align-items: center;
+    padding-bottom: 18px;
+}
+
+.my-work_title {}
+
+.my-work_item {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 24px;
+    margin: 0 auto;
+    width: 60%;
+    max-width: 900px;
+    padding-left: 200px;
+}
+
+.my-work_subtitle {
+    flex: 0 0 160px;
+}
+
+.my-work_text {
+    flex: 1 1 auto;
+    color: #5F698A;
+    font-size: 20px;
+    font-weight: 600;
+    position: relative;
+    list-style: disc;
 }
