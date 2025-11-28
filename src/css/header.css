@@ -8,13 +8,12 @@
 
 .header__container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     transition: 0.3s;
 }
 
 .header__logo {
-    width: 300px;
     color: white;
 }
 
@@ -25,14 +24,19 @@
 
 .navigation {
     display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-start;
     padding: 43px 0 42px;
+    gap: 2%;
 }
 
 .tab__element {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 154px;
+    white-space: nowrap;
+    padding: 0 6px;
     font-size: 20px;
     font-weight: 600;
     color: white;
