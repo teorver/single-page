@@ -402,6 +402,61 @@
 
     <section class="wrapper faq-modifier" id="faq">
         <h2 class="faq-header">Вопросы и ответы</h2>
+
+        <div class="faq-accordion">
+            <div class="faq-item">
+                <button class="faq-question">
+                    Сколько длится консультация?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Длительность индивидуальной консультации – 50 минут.</p>
+                    <p>Длительность консультации для пары – 80 минут.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Online vs offline, что лучше?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Выбирайте вариант, который вам ближе. Оба хороши и эффективны. Работаю очно в Минске и онлайн по всему миру на русском и английском языках.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Надо ли готовиться к консультации?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Нет. Это не экзамен. Можно прийти без запроса и в ходе работы определить его. И даже поменять. Это нормально.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Работаете ли вы с подростками?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Да, я работаю с подростками 16+, взрослыми и парами. LGBT friendly.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Как долго?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Часто спрашивают – как долго длится терапия? Сколько консультаций необходимо?</p>
+                    <p>Каждый случай уникален. Как в отношениях. Есть отношения, которые вы хотите превратить в роман, а получается маленький рассказ. Порой случайная встреча перетекает в историю длинною в жизнь.</p>
+                    <p>Работаю как в формате консультаций – несколько встреч, так и в длительной терапии от года.</p>
+                </div>
+            </div>
+        </div>
     </section>
     
     <section class="wrapper contacts-modifier" id="contacts">
@@ -442,15 +497,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="contact-video">
-                    <video
-                        class="contacts-main-video"
-                        controls
-                        poster="images/preview_img.jpg"
-                    >
-                        <source src="video/Irina_video.mp4" type="video/mp4">
-                    </video>
-                </div>
+                <img src="images/contacts_fin_img_modified.png" alt="#" loading="lazy">
             </div>
         </div>
     </section>
@@ -460,8 +507,7 @@
                 <li class="footer-item">ИП Карпович Ирина Михайловна (УНП 192153626)</li>
                 <li class="footer-item">Свидетельство № 0463089 выдано 1 ноября 2013 г. Минским горисполкомом</li>
                 <li class="footer-item">р/с BY67PJCB30130320970000000933 "Приорбанк" ОАО</li>
-                <!-- <li class="footer-item">Адрес и телефон: г.Минск, ул. Ильянская 12, +375 44 515 75 44</li> -->
-                <li class="footer-item">Тучинский переулок 2А, каб. 709Б, 7й этаж</li>
+                <li class="footer-item">Адрес: г. Минск, Тучинский переулок 2А, каб. 709Б, 7й этаж</li>
                 <li class="footer-item">Телефон: +375 44 515 75 44</li>
                 <li class="footer-item">Email: irina.karpovich@tut.by</li>
                 <li class="footer-item">Время работы: понедельник - пятница 10:00-20:00; суббота, воскресенье - выходной</li>
@@ -504,20 +550,36 @@
         </div>
     </div>
 
-    <!--<div class="programs-modal" id="programsModal" style="display: none;">-->
-    <!--    <div class="programs-modal-content" id="programsModalContent">-->
-    <!--        <span class="close">&times;</span>-->
-    <!--        <span class="programs-modal-text" id="programsModalText"></span>-->
-    <!--        <a href="https://t.me/irinakarpowitch" class="modal-btn">Записаться</a>-->
-    <!--    </div>-->
-    <!--</div>-->
-
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.7.2/jquery.flexslider.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     <script src="js/servicesSection.js"></script>
-    <!--<script src="js/programsSection.js"></script>-->
     <script src="js/slider.js"></script>
     <script src="js/burgerMenu.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const items = document.querySelectorAll('.faq-item');
+
+            items.forEach(item => {
+                const btn = item.querySelector('.faq-question');
+                const icon = item.querySelector('.faq-icon');
+
+                btn.addEventListener('click', () => {
+                    const isActive = item.classList.contains('faq-item--active');
+                    items.forEach(i => {
+                        i.classList.remove('faq-item--active');
+                        const ic = i.querySelector('.faq-icon');
+                        if (ic) ic.textContent = '+';
+                    });
+                    if (!isActive) {
+                        item.classList.add('faq-item--active');
+                        if (icon) icon.textContent = '−';
+                    }
+                });
+            });
+        });
+    </script>
+
 </body>
 </html>
