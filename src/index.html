@@ -11,7 +11,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.7.2/flexslider.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" referrerpolicy="no-referrer">
-<!--    <link rel="stylesheet" href="css/index.css">-->
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/about.css">
@@ -22,6 +21,7 @@
     <link rel="stylesheet" href="css/image-viewer.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/misc.css">
+    <link rel="stylesheet" href="css/faq.css">
 
     <title>Ирина Карпович</title>
 </head>
@@ -43,7 +43,7 @@
                     <a href="#programs" class="tab__element">Программы</a>
                     <a href="#education" class="tab__element">Образование</a>
                     <a href="#reviews" class="tab__element">Отзывы</a>
-                    <a href="#" class="tab__element">Оплата</a>
+                    <a href="https://api.bepaid.by/products/prd_a49ad66717615573/pay" class="tab__element">Оплата</a>
                     <a href="#faq" class="tab__element">FAQ</a>
                     <a href="#contacts" class="tab__element">Контакты</a>
                     <a href="en.html" class="tab__element">EN</a>
@@ -54,10 +54,6 @@
     <section class="wrapper about-me" >
         <div class="about-wrapper">
             <div class="about-1">
-<!--                <ul class="about-1-text">-->
-<!--                    <li class="about-item-text">Психолог</li>-->
-<!--                    <li class="about-item-text">Ирина Карпович</li>-->
-<!--                </ul>-->
                 <div class="about-3-text">
                     <div class="about-3-group about-group-modifier">
                         <span class="about-3-title">Психолог</span>
@@ -66,15 +62,13 @@
                 </div>
             </div>
             <div class="about-2">
-                <!--<img src="images/BackgroundEraser_20241019_225028136.png" alt="#" class="about-me-main-img">-->
-                <img src="images/1000033919.png" alt="#" class="about-me-main-img">
+                <img src="images/main_title_img.png" alt="#" class="about-me-main-img">
             </div>
             <div class="about-3">
                 <div class="about-3-text">
                     <div class="about-3-group">
                         <a href="#" class="about-3-title">Записаться</a>
                     </div>
-                    <!--<span class="about-item-text text-modifier">Я психолог</span>-->
                 </div>
                 <div class="socials-img">
                     <a href="https://t.me/irinakarpowitch">
@@ -92,9 +86,14 @@
                 </div>
             </div>
         </div>
-        <!-- new "Обо мне" block -->
+
         <div class="about-me-main" id="about-me">
-            <span class="about-me-main_title">Обо мне</span>
+            <svg class="about-me-separator" xmlns="http://www.w3.org/2000/svg"
+                 viewBox="0 0 200 2" aria-hidden="true">
+                <line x1="0" y1="1" x2="200" y2="1" stroke="#DDAE74" stroke-width="2" />
+            </svg>
+
+            <span class="about-me-main_title">ОБО МНЕ</span>
             <span class="about-me-main_text">
                 Здравствуйте. Меня зовут Ирина Карпович. Я семейный психолог.
                 Никакой мистики или наставлений, когда надо разобраться с «кашей» в голове,
@@ -106,10 +105,15 @@
                 сотрудничаю с ЮНИСЕФ (English speaking psychologist), аккредитованный
                 гештальт‑терапевт (студентам МГИ часы идут в зачет).
             </span>
+
+            <svg class="about-me-separator" xmlns="http://www.w3.org/2000/svg"
+                 viewBox="0 0 200 2" aria-hidden="true">
+                <line x1="0" y1="1" x2="200" y2="1" stroke="#DDAE74" stroke-width="2" />
+            </svg>
         </div>
 
         <div class="my-work-section">
-            <span class="my-work_title">C ЧЕМ Я РАБОТАЮ?</span>
+            <span class="about-me-main_title" id="services">C ЧЕМ Я РАБОТАЮ?</span>
             <div class="my-work_item">
                 <div class="my-work_subtitle">01 Cозависимость</div>
                 <div class="my-work_text">
@@ -124,6 +128,11 @@
                 </div>
             </div>
 
+            <svg class="about-me-separator" xmlns="http://www.w3.org/2000/svg"
+                 viewBox="0 0 200 2" aria-hidden="true">
+                <line x1="0" y1="1" x2="200" y2="1" stroke="#DDAE74" stroke-width="2" />
+            </svg>
+
             <div class="my-work_item">
                 <div class="my-work_subtitle">02 Зависимость</div>
                 <div class="my-work_text">
@@ -135,6 +144,11 @@
                     </ul>
                 </div>
             </div>
+
+            <svg class="about-me-separator" xmlns="http://www.w3.org/2000/svg"
+                 viewBox="0 0 200 2" aria-hidden="true">
+                <line x1="0" y1="1" x2="200" y2="1" stroke="#DDAE74" stroke-width="2" />
+            </svg>
 
             <div class="my-work_item">
                 <div class="my-work_subtitle">03 Отношения</div>
@@ -148,6 +162,11 @@
                 </div>
             </div>
 
+            <svg class="about-me-separator" xmlns="http://www.w3.org/2000/svg"
+                 viewBox="0 0 200 2" aria-hidden="true">
+                <line x1="0" y1="1" x2="200" y2="1" stroke="#DDAE74" stroke-width="2" />
+            </svg>
+
             <div class="my-work_item">
                 <div class="my-work_subtitle">04 Кризисы</div>
                 <div class="my-work_text">
@@ -160,136 +179,73 @@
                 </div>
             </div>
         </div>
+
+        <div class="services-apply">
+            <span class="service-span-1" >Длительность индивидуальной консультации – 50 минут / 100 BYN/ 3000 RUB</span>
+            <span class="service-span-1" >* по курсу НБРБ на день оплаты.</span>
+            <a href="https://t.me/irinakarpowitch" class="services-btn">Записаться</a>
+            <a href="https://api.bepaid.by/products/prd_a49ad66717615573/pay" class="services-btn">Оплатить</a>
+        </div>
     </section>
 
-    <section class="wrapper services-modifier" id="services">
-        <div class="services-tab">
-            <h2 class="services-header">Консультация 30$*/100 BYN/3000 RUB</h2>
-            <div class="services-info">
-                <div class="services-list">
-                    <ul class="services-list-wrapper">
-                        <li class="services-list-item" id="item-1">Зависимое и созависимое поведение</li>
-                        <li class="services-list-item" id="item-2">Взаимоотношения в паре</li>
-                        <li class="services-list-item" id="item-3">Детско-родительские отношения</li>
-                        <li class="services-list-item" id="item-4">Улучшение качества жизни</li>
-                        <li class="services-list-item" id="item-5">Саморазвитие и личностный рост</li>
-                        <li class="services-list-item" id="item-6">Самооценка, личные границы и поиск собственных смыслов</li>
-                        <li class="services-list-item" id="item-7">Помощь при расставании/разводе/утрате/проживании потери</li>
-                    </ul>
-                </div>
-                <div class="services-video">
-                    <video
-                        controls
-                        class="services-main-video"
-                    >
-                        <source src="video/services_new.mp4" type="video/mp4">
-                    </video>
-                </div>
-                <!--<div class="services-video">-->
-                <!--    <div class="video-wrapper">-->
-                <!--        <iframe-->
-                <!--            src="https://www.youtube.com/embed/xZgJ9-mVCIw?si=e82AUyZMQudNQs26&modestbranding=1&rel=0"-->
-                <!--            frameborder="0"-->
-                <!--            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"-->
-                <!--            referrerpolicy="strict-origin-when-cross-origin"-->
-                <!--            allowfullscreen-->
-                <!--            class="services-main-video">-->
-                <!--        </iframe>-->
-                <!--    </div>-->
-                <!--</div>-->
-            </div>
-        </div>
-        <div class="services-apply">
-                <span class="service-span-1" >Длительность консультации 50 минут</span>
-                <span class="service-span-1" >* по курсу НБРБ на день оплаты.</span>
-                <span class="service-span-1" >Работаю со взрослыми и подростками 18+</span>
-                <a href="https://t.me/irinakarpowitch" class="services-btn">Записаться</a>
-                <a href="https://api.bepaid.by/products/prd_a49ad66717615573/pay" class="services-btn">Оплатить</a>
-            </div>
-    </section>
     <section class="wrapper programs-modifier" id="programs">
         <div class="programs-tab">
             <h2 class="programs-header">Программы</h2>
             <div class="programs-options">
-                <!-- <div class="program-item" id="program-item-1">
-                    <p class="program-item__header">Пережить расставание</p>
-                    <span class="program__list-item list-item_modifier">Мини-курс для самостоятельной работы</span> -->
-                    <!-- <ul class="program__list">
-                        <li class="program__list-item">30$*/100 BYN/3000 RUB</li>
-                        <li class="program__list-item">* по курсу НБРБ на день оплаты.</li>
-                    </ul> -->
-                    <!-- <button class="product-item-btn">Подробнее</button>
-                    <a href="/programs/пережить-расставание-мини-курс.html" class="product-item-btn">Подробнее</a>
-                                    </div> -->
-                <!-- <div class="program-item" id="program-item-2">
-                    <p class="program-item__header">Пережить расставание</p>
-                    <span class="program__list-item list-item_modifier">Онлайн-программа</span>
+                <div class="program-item" id="program-item-1">
+                    <p class="program-item__header">Путь героя</p>
                     <ul class="program__list">
-                        <li class="program__list-item">21 день для того, чтобы привести в порядок тело, ум, эмоции</li>
-                        <li class="program__list-item">Даже если кажется, что «никогда не смогу» и «лучше не найду»</li>
-                        <li class="program__list-item">Пусть лучше болят мышцы, чем болит душа)</li>
-                    </ul>
-                    <a href="/programs/пережить-расставание.html" class="product-item-btn">Подробнее</a>
-                </div> -->
-                <div class="program-item" id="program-item-3">
-                    <p class="program-item__header">Rehab 28</p>
-                    <ul class="program__list">
-                        <li class="program__list-item">Зависимость – это болезнь, которую там и тогда Вы себе не выбирали. Здесь и сейчас выбор за Вами.</li>
+                        <li class="program__list-item">Программа восстановление 28 дней.</li>
                         <li class="program__list-item">Трезвость нужна, чтобы чувствовать радость, счастье и свободу в своей жизни.</li>
                     </ul>
                     <a href="/src/programs/rehab_28.html" class="product-item-btn">Подробнее</a>
-                    <!--<a href="https://api.bepaid.by/products/prd_075dcac89ecf24a8/pay" class="product-item-btn">Оплатить</a>-->
                 </div>
                 
-                <div class="program-item" id="program-item-4">
-                    <p class="program-item__header">Вне СОЗЫ доступа</p>
+                <div class="program-item" id="program-item-2">
+                    <p class="program-item__header">Путь героя. Выход из созависимости</p>
                     <ul class="program__list">
-                        <li class="program__list-item">Где есть созависимость – там нет меня. Есть вещество или эмоция/состояние, которое управляет мной через другого. Ощущение «липучести», без тебя меня нет. И я правда не знаю ни своих желаний, ни чувств..</li>
-                        <li class="program__list-item">Пришло время сделать что-то для себя: подарить себе себя, вернуть себе свои чувства, мысли, желания и ценности.</li>
+                        <li class="program__list-item">Где есть созависимость – там нет личности.</li>
+                        <li class="program__list-item">Пришло время подарить себе себя, вернуть себе свои чувства, мысли, желания и ценности.</li>
                     </ul>
                     <a href="/src/programs/соза.html" class="product-item-btn">Подробнее</a>
                 </div>
-                <div class="program-item" id="program-item-5">
+                <div class="program-item" id="program-item-3">
                     <p class="program-item__header">Перезагрузка</p>
                     <ul class="program__list">
-                        <li class="program__list-item">Всем нам порой необходима ПЕРЕЗАГРУЗКА для того, чтобы справиться со стрессом, пережить расставание, преодолеть кризис, улучшить сон, снизить тревожность и просто уделить время себе.</li>
-                        <li class="program__list-item">Если у Вас есть стрессовое состояние, неуверенность, нежелание вообще что-то делать, подавленное состояние – ПЕРЕЗАГРУЗКА – то, что надо сейчас.</li>
+                        <li class="program__list-item">Если у Вас есть стрессовое состояние, неуверенность, нежелание вообще что-то делать, подавленное состояние – ПЕРЕЗАГРУЗКА – то, что нужно.</li>
                     </ul>
                     <a href="/src/programs/перезагрузка.html" class="product-item-btn">Подробнее</a>
                 </div>
-                
             </div>
-            
-            <!-- <div class="programs-options" style="justify-content: normal; gap: 150px;">
-                <div class="program-item" id="program-item-4">
-                    <p class="program-item__header">Вне СОЗЫ доступа</p>
-                    <ul class="program__list">
-                        <li class="program__list-item">Где есть созависимость – там нет меня. Есть вещество или эмоция/состояние, которое управляет мной через другого. Ощущение «липучести», без тебя меня нет. И я правда не знаю ни своих желаний, ни чувств..</li>
-                        <li class="program__list-item">Пришло время сделать что-то для себя: подарить себе себя, вернуть себе свои чувства, мысли, желания и ценности.</li>
-                    </ul>
-                    <a href="/programs/соза.html" class="product-item-btn">Подробнее</a>
-                    <a href="https://api.bepaid.by/products/prd_9edfaad83560cb7f/pay" class="product-item-btn__pay">Оплатить</a> -->
-                <!-- </div> -->
-                <!-- <div class="program-item" id="program-item-5"> -->
-                    <!-- <p class="program-item__header">Перезагрузка</p> -->
-                    <!-- <ul class="program__list"> -->
-                        <!-- <li class="program__list-item">Всем нам порой необходима ПЕРЕЗАГРУЗКА для того, чтобы справиться со стрессом, пережить расставание, преодолеть кризис, улучшить сон, снизить тревожность и просто уделить время себе.</li> -->
-                        <!-- <li class="program__list-item">Если у Вас есть стрессовое состояние, неуверенность, нежелание вообще что-то делать, подавленное состояние – ПЕРЕЗАГРУЗКА – то, что надо сейчас.</li> -->
-                    <!-- </ul> -->
-                    <!-- <a href="/programs/перезагрузка.html" class="product-item-btn">Подробнее</a> -->
-                <!-- </div> -->
-            <!-- </div>-->
-            
-            <!--<h2 class="programs-header" id="payment">Оплата</h2>-->
-            <!--<div class="program-item payment-modifier">-->
-            <!--        <p class="program-item__header">Свободный платёж</p>-->
-            <!--        <ul>-->
-            <!--            <li class="program__list-item">Стоимость по курсу НБРБ на день оплаты.</li>-->
-            <!--        </ul>-->
-            <!--        <a href="https://t.me/irinakarpowitch" class="modal-btn">Оплата</a>-->
-            <!--</div>-->
         </div>
+
+        <div class="why-with-me">
+            <img src="images/why_with_me.png" alt="#">
+            <div class="why-with-me_items">
+                <span class="about-me-main_title">Почему со мной?</span>
+                <ul class="about-1-text why-with-me_text_modifier">
+                    <li class="why-with-me_text">Конфиденциальность<br>
+                        <span class="my-work_text-body">
+                            Это про честность и уважение к человеку, который доверяет мне свою историю.
+                        </span>
+                    </li>
+                    <li class="why-with-me_text">Индивидуальность<br>
+                        <span class="my-work_text-body">
+                            Каждый человек – уникальная вселенная. Поэтому стратегия работы в каждом случае формируется индивидуально
+                        </span>
+                    </li>
+                    <li class="why-with-me_text">Интегративный подход в работе<br>
+                        <span class="my-work_text-body">
+                            В своей работе я использую идеи, методы и инструменты различных направлений психологии: гештальт, арт-терапия, телесные и дыхательные практики, элементы КПТ, медитации.
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <a href="https://t.me/irinakarpowitch" class="services-btn">Записаться</a>
     </section>
+    
     <h2 class="swiper-header" id="education">Образование</h2>
     <section class="flexslider education-slider">
         <ul class="slides">
@@ -442,6 +398,10 @@
                 </a>
             </li>
         </ul>
+    </section>
+
+    <section class="wrapper faq-modifier" id="faq">
+        <h2 class="faq-header">Вопросы и ответы</h2>
     </section>
     
     <section class="wrapper contacts-modifier" id="contacts">

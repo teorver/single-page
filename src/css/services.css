@@ -217,6 +217,10 @@
     justify-content: center;
 }
 
+.service-span-1 {
+    color: #5F698A;
+}
+
 @media (max-width: 550px) {
     .services-apply {
         text-align: center;
