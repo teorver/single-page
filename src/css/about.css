@@ -316,13 +316,14 @@
     }
 }
 
-.about-me-separator {
-    width:100% !important;
+.about-me-main::before,
+.about-me-main::after {
+    content: "";
+    display: block;
+    width: 50%;
     height: 2px;
-    display: flex;
-    padding-top: 18px;
-    padding-bottom: 18px;
-    box-sizing: content-box;
+    margin: 18px auto;
+    background: linear-gradient(to right, transparent 0, #5F698A 15%, #5F698A 85%, transparent 100%);
 }
 
 .about-me-main_title {
@@ -352,7 +353,7 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 4px;
+    gap: 4%;
     margin: 0 auto;
     width: 50%;
     max-width: 800px;
