@@ -203,6 +203,14 @@
     justify-content: center;
     padding: 38px 0;
     gap: 20px;
+
+    @media (max-width: 1250px) {
+        gap: 0;
+    }
+
+    @media (max-width: 540px) {
+        flex-direction: column-reverse;
+    }
 }
 
 .why-with-me_items {
@@ -210,12 +218,24 @@
     flex-direction: column;
     gap: 20px;
     width: 1000px;
+
+    @media (max-width: 1250px) {
+        width: 100%;
+    }
+
+    @media (max-width: 800px) {
+        gap: 12px;
+    }
 }
 
 .why-with-me_text_modifier {
     height: fit-content;
     gap: 64px;
     margin: auto 0;
+
+    @media (max-width: 800px) {
+        gap: 30px;
+    }
 }
 
 .why-with-me_text {
@@ -225,8 +245,26 @@
     font-weight: 600;
     position: relative;
     list-style: disc;
+
+    @media (max-width: 1250px) {
+        font-size: 24px;
+    }
+
+    @media (max-width: 800px) {
+        font-size: 18px;
+    }
 }
 
 .my-work_text-body {
     font-weight: normal;
+}
+
+.why-with-me_img {
+    @media (max-width: 1250px) {
+        width: 400px;
+    }
+
+    @media (max-width: 800px) {
+        width: 300px;
+    }
 }
