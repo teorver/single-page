@@ -69,6 +69,7 @@
     border: 1px solid #5F698A;
     text-align: left;
     width: 60%;
+    padding: 1%;
 }
 
 .who-need-program-title {
@@ -102,7 +103,7 @@
 
 .program-card {
     border: 1px solid #5F698A;
-    padding: 16px 18px;
+    padding: 1%;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -176,13 +177,39 @@
     justify-content: center;
     text-align: center;
     border: 1px solid #5F698A;
-    padding: 24px 32px;
+    padding: 1%;
     box-sizing: border-box;
 }
 
 .course-methods-grid {
     align-items: stretch;
 }
+
+.work-format {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.work-format-items {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.work-format-items__item {
+    color: #5F698A;
+    font-size: 28px;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.work-format-btn-modifier {}
 
 @media (max-width: 1130px) {
     .program-benefits__title {
@@ -269,5 +296,11 @@
 @media (max-width: 770px) {
     .course-methods-grid .program-card {
         flex: 1 1 100%;                     /* 1 в ряд */
+    }
+}
+
+@media (max-width: 510px) {
+    .hero-modifier {
+        padding: 8% 1%;
     }
 }
