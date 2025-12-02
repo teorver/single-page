@@ -1,0 +1,22 @@
+.hero-modifier {
+    background-color: #f8f5f7;
+    max-width: 100%;
+    padding: 170px 115px 70px 115px;
+    background-repeat: no-repeat;
+}
+
+.selected-program-main {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.selected-program-main-title {
+    text-align: center;
+}
+
+.selected-program-description {}
+
+.selected-program__img {}
+
+.selected-program_text {}
