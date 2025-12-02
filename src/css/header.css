@@ -94,7 +94,7 @@
     }
 }
 
-@media (max-width: 1350px) {
+@media (max-width: 1520px) {
     .header__wrapper {
         padding: 0 100px;
     }
@@ -105,13 +105,28 @@
     }
 }
 
-@media (max-width: 950px) {
+@media (max-width: 1410px) {
     .header__wrapper {
         padding: 0 80px;
     }
 
     .tab__element {
         width: 110px;
+        font-size: 14px;
+    }
+
+    .navigation {
+        width: 60%;
+    }
+}
+
+@media (max-width: 1300px) {
+    .header__wrapper {
+        padding: 0 80px;
+    }
+
+    .tab__element {
+        width: 100px;
         font-size: 14px;
     }
 

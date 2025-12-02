@@ -153,3 +153,11 @@
         width: 100%;
     }
 }
+
+
+
+@media (max-width: 500px) {
+    .contacts-img {
+        width: 300px;
+    }
+}
