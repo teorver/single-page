@@ -8,6 +8,10 @@
     overflow-x: hidden;
 }
 
+.slider-padding {
+    padding: 40px 87px 80px 87px;
+}
+
 @media (max-width: 1200px) {
     .flexslider {
         padding: 40px;
@@ -23,6 +27,10 @@
 @media (max-width: 590px) {
     .flexslider {
         padding: 10px;
+    }
+
+    .slider-padding {
+        padding: 40px 10px;
     }
 }
 
@@ -136,7 +144,7 @@
 
 .swiper-header {
     font-weight: bold;
-    font-size: 64px;
+    font-size: 32px;
     color: #5F698A;
     text-align: center;
     padding: 40px 120px;

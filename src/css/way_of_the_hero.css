@@ -79,6 +79,7 @@
     font-size: 26px;
     font-weight: bold;
     color: #5f698a;
+    padding: 3%;
 }
 
 .who-need-program-desc {
@@ -107,6 +108,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 24px 32px;
+    align-items: stretch;
 }
 
 .program-card {
@@ -170,8 +172,7 @@
 
 .course-methods-grid {
     display: flex;
-    flex-wrap: wrap;
-    gap: 24px 32px;
+    gap: 20px;
 }
 
 .grid-modifier {
@@ -179,19 +180,22 @@
 }
 
 .course-methods-grid .program-card {
-    flex: 1 1 calc((100% - 2 * 32px) / 3);
+    flex: 0 1 calc(33.333% - 20px);
+    border: 1px solid #5F698A;
+    box-sizing: border-box;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    border: 1px solid #5F698A;
-    padding: 1%;
-    box-sizing: border-box;
 }
 
-.course-methods-grid {
-    align-items: stretch;
+.test-modif {
+    justify-content: center;
 }
+
+/*.course-methods-grid {*/
+/*    align-items: stretch;*/
+/*}*/
 
 .work-format {
     display: flex;
@@ -205,6 +209,7 @@
     justify-content: space-between;
     text-align: center;
     margin: 0 auto;
+    gap: 16px;
 }
 
 .work-format-items__item {
@@ -215,6 +220,7 @@
     justify-content: center;
     align-content: center;
     flex-wrap: wrap;
+    border: 1px solid #5F698A;
 }
 
 .work-format-btn-modifier {}
@@ -383,6 +389,7 @@
 
     .work-format-items__item {
         width: 100%;
+        border: none;
     }
 }
 
@@ -431,6 +438,10 @@
 
     .program-title-modifier {
         font-size: 24px;
+    }
+
+    .course-methods-grid {
+        flex-direction: column;
     }
 }
 
