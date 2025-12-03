@@ -28,6 +28,10 @@
     width: 350px;
 }
 
+.selected-program-img-modifier {
+    height: fit-content;
+}
+
 .hero-text-modifier {
     display: flex;
     flex-direction: column;
