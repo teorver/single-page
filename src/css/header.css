@@ -94,6 +94,16 @@
     }
 }
 
+@media (max-width: 1540px) {
+    .logo {
+        font-size: 30px;
+    }
+
+    .tab__element {
+        width: 100%;
+    }
+}
+
 @media (max-width: 1520px) {
     .header__wrapper {
         padding: 0 100px;
