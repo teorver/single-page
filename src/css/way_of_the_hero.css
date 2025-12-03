@@ -219,6 +219,19 @@
 
 .work-format-btn-modifier {}
 
+.program-title-modifier {
+    padding: 0 16%;
+}
+
+.program-desc-modifier {
+    flex-direction: column;
+}
+
+.card-modifier {
+    padding: 4% 8%;
+}
+
+/* 1600 */
 @media (max-width: 1600px) {
     .who-need-img {
         height: fit-content;
@@ -234,6 +247,7 @@
     }
 }
 
+/* 1410 */
 @media (max-width: 1410px) {
     .hero-text-modifier {
         width: 100%;
@@ -244,6 +258,7 @@
     }
 }
 
+/* 1140 */
 @media (max-width: 1140px) {
     .who-need-program {
         padding: 4% 0;
@@ -257,15 +272,39 @@
         gap: 8px;
     }
 
-    .prgoram__item {
-        width: 100%;
-    }
-
+    .prgoram__item,
     .who-need-program__img {
         width: 100%;
     }
 }
 
+/* 1130 – сгруппировано */
+@media (max-width: 1130px) {
+    .program-benefits__title {
+        font-size: 24px;
+    }
+
+    .program-benefits__item {
+        font-size: 20px;
+    }
+
+    .course-methods-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .course-methods-grid .program-card {
+        flex: 1 1 calc((100% - 32px) / 2); /* 2 в ряд */
+    }
+}
+
+@media (max-width: 975px) {
+    .program-title-modifier {
+        font-size: 28px;
+        padding: 0;
+    }
+}
+
+/* 940 */
 @media (max-width: 940px) {
     .hero-modifier {
         padding: 120px 40px 70px;
@@ -276,15 +315,13 @@
         text-align: center;
     }
 
-    .who-need-program-title {
-        font-size: 20px;
-    }
-
+    .who-need-program-title,
     .who-need-program-desc {
         font-size: 20px;
     }
 }
 
+/* 784 */
 @media (max-width: 784px) {
     .selected-program__img {
         height: fit-content;
@@ -292,39 +329,11 @@
     }
 }
 
-@media (max-width: 750px) {
-
-}
-
-@media (max-width: 550px) {
-    .selected-program-description {
-        flex-direction: column;
-        gap: 24px;
-    }
-
-    .selected-program__img {
-        width: 100%;
-    }
-
-    .hero-btn-modifier {
-        width: 100%;
-    }
-}
-
-@media (max-width: 1130px) {
-    .program-benefits__title {
-        font-size: 24px;
-    }
-
-    .program-benefits__item {
-        font-size: 20px;
-    }
-}
-
+/* 770 – сгруппировано */
 @media (max-width: 770px) {
     .program-benefits {
         margin: 24px auto 0;
-        padding: 0 16px
+        padding: 0 16px;
     }
 
     .program-benefits__title {
@@ -339,15 +348,59 @@
     .program-benefits__item::before {
         font-size: 20px;
     }
-}
 
-@media (max-width: 1130px) {
+    .course-methods {
+        padding: 0 5%;
+    }
+
     .course-methods-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
+    }
+
+    .course-methods-grid .program-card {
+        flex: 1 1 100%; /* 1 в ряд */
+        text-align: center;
+    }
+
+    .who-need-program-title {
+        font-size: 18px;
+    }
+
+    .who-need-program-description,
+    .who-need-program__item {
+        flex-direction: column;
+    }
+
+    .who-need-img {
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    .work-format-items {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .work-format-items__item {
+        width: 100%;
     }
 }
 
-@media (max-width: 450px) {
+/* 550 */
+@media (max-width: 550px) {
+    .selected-program-description {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .selected-program__img {
+        width: 100%;
+    }
+
+    .hero-btn-modifier {
+        width: 100%;
+    }
+
     .program-benefits {
         padding: 0 10px;
     }
@@ -365,53 +418,23 @@
     .program-benefits__item::before {
         font-size: 18px;
     }
-}
 
-@media (max-width: 770px) {
-    .course-methods {
-        padding: 0 5%;
-    }
-
-    .course-methods-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .who-need-program-title {
-        font-size: 22px;
-    }
-
-    .who-need-program-description {
+    .who-need-program-grid {
+        display: flex;
         flex-direction: column;
     }
 
-    .who-need-program__item {
-        flex-direction: column;
+    .program-card {
+        text-align: center;
+        justify-content: center;
     }
 
-    .who-need-img {
-        width: 50%;
-        margin: 0 auto;
-    }
-}
-
-@media (max-width: 450px) {
-    .who-need-program-title {
-        font-size: 20px;
+    .program-title-modifier {
+        font-size: 24px;
     }
 }
 
-@media (max-width: 1130px) {
-    .course-methods-grid .program-card {
-        flex: 1 1 calc((100% - 32px) / 2);  /* 2 в ряд */
-    }
-}
-
-@media (max-width: 770px) {
-    .course-methods-grid .program-card {
-        flex: 1 1 100%;                     /* 1 в ряд */
-    }
-}
-
+/* 510 */
 @media (max-width: 510px) {
     .hero-modifier {
         padding: 18% 1%;
@@ -430,3 +453,223 @@
         padding: 0 1%;
     }
 }
+
+/* 450 – сгруппировано */
+@media (max-width: 450px) {
+    .who-need-program-title {
+        font-size: 20px;
+    }
+}
+
+
+/*@media (max-width: 1600px) {*/
+/*    .who-need-img {*/
+/*        height: fit-content;*/
+/*    }*/
+
+/*    .who-need-program__img {*/
+/*        width: 60%;*/
+/*    }*/
+
+/*    .prgoram__item {*/
+/*        width: 50%;*/
+/*        padding: 5% 1%;*/
+/*    }*/
+/*}*/
+
+/*@media (max-width: 1410px) {*/
+/*    .hero-text-modifier {*/
+/*        width: 100%;*/
+/*    }*/
+
+/*    .who-need-program {*/
+/*        padding: 4% 1%;*/
+/*    }*/
+/*}*/
+
+/*@media (max-width: 1140px) {*/
+/*    .who-need-program {*/
+/*        padding: 4% 0;*/
+/*    }*/
+
+/*    .who-need-program-description {*/
+/*        gap: 12px;*/
+/*    }*/
+
+/*    .who-need-program__item {*/
+/*        gap: 8px;*/
+/*    }*/
+
+/*    .prgoram__item {*/
+/*        width: 100%;*/
+/*    }*/
+
+/*    .who-need-program__img {*/
+/*        width: 100%;*/
+/*    }*/
+/*}*/
+
+/*@media (max-width: 940px) {*/
+/*    .hero-modifier {*/
+/*        padding: 120px 40px 70px;*/
+/*    }*/
+
+/*    .prgoram__item {*/
+/*        gap: 42px;*/
+/*        text-align: center;*/
+/*    }*/
+
+/*    .who-need-program-title {*/
+/*        font-size: 20px;*/
+/*    }*/
+
+/*    .who-need-program-desc {*/
+/*        font-size: 20px;*/
+/*    }*/
+/*}*/
+
+/*@media (max-width: 784px) {*/
+/*    .selected-program__img {*/
+/*        height: fit-content;*/
+/*        width: 280px;*/
+/*    }*/
+/*}*/
+
+/*@media (max-width: 550px) {*/
+/*    .selected-program-description {*/
+/*        flex-direction: column;*/
+/*        gap: 24px;*/
+/*    }*/
+
+/*    .selected-program__img {*/
+/*        width: 100%;*/
+/*    }*/
+
+/*    .hero-btn-modifier {*/
+/*        width: 100%;*/
+/*    }*/
+/*}*/
+
+/*@media (max-width: 1130px) {*/
+/*    .program-benefits__title {*/
+/*        font-size: 24px;*/
+/*    }*/
+
+/*    .program-benefits__item {*/
+/*        font-size: 20px;*/
+/*    }*/
+/*}*/
+
+/*@media (max-width: 770px) {*/
+/*    .program-benefits {*/
+/*        margin: 24px auto 0;*/
+/*        padding: 0 16px*/
+/*    }*/
+
+/*    .program-benefits__title {*/
+/*        font-size: 22px;*/
+/*    }*/
+
+/*    .program-benefits__item {*/
+/*        font-size: 18px;*/
+/*        padding-left: 22px;*/
+/*    }*/
+
+/*    .program-benefits__item::before {*/
+/*        font-size: 20px;*/
+/*    }*/
+/*}*/
+
+/*@media (max-width: 1130px) {*/
+/*    .course-methods-grid {*/
+/*        grid-template-columns: repeat(2, 1fr);*/
+/*    }*/
+/*}*/
+
+/*@media (max-width: 450px) {*/
+/*    .program-benefits {*/
+/*        padding: 0 10px;*/
+/*    }*/
+
+/*    .program-benefits__title {*/
+/*        font-size: 20px;*/
+/*        padding: 3px 8px;*/
+/*    }*/
+
+/*    .program-benefits__item {*/
+/*        font-size: 16px;*/
+/*        padding-left: 20px;*/
+/*    }*/
+
+/*    .program-benefits__item::before {*/
+/*        font-size: 18px;*/
+/*    }*/
+/*}*/
+
+/*@media (max-width: 770px) {*/
+/*    .course-methods {*/
+/*        padding: 0 5%;*/
+/*    }*/
+
+/*    .course-methods-grid {*/
+/*        grid-template-columns: 1fr;*/
+/*    }*/
+
+/*    .program-card {*/
+/*        text-align: center;*/
+/*    }*/
+
+/*    .who-need-program-title {*/
+/*        font-size: 18px;*/
+/*    }*/
+
+/*    .who-need-program-description {*/
+/*        flex-direction: column;*/
+/*    }*/
+
+/*    .who-need-program__item {*/
+/*        flex-direction: column;*/
+/*    }*/
+
+/*    .who-need-img {*/
+/*        width: 50%;*/
+/*        margin: 0 auto;*/
+/*    }*/
+/*}*/
+
+/*@media (max-width: 450px) {*/
+/*    .who-need-program-title {*/
+/*        font-size: 20px;*/
+/*    }*/
+/*}*/
+
+/*@media (max-width: 1130px) {*/
+/*    .course-methods-grid .program-card {*/
+/*        flex: 1 1 calc((100% - 32px) / 2);  !* 2 в ряд *!*/
+/*    }*/
+/*}*/
+
+/*@media (max-width: 770px) {*/
+/*    .course-methods-grid .program-card {*/
+/*        flex: 1 1 100%;                     !* 1 в ряд *!*/
+/*    }*/
+/*}*/
+
+/*@media (max-width: 510px) {*/
+/*    .hero-modifier {*/
+/*        padding: 18% 1%;*/
+/*    }*/
+
+/*    .hero-text-modifier {*/
+/*        padding: 0;*/
+/*        text-align: center;*/
+/*    }*/
+
+/*    .who-need-program-main-title {*/
+/*        font-size: 28px;*/
+/*    }*/
+
+/*    .who-need-program__item {*/
+/*        padding: 0 1%;*/
+/*    }*/
+/*}*/
