@@ -24,13 +24,16 @@
     justify-content: center;
 }
 
-.selected-program__img {}
+.selected-program__img {
+    width: 350px;
+}
 
 .hero-text-modifier {
     display: flex;
     flex-direction: column;
     gap: 16px;
     width: 40%;
+    justify-content: space-evenly;
 }
 
 .selected-program_text {
@@ -65,11 +68,11 @@
 .prgoram__item {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 62px;
     border: 1px solid #5F698A;
     text-align: left;
     width: 60%;
-    padding: 1%;
+    padding: 5% 2%;
 }
 
 .who-need-program-title {
@@ -89,6 +92,11 @@
     flex-direction: column;
     justify-content: space-between;
     width: 40%;
+    gap: 18px;
+}
+
+.who-need-img {
+    width: 100%;
 }
 
 .why-btn-modifier {
@@ -211,6 +219,98 @@
 
 .work-format-btn-modifier {}
 
+@media (max-width: 1600px) {
+    .who-need-img {
+        height: fit-content;
+    }
+
+    .who-need-program__img {
+        width: 60%;
+    }
+
+    .prgoram__item {
+        width: 50%;
+        padding: 5% 1%;
+    }
+}
+
+@media (max-width: 1410px) {
+    .hero-text-modifier {
+        width: 100%;
+    }
+
+    .who-need-program {
+        padding: 4% 1%;
+    }
+}
+
+@media (max-width: 1140px) {
+    .who-need-program {
+        padding: 4% 0;
+    }
+
+    .who-need-program-description {
+        gap: 12px;
+    }
+
+    .who-need-program__item {
+        gap: 8px;
+    }
+
+    .prgoram__item {
+        width: 100%;
+    }
+
+    .who-need-program__img {
+        width: 100%;
+    }
+}
+
+@media (max-width: 940px) {
+    .hero-modifier {
+        padding: 120px 40px 70px;
+    }
+
+    .prgoram__item {
+        gap: 42px;
+        text-align: center;
+    }
+
+    .who-need-program-title {
+        font-size: 20px;
+    }
+
+    .who-need-program-desc {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 784px) {
+    .selected-program__img {
+        height: fit-content;
+        width: 280px;
+    }
+}
+
+@media (max-width: 750px) {
+
+}
+
+@media (max-width: 550px) {
+    .selected-program-description {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .selected-program__img {
+        width: 100%;
+    }
+
+    .hero-btn-modifier {
+        width: 100%;
+    }
+}
+
 @media (max-width: 1130px) {
     .program-benefits__title {
         font-size: 24px;
@@ -279,6 +379,19 @@
     .who-need-program-title {
         font-size: 22px;
     }
+
+    .who-need-program-description {
+        flex-direction: column;
+    }
+
+    .who-need-program__item {
+        flex-direction: column;
+    }
+
+    .who-need-img {
+        width: 50%;
+        margin: 0 auto;
+    }
 }
 
 @media (max-width: 450px) {
@@ -301,6 +414,19 @@
 
 @media (max-width: 510px) {
     .hero-modifier {
-        padding: 8% 1%;
+        padding: 18% 1%;
+    }
+
+    .hero-text-modifier {
+        padding: 0;
+        text-align: center;
+    }
+
+    .who-need-program-main-title {
+        font-size: 28px;
+    }
+
+    .who-need-program__item {
+        padding: 0 1%;
     }
 }
