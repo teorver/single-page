@@ -73,9 +73,9 @@
     content: '-';
 }
 
-.faq-item--active .faq-icon {
-    transform: rotate(45deg);
-}
+/*.faq-item--active .faq-icon {*/
+/*    transform: rotate(45deg);*/
+/*}*/
 
 @media (max-width: 1130px) {
     .faq-modifier {

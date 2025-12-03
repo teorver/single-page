@@ -19,6 +19,16 @@
     padding-top: 6%;
 }
 
+@media (max-width: 1540px) {
+    .about-me-main-img {
+        width: 60%;
+    }
+
+    .about-wrapper {
+        padding-top: 10%;
+    }
+}
+
 @media (max-width: 1140px) {
     .about-wrapper {
         padding: 0 5%;
