@@ -350,6 +350,19 @@
     }
 }
 
+.about-me-list {
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+    margin: 0 auto;
+    padding-top: 2%;
+
+    @media (max-width: 550px) {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
 .about-me-main_list {
     margin: 12px 0 0;
     padding-left: 1.2em;
@@ -368,6 +381,10 @@
     padding-bottom: 18px;
     text-align: left;
     margin: 0 auto;
+
+    @media (max-width: 550px) {
+        margin: 0;
+    }
 }
 
 /*.my-work_title {}*/
@@ -413,7 +430,7 @@
 }
 
 .my-work_subtitle {
-    flex: 0 0 310px;
+    flex: 0 0 360px;
     text-align: left;
     font-weight: 600;
     font-size: 32px;
@@ -436,6 +453,7 @@
     font-weight: 400;
     position: relative;
     list-style: disc;
+    margin: 0;
 
     @media (max-width: 760px) {
         font-size: 20px;
