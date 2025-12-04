@@ -260,6 +260,9 @@
 }
 
 .why-with-me_img {
+    width: 20%;
+    height: fit-content;
+
     @media (max-width: 1250px) {
         width: 400px;
     }

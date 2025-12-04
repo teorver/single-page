@@ -154,10 +154,17 @@
     }
 }
 
-
+.contacts-img {
+    width: 30%;
+    height: fit-content;
+}
 
 @media (max-width: 500px) {
     .contacts-img {
         width: 300px;
+    }
+
+    .contacts-items {
+        gap: 16px;
     }
 }
