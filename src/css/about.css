@@ -106,6 +106,10 @@
     gap: 30px;
 }
 
+.my-work-modifier {
+    gap: 1px;
+}
+
 @media (max-width: 1140px) {
     .about-1-text,
     .about-3-text {
@@ -235,11 +239,11 @@
 
 .about-me-main-img {
     display: flex;
-    margin: 0 auto;
+    /*margin: 0 auto;*/
+    padding-top: 3%;
     position: relative;
-    width: 50%;
-    height: fit-content;
-    /*width: 650px;*/
+    width: 350px;
+    /*height: fit-content;*/
 }
 
 @media (max-width: 1350px) {
@@ -314,7 +318,7 @@
     font-size: 26px;
     padding: 4% 12%;
     position: relative;
-    gap: 10px;
+    /*gap: 10px;*/
     text-align: center;
     align-items: stretch;
 
@@ -359,7 +363,7 @@
 
     @media (max-width: 550px) {
         flex-direction: column;
-        gap: 20px;
+        gap: 6px;
     }
 }
 
@@ -376,7 +380,7 @@
 .my-work-section {
     display: flex;
     flex-direction: column;
-    gap: 42px;
+    gap: 1px;
     /*align-items: center;*/
     padding-bottom: 18px;
     text-align: left;
@@ -384,6 +388,7 @@
 
     @media (max-width: 550px) {
         margin: 0;
+        gap: 14px;
     }
 }
 
