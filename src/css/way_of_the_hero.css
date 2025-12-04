@@ -115,6 +115,10 @@
     align-items: stretch;
 }
 
+.program-grid-modifier {
+    grid-template-columns: repeat(3, 1fr);
+}
+
 .program-card {
     border: 1px solid #5F698A;
     padding: 1%;

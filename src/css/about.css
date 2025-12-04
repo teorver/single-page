@@ -350,12 +350,24 @@
     }
 }
 
+.about-me-main_list {
+    margin: 12px 0 0;
+    padding-left: 1.2em;
+    color: #5F698A;
+    font-size: 26px;
+    line-height: 1.4;
+    text-align: left;
+
+}
+
 .my-work-section {
     display: flex;
     flex-direction: column;
     gap: 42px;
-    align-items: center;
+    /*align-items: center;*/
     padding-bottom: 18px;
+    text-align: left;
+    margin: 0 auto;
 }
 
 /*.my-work_title {}*/
